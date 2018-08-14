@@ -1,5 +1,16 @@
 # FEW-2.4-Native-Apps-with-JavaScript-with-React-Native-and-Electron-js
 
+---
+
+Prerequisites: FEW 2.2
+Projects: 
+
+This class covers how JavaScript can be used to create native desktop and mobile applications.  Using Electron on the desktop and React Native for mobile, applications have the ease of being cross platform and written in JavaScript while still benefiting most of the features of writing in the native language.  Students will deepen their JavaScript knowledge and gain understanding where these JavaScript frameworks can and can not effectively replace native programming.
+
+Tools: JavaScript ES6, React JS, Electron, React Native
+
+---
+
 ## Course Description
 
 JavaScript cna be used to create apps for the web it can 
