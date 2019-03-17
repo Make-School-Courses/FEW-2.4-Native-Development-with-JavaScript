@@ -1,114 +1,174 @@
-# FEW-2.4-Native-Apps-with-JavaScript-with-React-Native-and-Electron-js
+# FEW-2.4-Native-Apps-with-JavaScript
 
----
-
-Prerequisites: FEW 2.2
-Projects: 
+## Course Description
 
 This class covers how JavaScript can be used to create native desktop and mobile applications.  Using Electron on the desktop and React Native for mobile, applications have the ease of being cross platform and written in JavaScript while still benefiting most of the features of writing in the native language.  Students will deepen their JavaScript knowledge and gain understanding where these JavaScript frameworks can and can not effectively replace native programming.
 
 Tools: JavaScript ES6, React JS, Electron, React Native
 
+### Why you should should take this class?
+
+If your goal is to make the best possible user experiences and products having the ability to make truly native applications is a great tool to have in your arsenal. If you want to broaden your skill set out from the web adding native development is a good direction. If you want get a deeper understanding of the JavaScript language, and if you want to develop your programming knowledge by practicing with Reactive and functional programming concepts. 
+
+## Course Specifics
+
+Weeks to Completion:  7 <br>
+Total Seat Hours:  37.5 hours <br>
+Total Out-of-Class Hours: 75 hours <br>
+Total Hours: 112.5 hours <br>
+Units:  3 units <br>
+Delivery Method:  Residential <br>
+Class Sessions:  14 classes, 7 labs
+
+## Prerequisites  
+
+- FEW 1.2
+
+## Learning Outcomes
+
+Students by the end of the course will be able to:
+
+1. Create Native Applications for Desktop and Mobile
+1. Identify the use cases, pros, and cons of native development
+1. Use Reactive and Functional programming concepts
+1. Design and build applications using Android and or iOS UI Paradigms
+1. Practice JavaScript
+
+## Schedule
 ---
+### **[INSTRUCTOR NOTE: PLEASE REMOVE THIS BEFORE APRIL 1]**
+If you teach **M/W** or **Tu/Th**, please pick from a template below and delete the other one
 
-## Course Description
+---
+### M/W Template **[PLEASE REMOVE THIS HEADER BEFORE APRIL 1]**
+**Course Dates:** Monday, April 1 – Wednesday, May 15, 2019 (7 weeks)
 
-JavaScript cna be used to create apps for the web it can 
-also be used to create native mobile and desktop applications. 
+**Class Times:** Monday and Wednesday at 3:30–5:20pm (14 class sessions)
 
-This class covers making desktop apps with Electron. 
+| Class |          Date          |                 Topics                  |
+|:-----:|:----------------------:|:---------------------------------------:|
+|  1 |  Monday, April 1                         | [Lesson 1] |
+|  2 |  Wednesday, April 3                      | [Lesson 2] |
+|  3 |  Monday, April 8                         | [Lesson 3] |
+|  4 |  Wednesday, April 10                     | [Lesson 4] |
+|  5 |  Monday, April 15                        | [Lesson 5] |
+|  6 |  Wednesday, April 17                     | [Lesson 6] |
+|  7 |  Monday, April 22                        | [Lesson 7] |
+|  8 |  Wednesday, April 24                     | [Lesson 8] |
+|  9 |  Monday, April 29                        | [Lesson 9] |
+| 10 |  Wednesday, May 1                        | [Lesson 10] |
+| 11 |  Monday, May 6                           | [Lesson 11] |  
+| 12 |  Wednesday, May 8                        | [Lesson 12] |
+| 13 |  Monday, May 13                          | Final Class (presentations, etc) |
+| 14 |  Wednesday, May 15                       | Final Exams/Presentations |
 
-## Prerequisites
+### Tu/Th Template **[PLEASE REMOVE THIS HEADER BEFORE APRIL 1]**
+**Course Dates:** Tuesday, April 2 – Thursday, May 16, 2019 (7 weeks)
 
-A list of prerequisites students need to be successful 
-in this class. Include previous classes you expect 
-students should have taken, and knowledge and skills 
-that students should have coming into the class.
+**Class Times:** Tuesday and Thursday at 3:30–5:20pm (14 class sessions)
 
-1. Use an...
-1. ordered list. 
+| Class |          Date          |                 Topics                  |
+|:-----:|:----------------------:|:---------------------------------------:|
+|  1 |  Tuesday, April 2                        | [Lesson 1] |
+|  2 |  Thursday, April 4                       | [Lesson 2] |
+|  3 |  Tuesday, April 9                        | [Lesson 3] |
+|  4 |  Thursday, April 11                      | [Lesson 4] |
+|  5 |  Tuesday, April 16                       | [Lesson 5] |
+|  6 |  Thursday, April 18                      | [Lesson 6] |
+|  7 |  Tuesday, April 23                       | [Lesson 7] |
+|  8 |  Thursday, April 25                      | [Lesson 8] |
+|  9 |  Tuesday, April 30                       | [Lesson 9] |
+| 10 |  Thursday, May 2                         | [Lesson 10] |
+| 11 |  Tuesday, May 7                          | [Lesson 11] |  
+| 12 |  Thursday, May 9                         | [Lesson 12] |
+| 13 |  Tuesday, May 14                         | Final Class (presentations, etc) |
+| 14 |  Thursday, May 16                        | Final Exams/Presentations |
 
-### Who should enroll (optional)
+[Lesson 1]: Lessons/Lesson-01.md
+[Lesson 2]: Lessons/Lesson-02.md
+[Lesson 3]: Lessons/Lesson-03.md
+[Lesson 4]: Lessons/Lesson-04.md
+[Lesson 5]: Lessons/Lesson-05.md
+[Lesson 6]: Lessons/Lesson-06.md
+[Lesson 7]: Lessons/Lesson-07.md
+[Lesson 8]: Lessons/Lesson-08.md
+[Lesson 9]: Lessons/Lesson-09.md
+[Lesson 10]: Lessons/Lesson-10.md
+[Lesson 11]: Lessons/Lesson-11.md
+[Lesson 12]: Lessons/Lesson-12.md
 
-A short description of who would benefit most from 
-taking this class. This is optional. Include this if you 
-feel your class would not benefit everyone.
+## Class Assignments
 
-## Competencies & Objectives
 
-A description of the skills a student aquire by taking 
-the class.
 
-Must be measurable! Make School does not have grades 
-but we do evaluate student progress. Usually this 
-will evaluate to something a student will be able to 
-do after taking the class.
+### Tutorials
 
-Follow the guide here for writing competencies.
+- React Redux Review Tutorial Choose one
+	- Passwords - React + Redux 
+	- Timers - React + Redux 
+	- Tetris - React + Redux 
+- React Native Tutorial
 
-https://sph.uth.edu/content/uploads/2012/01/Competencies-and-Learning-Objectives.pdf
+### Projects
 
-1. List all of the course 
-1. Competencies here.
-1. Use an orderd list
+- Electron Project
+- React Native Project
+- Custom Project 
 
-## Required Text and Materials (Optional)
+**All projects will require a minimum of 10 commits, and must take place throughout the entirety of the course**
 
-- List required materials here
+- **Good Example:** 40+ commits throughout the length of the course, looking for a healthy spattering of commits each week (such as 3-5 per day).
+- **Bad Example:** 10 commits on one day during the course and no others. Students who do this will be at severe risk of not passing the class.
+- **Unacceptable Example:** 2 commits the day before a project is due. Students who do this should not expect to pass the class. 
 
-### Evaluation
+#### Why are we doing this?
 
-Define what students need to do to pass this class. 
-Be clear and accurate, avoid vague terms. 
+We want to encourage best practices that you will see working as a professional software engineer. Breaking up a project by doing a large amount of commits helps engineers in the following ways:
 
-Make School does not provide grades but we do evaulate 
-student work. Determine what work assigned in class is 
-required to pass.
+- It's much easier to retrace your steps if you break your project/product/code up into smaller pieces
+- It helps with being able to comprehend the larger problem, and also will help with your debugging (i.e. finding exactly when you pushed that piece of broken code)
+- It allows for more streamlined, iterative communication in your team, as it's much easier to hand off a small change to someone (updating a function) than a huge one (changed the architecture of the project)
 
-All work must Must have Pass Fail Criteria!
+Through this requirement, we hope to encourage you to think about projects with an iterative, modular mindset. Doing so will allow you to break projects down into smaller milestones that come together to make your fully-realized solution.
 
-As a general guide list the number of projects and 
-baseline challenges that must be completed to pass the 
-class.
+### Final Exam
 
-Here is some more information on learning assessment.
+-  **Passing the exam is a requirement for passing the class.**
+- You will have 2 hours to complete this exam - it will be in class using paper and pencil, or a format of the instructor's choosing
+- There are no retakes of the exam.
+- If you have a disability that needs an accommodation such as extended time or a different format, please take advantage of our [accommodations program](make.sc/disability-policy).
 
-https://www.cte.cornell.edu/teaching-ideas/assessing-student-learning/measuring-student-learning.html
+### Other Class assignments
 
-- Use a list 
+## Evaluation
+**[MAKE SPECIFIC TO YOUR COURSE SO IT IS SUPER CLEAR]**
+To pass this course you must meet the following requirements:
 
-## Lessons
+- Complete all required tutorials 
+- Pass all projects according to the associated project rubric
+- Pass the final summative assessment >=75%
+- Actively participate in class and abide by the attendance policy
+- Make up all classwork from all absences
 
-- List your lessons here
-- Provide a link to each lesson
-- Use a list
+## Attendance
+Just like any job, attendance at Make School is required and a key component of your success. Attendance is being onsite from 9:30 to 5:30 each day, attending all scheduled sessions including classes, huddles, coaching and school meetings, and working in the study labs when not in a scheduled session. Working onsite allows you to learn with your peers, have access to support from TAs, instructors and others, and is vital to your learning.
 
-### Projects 
+Attendance requirements for scheduled sessions are:
+- No more than two no call no shows per term in any scheduled session.
+- No more than four excused absences per term in any scheduled session.
 
-- List all of the projects 
-- Use a list
+Failure to meet these requirements will result in a PIP (Participation Improvement Plan).  Failure to improve after the PIP is cause for not being allowed to continue at Make School. 
 
-### Vocabulary & Conventions
 
-- List vocabulary
-- and definitions 
-- for terms students 
-- need to understand
-- This is optional 
+## Make School Course Policies
 
-### Best Practices
+[Academic Honesty](https://make.sc/academic-honesty)<br>
+[Accommodations for Students](https://make.sc/accommodations-for-students)<br>
+[Attendance Policy](https://make.sc/attendance-policy)  
+[Diversity and Inclusion Policy](https://make.sc/diversity-and-inclusion-policy)<br>
+[Grading System](https://make.sc/grading-system)
+<br>
+[Title IX Policy](https://make.sc/title-ix-policy)<br>
+[Program Learning Outcomes](https://make.sc/program-learning-outcomes)
 
-- List best practices 
-- This is optional 
-
-### Resources
-
-Any resources to be used by students in class. Include:
-
-- books
-- videos
-- blog posts
-- online articles
-- links to tutorials
-- other media
 
