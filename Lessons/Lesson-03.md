@@ -13,11 +13,11 @@
 	- Who is using Electron? 
 	- Why use a Electron?
 
-## Overview/TT I 
+## Getting started with Electron
 
 - Getting started with Electron
 
-## In Class Activity I
+## Build an Electron App
 
 - Wrap the Clicker Game in an Electron app
 
@@ -34,5 +34,4 @@ Choose a React App you have created, this can be one of the tutorial projects, a
 - [Electron](https://electronjs.org)
 - [Electron Apps](https://electronjs.org/apps)
 - [Create React App + Electron](https://medium.com/@kitze/%EF%B8%8F-from-react-to-an-electron-app-ready-for-production-a0468ecb1da3)
-- 
 
