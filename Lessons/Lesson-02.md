@@ -1,6 +1,8 @@
-# FEW 2.4 Class 02 - Redux Review 
+# FEW 2.4 Class 2 - Redux Review 
 
 ## Review and Dig into Redux
+
+## Learing Objectives 
 
 1. Define Actions, Reducers, and Store
 1. Use Redux to manage application state 

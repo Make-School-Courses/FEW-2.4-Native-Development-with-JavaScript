@@ -1,4 +1,4 @@
-# React Native
+# FEW 2.4 Class 5 - React Native
 
 ## Learning Objectives/Competencies
 
@@ -6,15 +6,15 @@
 - Identify differences in development between Android and iOS
 - Using Native Components
 - Building and running apps with Expo
-- Compare and contrast testing in the simulator vs testing on device
+- Compare and contrast testing in the simulator vs testing on a device
 
 ## Initial Exercise
 
 - What is React Native?
-	- What is Native?
-	- Why build a native app?
-	- Why build a Web app?
-	- What is the user experience web vs native?
+    - What is Native?
+    - Why build a native app?
+    - Why build a Web app?
+    - What is the user experience web vs native?
 
 ## Create React Native App 
 
@@ -22,7 +22,7 @@ Working with Native projects is a little more complex than working with Web proj
 
 You'll need to have Node.js 8+ for running the dev server and compiling your JS code. 
 
-To work with React Native you'll need to have the commandline tool to create and run projects on your computer. 
+To work with React Native you'll need to have the command-line tool to create and run projects on your computer. 
 
 To test the projects on your phone, Android or iOS, you'll need to install the Expo App. 
 
@@ -32,9 +32,9 @@ To build and publish your app you'll need to Xcode for iOS and or Android Studio
 
 Also to publish your native apps to the Apple App Store you'll need to have Apple Developer Account. 
 
-This sounds like a lot, and it is, compared to web projects. This is one of the brudens of native dev. 
+This sounds like a lot, and it is, compared to web projects. This is one of the burdens of native dev. 
 
-The easiest path to developement is to test on your device using the Expo App. Not only does React Native make this process streamlined and easy to work with, it also allows you to see your app as it will appear on a real device which is a great way to test. 
+The easiest path to development is to test on your device using the Expo App. Not only does React Native make this process streamlined and easy to work with, but it also allows you to see your app as it will appear on a real device which is a great way to test. 
 
 Follow the [Quickstart Guide](https://facebook.github.io/react-native/docs/getting-started). 
 

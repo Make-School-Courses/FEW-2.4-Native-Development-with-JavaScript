@@ -1,6 +1,6 @@
-# Desktop Apps with Electron
+# FEW 2.4 Class 3 - Desktop Apps with Electron
 
-## Learning Objectives/Competencies
+## Learning Objectives
 
 1. Define use cases for desktop applications
 1. Define Electron 

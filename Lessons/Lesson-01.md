@@ -1,6 +1,6 @@
 # FEW 2.4 Class 1 - Intro React Review
 
-## Learning Objectives/Competencies
+## Learning Objectives
 
 1. Define Components with Class and function syntax
     - Component Architecture

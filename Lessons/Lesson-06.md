@@ -1,4 +1,4 @@
-# Native Components
+# FEW 2.4 Class 6 - Native Components
 
 ## Learning Objectives/Competencies
 
@@ -14,7 +14,6 @@
 		- What are the UI systems in use? 
 	- Who uses iOS?
 		- What are UI systems in use? 
-	
 
 ## In Class Activity I
 
@@ -28,10 +27,6 @@
 - Formative assessment
 - Form into groups
 - etc (get creative :D)
-
-## Overview/TT II (optional)
-
-## In Class Activity II (optional)
 
 ## After Class
 

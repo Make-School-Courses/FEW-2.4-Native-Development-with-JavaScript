@@ -1,4 +1,4 @@
-# Navigation part 2
+# FEW 2.4 Class 8 - Navigation part 2
 
 ## Learning Objectives/Competencies
 

@@ -1,4 +1,4 @@
-# Navigation part 1
+# FEW 2.4 class 7 - Navigation part 1
 
 ## Learning Objectives/Competencies
 
