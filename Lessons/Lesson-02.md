@@ -1,27 +1,23 @@
-# Redux Review 
+# FEW 2.4 Class 02 - Redux Review 
 
 ## Review and Dig into Redux
 
-1. Define Actions, Reducers and Store
+1. Define Actions, Reducers, and Store
 1. Use Redux to manage application state 
 1. Create container components implement React Redux
 
-## Initial Exercise
-
-- 
-
-## Overview/TT I 
+## Why learn this?
 
 - Why learn this?
-	- [Hiring Trends](https://www.hntrends.com/2018/jun-no-signs-of-slowing-for-react.html?compare1=React&compare2=Redux&compare3=Angular+2&compare4=AngularJS)
-	- [NPM Trends](https://npm-stat.com/charts.html?package=react&package=vue&package=angular&package=angular%202&package=redux&from=2016-06-01&to=2018-05-31)
+    - [Hiring Trends](https://www.hntrends.com/2018/jun-no-signs-of-slowing-for-react.html?compare1=React&compare2=Redux&compare3=Angular+2&compare4=AngularJS)
+    - [NPM Trends](https://npm-stat.com/charts.html?package=react&package=vue&package=angular&package=angular%202&package=redux&from=2016-06-01&to=2018-05-31)
 
-## In Class Activity I
+## Implement Redux
 
 - Build the clicker with Redux
-	- Hold clicks in store
-	- Keep click count in store
-	- Create auto clickers in the store
+    - Hold clicks in store
+    - Keep click count in store
+    - Create auto clickers in the store
 
 ## After Class
 
