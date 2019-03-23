@@ -1,28 +1,28 @@
-# Class 1 - Intro React Review
+# FEW 2.4 Class 1 - Intro React Review
 
 ## Learning Objectives/Competencies
 
 1. Define Components with Class and function syntax
-	- Component Architecture
-	- Props and State
-	- JSX
+    - Component Architecture
+    - Props and State
+    - JSX
 1. Compare and constrast Web and Native Applications 
 1. Compare and constrast Mobile vs Desktop experiences  
 
 ## Initial Exercise
 
 - Dicussion: 
-	- What is native?
-	- Native vs Web
-		- What makes a good native app? 
-		- What makes a good web app? 
-	- Desktop vs Mobile? 
-		- What makes a good desktop app?
-		- What makes a good mobile app?
+    - What is native?
+    - Native vs Web
+        - What makes a good native app? 
+        - What makes a good web app? 
+    - Desktop vs Mobile? 
+        - What makes a good desktop app?
+        - What makes a good mobile app?
 
 ## Why Learn React?  
 
-React is one of the most popular libraries around today. Seriously, you should know it! React is good to learn now since it has huge and well deserved popularity.
+React is one of the most popular libraries around today. Seriously, you should know it! React is good to learn now since it has huge and well-deserved popularity.
 
 [Hacker News Hiring Trends: React, Vue, Angular, Angular 2](https://www.hntrends.com/2018/jun-no-signs-of-slowing-for-react.html?compare1=React&compare2=AngularJS&compare3=Angular+2&compare4=Vue)
 
@@ -33,9 +33,9 @@ Looks to me like it's a good time to learn React. That said, it won't be here fo
 ## React Review
 
 - Components 
-	- Function vs Class
-	- Props and State
-	- JSX
+    - Function vs Class
+    - Props and State
+    - JSX
 
 Build a Cookie Clicker in class? 
 
@@ -48,7 +48,7 @@ Review practice and brush up your React and Redux skills by completing one of th
 
 Choose a tutorial to work on. Your goal is to complete your chosen tutorial before class next week. 
 
-There are three tutorials. I have arranged them in level of diffculty. 
+There are three tutorials listed by level of difficulty. 
 
 1. [Password App](https://github.com/MakeSchool-Tutorials/web-7-react-redux-passwords-app)
 2. [Timers App](https://github.com/MakeSchool-Tutorials/web-7-react-redux-timers-app)
