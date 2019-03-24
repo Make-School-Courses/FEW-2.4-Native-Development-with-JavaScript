@@ -15,24 +15,21 @@
 	- Who uses iOS?
 		- What are UI systems in use? 
 
-## In Class Activity I
+## Basic Components 
 
-- I do, We do, You do
-- Reading & Discussion Questions in small groups
-- Draw a picture/diagram
-- Complete Challenges solo or in pair
-- Q&A about tutorials
-- Pair up and code review
-- Pair program
-- Formative assessment
-- Form into groups
-- etc (get creative :D)
+Look at the [example project](https://github.com/Make-School-Labs/react-native-components)
+
+The components I've chosen for this demo are not specific to iOS or Android  and are common to both. They will be rendered in the style that matches the platform but ottherwise are configured and function the same on both platforms. 
+
+Apply some of the ideas from this example project to the Wthr tutorial. 
+
+- Add a background image
+- Add an image the weather
+- Switch to set the unit
 
 ## After Class
 
 - Continue working on your current tutorial
-- Complete reading
-- Complete challenges
 
 ## Additional Resources
 
