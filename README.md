@@ -22,7 +22,7 @@ Class Sessions:  14 classes, 7 labs
 
 ## Prerequisites  
 
-- FEW 1.2
+- [FEW 2.3](https://github.com/Make-School-Courses/FEW-2.3-Single-Page-Web-Applications)
 
 ## Learning Outcomes
 
@@ -32,7 +32,6 @@ Students by the end of the course will be able to:
 1. Identify the use cases, pros, and cons of native development
 1. Use Reactive and Functional programming concepts
 1. Design and build applications using Android and or iOS UI Paradigms
-1. Practice JavaScript
 
 ## Schedule
 ---
