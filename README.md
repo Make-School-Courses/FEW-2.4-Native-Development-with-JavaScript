@@ -103,10 +103,9 @@ If you teach **M/W** or **Tu/Th**, please pick from a template below and delete 
 ### Tutorials
 
 - React Redux Review Tutorial Choose one
-	- Passwords - React + Redux 
-	- Timers - React + Redux 
-	- Tetris - React + Redux 
-- React Native Tutorial
+	- [Timers - React + Redux](https://www.makeschool.com/academy/track/react-redux-passwords-app-tutorial-oh4) 
+	- [Tetris - React + Redux](https://www.makeschool.com/academy/track/react-redux-tetris-app-tutorial-o4s)
+- [React Native Tutorial](https://www.makeschool.com/academy/track/wthr-native-tutorial-mvs)
 
 ### Projects
 
