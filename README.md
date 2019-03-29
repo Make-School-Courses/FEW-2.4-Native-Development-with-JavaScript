@@ -34,34 +34,7 @@ Students by the end of the course will be able to:
 1. Design and build applications using Android and or iOS UI Paradigms
 
 ## Schedule
----
-### **[INSTRUCTOR NOTE: PLEASE REMOVE THIS BEFORE APRIL 1]**
-If you teach **M/W** or **Tu/Th**, please pick from a template below and delete the other one
 
----
-### M/W Template **[PLEASE REMOVE THIS HEADER BEFORE APRIL 1]**
-**Course Dates:** Monday, April 1 – Wednesday, May 15, 2019 (7 weeks)
-
-**Class Times:** Monday and Wednesday at 3:30–5:20pm (14 class sessions)
-
-| Class |          Date          |                 Topics                  |
-|:-----:|:----------------------:|:---------------------------------------:|
-|  1 |  Monday, April 1                         | [Lesson 1] |
-|  2 |  Wednesday, April 3                      | [Lesson 2] |
-|  3 |  Monday, April 8                         | [Lesson 3] |
-|  4 |  Wednesday, April 10                     | [Lesson 4] |
-|  5 |  Monday, April 15                        | [Lesson 5] |
-|  6 |  Wednesday, April 17                     | [Lesson 6] |
-|  7 |  Monday, April 22                        | [Lesson 7] |
-|  8 |  Wednesday, April 24                     | [Lesson 8] |
-|  9 |  Monday, April 29                        | [Lesson 9] |
-| 10 |  Wednesday, May 1                        | [Lesson 10] |
-| 11 |  Monday, May 6                           | [Lesson 11] |  
-| 12 |  Wednesday, May 8                        | [Lesson 12] |
-| 13 |  Monday, May 13                          | Final Class (presentations, etc) |
-| 14 |  Wednesday, May 15                       | Final Exams/Presentations |
-
-### Tu/Th Template **[PLEASE REMOVE THIS HEADER BEFORE APRIL 1]**
 **Course Dates:** Tuesday, April 2 – Thursday, May 16, 2019 (7 weeks)
 
 **Class Times:** Tuesday and Thursday at 3:30–5:20pm (14 class sessions)
@@ -139,7 +112,7 @@ Through this requirement, we hope to encourage you to think about projects with 
 ### Other Class assignments
 
 ## Evaluation
-**[MAKE SPECIFIC TO YOUR COURSE SO IT IS SUPER CLEAR]**
+
 To pass this course you must meet the following requirements:
 
 - Complete all required tutorials 
