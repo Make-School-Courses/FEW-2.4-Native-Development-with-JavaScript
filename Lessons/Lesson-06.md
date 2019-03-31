@@ -1,4 +1,4 @@
-# FEW 2.4 Class 6 - Native Components
+# FEW 2.4 Class 6 - Native Components Part 1
 
 ## Learning Objectives/Competencies
 
@@ -25,7 +25,7 @@ Apply some of the ideas from this example project to the Wthr tutorial.
 
 - Add a background image
 - Add an image the weather
-- Switch to set the unit
+- Switch to set the unit F˚ or C˚
 
 ## After Class
 
