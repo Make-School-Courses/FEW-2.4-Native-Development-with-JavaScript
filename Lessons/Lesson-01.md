@@ -32,15 +32,28 @@ Looks to me like it's a good time to learn React. That said, it won't be here fo
 
 ## React Review
 
-- Components 
+- Components
     - Function vs Class
     - Props and State
     - JSX
 
 Build a Cookie Clicker in class? 
 
-- What is a clicker? 
-- Universal Paper Clips
+- What is a [clicker](https://en.wikipedia.org/wiki/Cookie_Clicker)? 
+- [Universal Paper Clips](http://www.decisionproblem.com/paperclips/)
+- [Incremental Game Math](https://gamedevelopment.tutsplus.com/articles/numbers-getting-bigger-the-design-and-math-of-incremental-games--cms-24023)
+
+
+Redux would be a great way to create a complext cookie clicker game. 
+
+Build the following components
+
+- Couter Display
+- Counter 
+	- Button add to count
+	- Upgrade button
+- Auto Counter
+	- Upgrade button
 
 ## After Class
 
