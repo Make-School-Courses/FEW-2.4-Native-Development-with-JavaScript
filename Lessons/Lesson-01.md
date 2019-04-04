@@ -65,7 +65,7 @@ There are three tutorials listed by level of difficulty.
 
 1. [Password App](https://github.com/MakeSchool-Tutorials/web-7-react-redux-passwords-app)
 2. [Timers App](https://github.com/MakeSchool-Tutorials/web-7-react-redux-timers-app)
-3. [Tetris App](https://github.com/MakeSchool-Tutorials/web-7-react-redux-tetris-app) 
+3. [Tetris App](https://github.com/MakeSchool-Tutorials/web-7-react-redux-tetris-app)
 
 ## Additional Resources
 
