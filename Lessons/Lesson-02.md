@@ -25,7 +25,7 @@ Currently the application allows you to add items to the list. Each item shows a
 
 Items are stored in Redux. `TodoList` displays a list of `Todo`. 
 
-
+New Todo uses the [controlled pattern](https://reactjs.org/docs/forms.html). Use this with all form elements. 
 
 ### Organizing code
 
@@ -56,6 +56,28 @@ Components can connect themselves to the store using 'react-redux'. This library
 
 - `mapStateToProps(state)` takes state as a parameter and maps values to props on a components. This means you get valeus from state from props! The return value should be an object with the properties that you want to map to props. 
 - `mapDispatchToProps()` this function returns an object with properties whose values are 
+
+## Local Storage 
+
+Local storage allows your apps to save data in the browser. This gives your apps the abilioty to save information without and internet connection, a login, database, or other tooling. 
+
+Local storage saves data in key value pairs. Values must be simple either strings or numbers. 
+
+This sounds pretty limited. Using JSON allows you to convert collections, like objects and arrays, to a string which can be saved. 
+
+Save data with: 
+
+`localStorage.setItem(key, data)`
+
+Fetch data with: 
+
+`localStorage.getItem(key)`
+
+Convert complex values with `JSON.stringify()`
+
+NOTE! Objects and Arrays can contain functions which can not be converted to JSON!
+
+Use this with 
 
 ## Adding features 
 
