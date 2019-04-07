@@ -14,7 +14,7 @@ Communication between the Main Process and rendering Processes.
 ## Initial Exercise
 
 - CSS and UI issues
-	- forms and stuff
+	- forms elements
 - Electron Options 
 	- Size of Window
 	- Saving data
@@ -24,6 +24,20 @@ Communication between the Main Process and rendering Processes.
 - What is the main process? 
 - What is the rendering process? 
 - Creating communication between the two
+
+## Review CSS Grid and Flexbox
+
+Use Grid for two dimensional layouts and Flexbox for arranging things on a single axis. 
+
+Both are applied to a parent container and affect the children. 
+
+You can use Flext box inside a grid or one grid within another grid. 
+
+- Use Grid for two dimensional layouts.
+- Use `grid-template-area` for arbitrary layouts use `grid-template-columns` for dynamic content. 
+
+- Use Flexbox for one dimensional layout
+- Use think in terms of main axis and cross axis
 
 ## After Class
 
