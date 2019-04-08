@@ -31,7 +31,7 @@ Use Grid for two dimensional layouts and Flexbox for arranging things on a singl
 
 Both are applied to a parent container and affect the children. 
 
-You can use Flext box inside a grid or one grid within another grid. 
+You can use Flex box inside a grid or one grid within another grid. 
 
 - Use Grid for two dimensional layouts.
 - Use `grid-template-area` for arbitrary layouts use `grid-template-columns` for dynamic content. 
@@ -41,7 +41,8 @@ You can use Flext box inside a grid or one grid within another grid.
 
 ## After Class
 
-Wrap up the Electron project. You should have a functional Electron application that runs on the desktop. 
+- Wrap up the Electron project. You should have a functional Electron application that runs on the desktop. 
+- 
 
 ## Additional Resources
 
