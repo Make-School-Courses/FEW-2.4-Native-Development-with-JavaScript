@@ -13,6 +13,14 @@
 
 Electron is built on top of the Chrome engine. All of the things that are possible in Chrome are possible in Electron and more. In some ways you can think you're making an application that runs a single dedicated website with some special privilleges not available to websites notmally. 
 
+Looking deeper Electron is built on a minimal Chromium browser. It uses HTML/CSS/JS to create graphical user interfaces.
+
+Electron is built on Node.js and uses the same concepts. Code is written in JS and packages are imported with NPM. 
+
+Electron runs a single main process. This is the process that is named in package.json. 
+
+Every window you create a separate render process. 
+
 ### Who is using Electron? 
 
 A lot of common apps are using electron. 
@@ -39,18 +47,15 @@ In most use cases you'll want to make a website. But for cases where you really 
 
 ## Getting started with Electron
 
-- Getting started with Electron
+Getting started with Electron is easy. Follow the quick start guide to make a "hello world" app with Electron. 
 
-Create React App and Electron
-
-
-
-
-
+- https://electronjs.org/docs/tutorial/quick-start
 
 ## Electron Builder
 
-Electron Builder is a tool that handles a lot of the work of building your electron apps. We will use it here. 
+Electron Builder is a tool that handles a lot of the work of building your electron apps. We will use it here.
+
+Note! React apps have some special requirements, they are a little more than simple web pages. They also require a special build process. Luckily Electron  Builder supports with Create React App projects out of the box.
 
 Below I've sumarized the steps from this [article](https://www.codementor.io/randyfindley/how-to-build-an-electron-app-using-create-react-app-and-electron-builder-ss1k0sfer)
 
@@ -153,14 +158,10 @@ app.on('activate', () => {
 
 - Set window size in electron.js:11
 	- `mainWindow = new BrowserWindow({width: 400, height: 600});`
-- Using localStorage
-	- https://github.com/sindresorhus/electron-store
 - App Icon
 	- https://www.christianengvall.se/electron-app-icons/
 	- https://www.electron.build/icons
-
-
-
+	
 ## Build an Electron App
 
 Your goal is to build a desktop application from your React project. Follow the guide above. Your deliverable is a functioning native app that runs on Mac or Windows. 
