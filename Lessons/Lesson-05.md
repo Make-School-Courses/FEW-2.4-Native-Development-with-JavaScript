@@ -20,7 +20,7 @@
 
 - https://medium.com/@chunchuanlin/android-vs-ios-compare-20-ui-components-patterns-part-1-ad33c2418b45
 
-Take a quick look at the article above. Discuss the differences with a partner. Ideally, pair Android and iOS users. 
+Take a quick look at the article above. Discuss the differences with a partner. Ideally, pair Android and iOS users. Use your mobile device to help answer the questions. 
 
 Answer these questions: 
 
