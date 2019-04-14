@@ -1,4 +1,6 @@
-# ScrollView
+# FEW 2.4 React Navigation
+
+This class covers navigating between views with React Navigation. 
 
 ## Learning Objectives/Competencies
 

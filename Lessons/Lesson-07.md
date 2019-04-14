@@ -59,11 +59,11 @@ Why data?
 
 FlatList needs to know how many rows you have to work with. Only a subset of the data will be displayed in the list. FlatList keeps track of the starting and ending indexs that are currently displayed. 
 	
-Why renderItems?
+Why renderItem?
 
 This function returns takes an object with the data and returns a React Native Component that displays as the list cell. FlatList will ask us for the cells it needs, we supply the cell from the data and index. 
 
-The Object passed to renderItems includes three keys: 
+The Object passed to renderItem includes three keys: 
 
 - item : The data item for this row
 - index : the index of this row in data
@@ -78,89 +78,90 @@ Each cell needs a unique id, keyExtractor is a method that generates a unique id
 
 Use this function to generate unique row ids. 
 
+## ScrollView demo
 
+- Create ScrollView 
+- Fill with objects
+- Set styles 
+- Options 
 
+## FlatList demo
 
+- Look at the data source 
+- Import FlatList
+- Render a FlatList
+- Set props
+	- data
+	- renderItem 
+	- keyExtractor
+- Define a Row Component
 
+The data source includes a list of cat anda list of dogs. Each animal has an object that inlcudes a breed property, and a list of other properties that rate the `breed` in different areas such as: friendliness, Affection, Shedding, Health etc. Each of these fields is rated with a value of 0 to 5. 
 
+NOTE! Not all properties appear with every animal. Only `breed` is guaranteed to appear with each object. 
 
+Create the FlatList component. Add set it's props. 
 
+- `data` - Set the data source to an array. 
+- renderItem - A function that returns a Component
+	- The function takes an object with the following properties: 
+		- `item` - An item from data
+		- `index` - the index of the item in data
+		- `separators` - An object with properties used for customizing custom separator Components (not used in this example)
+		
+Set data to an array:
 
+```JSX
+<FlatList 
+	...
+	data={['A', 'B', 'C', 'D']}
+	...
+/>
+```
 
+Here the array contains data items that rendered into rows in the FlatList. 
 
+Set renderItem: 
 
+```JSX
+<FlatList 
+	...
+	renderItem={({item, index}) => <Text>{`${index} ${item}`}</Text>}
+	...
+/>
+```
 
+The renderItem function returns a component to display for each row. The function receives an object with the item and the index. these were displayed with a text component. 
 
+Define keyExtractor: 
 
+```JSX
+<FlatList 
+	...
+	keyExtractor={(item, index) => `${item}-${index}`}
+	...
+/>
+```
 
+The keyExtractor function generates a unique key for each cell. Here the cell was generated from the contents of the row plus the index. If your data had unique ids you could use those. 
 
+## Challenges 
 
+- Use the cat or dog data in place of the Array of strings used in the example. 
+- Create a custom function for each row. Return this from renderItem.
+- Style the row component
+- Display the data from the cat/dog object. 
 
+## After class
 
+- Define a project for yourself it should be native either desktop or mobile
+- Create a set of milestones. 
+	- List these by class number with completed project done on class 14. 
 
-## Learning Objectives/Competencies
+## Resources 
 
-- Use List View 
-- Use Scroll View 
-- Differentiate the differences and use cases for List and Scroll views 
-- Input views and Controlled component pattern
-- Handle user input on mobile/touch screen 
-
-## Handling Input 
-
-Touch screen devices have their own input paradigms. Touch screen interaction is a very different experience from mouse driven interaction. 
-
-Discuss the differences
-
-https://facebook.github.io/react-native/docs/handling-touches
-
-React Native provides a few interactive components. 
-
-- Button - Good for basic button
-- Touchables - Good when the button isn't enough or can't be styled to meet your needs. 
-	- TouchableHighlight
-	- TouchableNativeFeedback
-	- TouchableOpacity
-	- TouchableWithoutNativeFeedback
-
-## Forms 
-
-Forms on native follow the same patterns used with React on the web with a few unique issues. 
-
-Keyboard avoiding!
-
-Mobile screens are small and space is limited. On mobile the keyboard will often obscure an input field. React Native solves this with it's: 
-
-[KeyboardAvoidingView](https://facebook.github.io/react-native/docs/keyboardavoidingview)
-
-For Text input use: 
-
-- [InputAccessoryView]( https://facebook.github.io/react-native/docs/inputaccessoryview) - Customizes keyboard input view
-- [Picker](https://facebook.github.io/react-native/docs/picker) - Handles multi-choice input with a scrolling list of choices. Good for many choices.
-- [PickerIOS](https://facebook.github.io/react-native/docs/pickerios) - iOS Picker View
-- [SegmentedConreolIOS](https://facebook.github.io/react-native/docs/segmentedcontrolios) - Multi-choice input, iOS only, good for a few choices. 
-- [Slider](https://facebook.github.io/react-native/docs/slider)
-- [Switch](https://facebook.github.io/react-native/docs/switch) - Like a checkbox
-- [TextInput](https://facebook.github.io/react-native/docs/textinput) - Use for Single line and multi-line text input 
-
-## Controlled Component Pattern
-
-Use the [Controlled Component pattern](https://reactjs.org/docs/forms.html) with form elements. 
-
-**tl;dr** Store the value of the input element on state, set the state when the element changes, and set the value of the element from state. 
-
-- Define a property on state
-- Set the valuse of the form element it value on state
-- Set state when the form element changes
-
-
-## After Class
-
-- 
-
-## Additional Resources
-
-- Compare Android and iOS
-	- https://medium.com/@chunchuanlin/android-vs-ios-compare-20-ui-components-patterns-part-1-ad33c2418b45
-	- https://medium.com/@vedantha/interaction-design-patterns-ios-vs-android-111055f8a9b7
-	- https://www.ready4s.com/blog/android-vs-ios-comparing-ui-design
+- [ScrollView](https://facebook.github.io/react-native/docs/scrollview)
+- [FlatList](https://facebook.github.io/react-native/docs/flatlist)
+	- [data](https://facebook.github.io/react-native/docs/flatlist#data)
+	- [renderItem](https://facebook.github.io/react-native/docs/flatlist#renderitem)
+	- [keyExtractor](https://facebook.github.io/react-native/docs/flatlist#keyextractor)

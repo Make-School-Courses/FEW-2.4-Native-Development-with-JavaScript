@@ -1,32 +1,33 @@
 # FEW 2.4 Class 8 Defining a project
 
-From here til the end of the term you will be working on your final project. 
+From here until the end of the term you will be working on your final project. Your goal is to define what the project is and plan how you will complete it between now and the end of the term. 
 
 ## Learning Objectives
 
-- Define goals 
-- Map out milestones 
-- 
+- Define project goals
+- Identify the platform
+- Map out milestones
 
 ## React Native Q and A
 
 What kinds of questions do you have so far about React Native? 
 	
-	
-	
-	
-	
-	
-	
-	
+- Native Components in general
+- Specific Components
+	- FlatList 
+	- View 
+	- Text 
 
-## Learning Objectives/Competencies
+## Defining the final 
 
-- Use List View 
-- Use Scroll View 
-- Differentiate the differences and use cases for List and Scroll views 
-- Input views and Controlled component pattern
-- Handle user input on mobile/touch screen 
+What are you going to make? 
+
+What platform will it use? 
+
+- Mobile
+- Desktop
+
+Define milestones for the project. A milestone is a a step in the construction of your project and should have a deliverable.
 
 ## Handling Input 
 
@@ -75,40 +76,6 @@ Use the [Controlled Component pattern](https://reactjs.org/docs/forms.html) with
 - Set the valuse of the form element it value on state
 - Set state when the form element changes
 
-
-## After Class
-
-- 
-
-## Additional Resources
-
-- Compare Android and iOS
-	- https://medium.com/@chunchuanlin/android-vs-ios-compare-20-ui-components-patterns-part-1-ad33c2418b45
-	- https://medium.com/@vedantha/interaction-design-patterns-ios-vs-android-111055f8a9b7
-	- https://www.ready4s.com/blog/android-vs-ios-comparing-ui-design
-
-	
-	
-	
-	
-	
-## In Class Activity I
-
-- I do, We do, You do
-- Reading & Discussion Questions in small groups
-- Draw a picture/diagram
-- Complete Challenges solo or in pair
-- Q&A about tutorials
-- Pair up and code review
-- Pair program
-- Formative assessment
-- Form into groups
-- etc (get creative :D)
-
-## Overview/TT II (optional)
-
-## In Class Activity II (optional)
-
 ## After Class
 
 - Continue working on your current tutorial
@@ -117,7 +84,11 @@ Use the [Controlled Component pattern](https://reactjs.org/docs/forms.html) with
 
 ## Additional Resources
 
-- Compare Android and iOS
-	- https://medium.com/@chunchuanlin/android-vs-ios-compare-20-ui-components-patterns-part-1-ad33c2418b45
-	- https://medium.com/@vedantha/interaction-design-patterns-ios-vs-android-111055f8a9b7
-	- https://www.ready4s.com/blog/android-vs-ios-comparing-ui-design
+- [Controlled Component pattern](https://reactjs.org/docs/forms.html) 
+- [InputAccessoryView]( https://facebook.github.io/react-native/docs/inputaccessoryview) - Customizes keyboard input view
+- [Picker](https://facebook.github.io/react-native/docs/picker) - Handles multi-choice input with a scrolling list of choices. Good for many choices.
+- [PickerIOS](https://facebook.github.io/react-native/docs/pickerios) - iOS Picker View
+- [SegmentedConreolIOS](https://facebook.github.io/react-native/docs/segmentedcontrolios) - Multi-choice input, iOS only, good for a few choices. 
+- [Slider](https://facebook.github.io/react-native/docs/slider)
+- [Switch](https://facebook.github.io/react-native/docs/switch) - Like a checkbox
+- [TextInput](https://facebook.github.io/react-native/docs/textinput) - Use for Single line and multi-line text input 
