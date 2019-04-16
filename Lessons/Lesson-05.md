@@ -1,111 +1,171 @@
-# FEW 2.4 Class 5 - React Native
+# FEW 2.4 class 5 - Native Components Part 1
 
-## Learning Objectives/Competencies
+Mobile is the land of small screens in portrait orientation. This is a different environment from the desktop. Building mobile apps require developers to think different to work with the limited space. 
 
-- Define use cases for web vs mobile 
-- Identify differences in development between Android and iOS
-- Using Native Components
-- Building and running apps with Expo
-- Compare and contrast testing in the simulator vs testing on a device
+## Learning Objectives
 
-## Initial Exercise
+- Display data on mobile
+- Differentiate list view and scrollview and their use cases
+- Use a FlatList
 
-- What is React Native?
-    - What is Native?
-    - Why build a native app?
-    - Why build a Web app?
-    - What is the user experience web vs native?
-        
-### Compare Android and iOS UI design
+## ScrollView vs ListView 
 
-- https://medium.com/@chunchuanlin/android-vs-ios-compare-20-ui-components-patterns-part-1-ad33c2418b45
+Mobile screens are small you'll always be scrollings. There are two ways to handle scrolling. 
 
-Take a quick look at the article above. Discuss the differences with a partner. Ideally, pair Android and iOS users. Use your mobile device to help answer the questions. 
+- Scrolling a **small** amount of content
+- Scrolling a **large** amount of content
 
-Answer these questions: 
+**tl;dr** For a small amount of content use a ScrollView. For a large amount of content use a ListView. This is obviously an oversimplified solution but it describes the situation well enough.
 
-- Are there any similarities? 
-- What are the major differences? 
-- What does this mean for the developer? 
+ScrollView scrolls things when the things take up more space than the ScrollView displays. Yeah that's what you expected. 
 
-## What is React Native? 
+Why is there a ListView and why would you use one?
 
-It's a tool from the Facebook team. It uses React to create truly native apps. 
+The ListView manages a large amount of data. Remember when Steve Jobs said you could have 10,000 songs in your pocket? People though it was great. 
 
-You create apps using the same React Component architecture. The components you create are translated into native code. 
+There was a developer somewhere that needed to solve the problem of how to scroll through a list of 10,000 items! 
 
-The app logic you write is written in JavaScript. React native implements a subset of the standard browser JavaScript API that maps to native systems. 
+Seriously imagine creating 10,000 views and loading them in RAM. Sounds like a memory problem. Heck! imagine rendering the pixels that made up a list of table cells where each cell is 40 pixels tall...
 
-This means not everything is supported, if supported you can most likely work with a feature in the same way you would have worked with it in regular JS project. 
+That's a 40,000 pixel tall images! If each cell were 320 pixels wide: 
 
-Create your first React Native project by following the guide [here](https://facebook.github.io/react-native/docs/getting-started). 
+`40 * 320 * 10,000 = 128,000,000`
 
-## Styling React Native 
+By comparison the iPhone SE screen is 320 x 568, thats:
 
-React Native components are styled with a style object using CSS properties. 
+`320 * 568 = 181,760`
 
-Not all properties are supported. Each component only supports a subset of CSS properties. Be sure to look at the documentation for each component to see what properties it supports and how to use that property. 
+So with 10,000 table cells listing all of your favorite songs on your iPhone SE you'd need more than 704 screens!
 
-Why? These components are translated to native code. CSS is used here as an interface to the native code. 
+`128,000,000 / 181,760 = 704.2253521127`
 
-## React Native 
+What does the ListView do differently? 
 
-Working with Native projects is a little more complex than working with Web projects. Native projects require a few more tools. These tools compile native code to the target platform, serve the project, and simulate native hardware. 
+The ListView generates enough views to fill the screen. It displays only a subset of data at any moment. As each row view scrolls off the screen it is recycled and populated with new data. 
 
-You'll need to have Node.js 8+ for running the dev server and compiling your JS code. 
+## Implement ScrollView
 
-- Check that you have this installed
+- Create a scrollView 
+- add some content 
+- scroll! 
 
-To work with React Native you'll need to have the command-line tool to create and run projects on your computer. 
+## Implement FlatList
 
-To test the projects on your phone, Android or iOS, you'll need to install the [Expo](https://expo.io/learn) App. 
+- Define data 
+- Create a FlatList 
+- Define props 
+	- renderItem
+	- keyExtractor
+	
+Why data? 
 
-- Install it now
-    - [Expo Android](https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=www)
-    - [Expo iOS](https://itunes.apple.com/app/apple-store/id982107779)
+FlatList needs to know how many rows you have to work with. Only a subset of the data will be displayed in the list. FlatList keeps track of the starting and ending indexs that are currently displayed. 
+	
+Why renderItem?
 
-To test your app in a simulator on your computer you'll need to install Xcode and or Android Studio. 
+This function returns takes an object with the data and returns a React Native Component that displays as the list cell. FlatList will ask us for the cells it needs, we supply the cell from the data and index. 
 
-To build and publish your app you'll need to Xcode for iOS and or Android Studio. 
+The Object passed to renderItem includes three keys: 
 
-You can skip these steps for now if you have Expo on a mobile device. 
+- item : The data item for this row
+- index : the index of this row in data
+- separators : An object with properties that can be used to render separators between rows
 
-To publish your native apps to the Apple App Store you'll need to have Apple Developer Account. 
+Why keyExtractor? 
 
-This sounds like a lot, and it is, compared to web projects. This is one of the burdens of native dev. 
+Each cell needs a unique id, keyExtractor is a method that generates a unique id for each row. You supply a function that takes two prarameters: 
 
-The easiest path to development is to test on your device using the Expo App. Not only does React Native make this process streamlined and easy to work with, but it also allows you to see your app as it will appear on a real device which is a great way to test. 
+- item : The data item for this row
+- index : The index of the row in data
 
-Follow the [Quickstart Guide](https://facebook.github.io/react-native/docs/getting-started). 
+Use this function to generate unique row ids. 
 
-## In Class Activity I
+## ScrollView demo
 
-- Build a simple UI with styles. Use the following native components. Be sure to look them up in the [docs](https://facebook.github.io/react-native/docs/getting-started)!
-    - View
-    - Text
-- Use styles to style the components. Use Flexbox for layout. Be sure to consult the docs to find the supported CSS properties!
-    - flex
-    - width
-    - fontSize
-    - color
-    - backgroundColor
+- Create ScrollView 
+- Fill with objects
+- Set styles 
+- Options 
 
-- Build tip calculator with React Native. Use these components: 
-    - View 
-    - Text
-    - TextInput
-    - Button
+## FlatList demo
 
-## After Class
+- Look at the data source 
+- Import FlatList
+- Render a FlatList
+- Set props
+	- data
+	- renderItem 
+	- keyExtractor
+- Define a Row Component
 
-As an intro to React Native do this tutorial. It covers Native Components, Styling Native Components, networking, and geolocation.
+The data source includes a list of cat anda list of dogs. Each animal has an object that inlcudes a breed property, and a list of other properties that rate the `breed` in different areas such as: friendliness, Affection, Shedding, Health etc. Each of these fields is rated with a value of 0 to 5. 
 
-- [Wthr Tutorial](https://www.makeschool.com/academy/track/standalone/wthr-native-tutorial-mvs/getting-started)
+NOTE! Not all properties appear with every animal. Only `breed` is guaranteed to appear with each object. 
 
-This tutorial is short, your goal is to complete it this week. 
+Create the FlatList component. Add set it's props. 
 
-## Additional Resources
+- `data` - Set the data source to an array. 
+- renderItem - A function that returns a Component
+	- The function takes an object with the following properties: 
+		- `item` - An item from data
+		- `index` - the index of the item in data
+		- `separators` - An object with properties used for customizing custom separator Components (not used in this example)
+		
+Set data to an array:
 
-- [React Native](https://facebook.github.io/react-native/)
-- [React Native - Quick Start](https://facebook.github.io/react-native/docs/getting-started.html)
-- [Wthr Tutorial](https://github.com/MakeSchool-Tutorials/FEW-2.4-Wthr-Native-Tutorial)
+```JSX
+<FlatList 
+	...
+	data={['A', 'B', 'C', 'D']}
+	...
+/>
+```
+
+Here the array contains data items that rendered into rows in the FlatList. 
+
+Set renderItem: 
+
+```JSX
+<FlatList 
+	...
+	renderItem={({item, index}) => <Text>{`${index} ${item}`}</Text>}
+	...
+/>
+```
+
+The renderItem function returns a component to display for each row. The function receives an object with the item and the index. these were displayed with a text component. 
+
+Define keyExtractor: 
+
+```JSX
+<FlatList 
+	...
+	keyExtractor={(item, index) => `${item}-${index}`}
+	...
+/>
+```
+
+The keyExtractor function generates a unique key for each cell. Here the cell was generated from the contents of the row plus the index. If your data had unique ids you could use those. 
+
+## Challenges 
+
+Use the starter project starter code [here](https://github.com/Make-School-Labs/by-breed-starter).
+
+- Use the cat or dog data in place of the Array of strings used in the example. 
+- Create a custom function for each row. Return this from renderItem.
+- Style the row component
+- Display the data from the cat/dog object. 
+
+## After class
+
+- Define a project for yourself it should be native either desktop or mobile
+- Create a set of milestones. 
+	- List these by class number with completed project done on class 14. 
+
+## Resources 
+
+- [ScrollView](https://facebook.github.io/react-native/docs/scrollview)
+- [FlatList](https://facebook.github.io/react-native/docs/flatlist)
+	- [data](https://facebook.github.io/react-native/docs/flatlist#data)
+	- [renderItem](https://facebook.github.io/react-native/docs/flatlist#renderitem)
+	- [keyExtractor](https://facebook.github.io/react-native/docs/flatlist#keyextractor)
