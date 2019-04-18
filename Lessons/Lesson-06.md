@@ -4,30 +4,55 @@ From here until the end of the term you will be working on your final project. Y
 
 ## Learning Objectives
 
+- Apply Styles to components 
+- Explore Native Components and read documentation apply what you find
 - Define project goals
 - Identify the platform
 - Map out milestones
 
+## Styling Components 
+
+Components in React Native are styled using inline styles. 
+
+```JavaScript
+...
+return <View style={{width: 100}}>...</View>
+...
+```
+
+Use `StyleSheet.create()` for some reason not clearly explained in the docs. The `StyleSheet` also has some helper functions. 
+
+```JavaScript
+...
+return <View style={styles.container}></View>
+...
+import { StyleSheet }
+const styles = StyleSheet.create({
+	container: {
+		width: 100
+	}
+})
+```
+
+**Important!** React Native uses CSS styles but there are a few differences between React Native and the Web. 
+
+- Does not support all styles 
+- Not all components support all styles 
+- All units are pixels/points (with a few expections)
+
+### Flex Box
+
+Everything is styled with Flex. The following properties will take your layouts far. 
+
+- flex
+- justifyContent
+- alignItems 
+
+Keep in mind that Flexbox applies to children. While Flexbox applies toa . single axis you can mix axis by nesting elements in in a view. 
+
 ## React Native Q and A
 
 What kinds of questions do you have so far about React Native? 
-	
-- Native Components in general
-- Specific Components
-	- FlatList 
-	- View 
-	- Text 
-
-## Defining the final 
-
-What are you going to make? 
-
-What platform will it use? 
-
-- Mobile
-- Desktop
-
-Define milestones for the project. A milestone is a a step in the construction of your project and should have a deliverable.
 
 ## Handling Input 
 
@@ -76,11 +101,31 @@ Use the [Controlled Component pattern](https://reactjs.org/docs/forms.html) with
 - Set the valuse of the form element it value on state
 - Set state when the form element changes
 
+## Activity 
+
+Use components to solve these problems. 
+
+- FlatList
+	- Use header, footer, and or separator in the list
+	- Use TextInput to filter list 
+- TextInput 
+	- Input zip code in Wthr app to show whether
+	- Use KeyBoardAvoidingView
+
 ## After Class
 
-- Continue working on your current tutorial
-- Complete reading
-- Complete challenges
+Define your final project. This must be a native app of some kind. 
+
+## Defining the final 
+
+What are you going to make? 
+
+What platform will it use? 
+
+- Mobile
+- Desktop
+
+Define milestones for the project. A milestone is a a step in the construction of your project and should have a deliverable.
 
 ## Additional Resources
 
