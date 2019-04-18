@@ -108,6 +108,8 @@ Use the [Controlled Component pattern](https://reactjs.org/docs/forms.html) with
 
 Use components to solve these problems. 
 
+- ScrollView 
+	- Make a scrolling view with content Use any components to fill the view.
 - FlatList
 	- Use header, footer, and or separator in the list
 	- Use TextInput to filter list 
