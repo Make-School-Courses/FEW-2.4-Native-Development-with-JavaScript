@@ -70,6 +70,9 @@ React Native provides a few interactive components.
 	- TouchableNativeFeedback
 	- TouchableOpacity
 	- TouchableWithoutNativeFeedback
+- TextInput
+
+Use the 'Touchable' components to create custom buttons and things you can tap to handle input. 
 
 ## Forms 
 
