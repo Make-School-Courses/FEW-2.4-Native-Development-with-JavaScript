@@ -1,4 +1,24 @@
-# More Navigation
+# FEW 2.4 Navigation Part 2
+
+A second look at navigation with FlatList and Passing Params. 
+
+## Table View Detail View 
+
+On iOS the TableView is the equivalent of the FlatList in React Native. Tapping a list cell to display a another view with information realted to selected cell is a very common navigation pattern.
+
+The class example will take a secon look at the By Breed app from a previous class. This time we will display a list of breed names in a FlatList, tapping a breed will display information about the breed in a detail screen. 
+
+[**Download the starter project**]()
+
+
+
+
+
+
+
+
+
+
 
 
 ## Learning Objectives/Competencies
