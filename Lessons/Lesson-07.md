@@ -44,7 +44,9 @@ A **Stack** is a series of Screens. This is similar to what you see in the brows
 
 **Drawers** act like tabs but the drawer is hidden until displayed, usually by tapping the "Hamburger" menu. Like Tabs, Drawers are available from any Screen, and anything they display might be a Stack. 
 
-**Modal** Views appear above the current Screen. Imagine a modal as out side of a stack. Anytime you close/dismiss a modal view you are returned to previous Screen. Really you never left, the modal view just appeared on top to ask a clarifying question then went away. 
+**Modal** Views appear above the current Screen. Imagine a modal as out side of a stack. Anytime you close/dismiss a modal view you are returned to previous Screen. Really you never left, the modal view just appeared on top to ask a clarifying question then went away.
+
+![Navigation Illustration](./images/lesson-07.png)
 
 ## Navigator
 
@@ -210,3 +212,5 @@ Start working on your project. Start by building your navigation system. Mock up
 ## Additional Resources
 
 - 
+
+

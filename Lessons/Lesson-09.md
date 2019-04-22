@@ -1,4 +1,8 @@
-# FEW 2.4 Class 6 - Native Components Part 1
+# FEW 2.4 React Native Elements
+
+React native ELements is a library of cross platform UI elements. This library fills in many of the gaps in the default React Native components making it quicker and easier to spin up mobile applications. 
+
+https://react-native-training.github.io/react-native-elements/docs/overview.html
 
 ## Learning Objectives/Competencies
 
@@ -14,22 +18,30 @@
 		- What are the UI systems in use? 
 	- Who uses iOS?
 		- What are UI systems in use? 
+	
 
-## Basic Components 
+## In Class Activity I
 
-Look at the [example project](https://github.com/Make-School-Labs/react-native-components)
+- I do, We do, You do
+- Reading & Discussion Questions in small groups
+- Draw a picture/diagram
+- Complete Challenges solo or in pair
+- Q&A about tutorials
+- Pair up and code review
+- Pair program
+- Formative assessment
+- Form into groups
+- etc (get creative :D)
 
-The components I've chosen for this demo are not specific to iOS or Android  and are common to both. They will be rendered in the style that matches the platform but ottherwise are configured and function the same on both platforms. 
+## Overview/TT II (optional)
 
-Apply some of the ideas from this example project to the Wthr tutorial. 
-
-- Add a background image
-- Add an image the weather
-- Switch to set the unit F˚ or C˚
+## In Class Activity II (optional)
 
 ## After Class
 
 - Continue working on your current tutorial
+- Complete reading
+- Complete challenges
 
 ## Additional Resources
 
