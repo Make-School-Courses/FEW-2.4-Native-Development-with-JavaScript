@@ -183,6 +183,18 @@ tabBarOptions: {
 
 I used keyword colors, you can use RGB or other color values. Yes, tomato is a color, try rebecapurple, aliceblue, blanchedalmond. On second thought don't, make up your own colors instead! 
 
+### Tab Navigator Recap
+
+Discussion: 
+
+- Quickly describe how tabnavigator is constructed
+- How are icons added? 
+- What other options can be applied? 
+
+Stretch challenges: 
+
+- Add a stack navigator to one of the tabs screens
+
 ### Drawer Navigator
 
 I had a hard time getting this to work. I suspect this was because I was working on iOS. 
