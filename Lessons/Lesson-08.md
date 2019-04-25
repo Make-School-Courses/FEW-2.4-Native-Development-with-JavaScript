@@ -128,7 +128,19 @@ Challenges:
 
 Explore Icons here: 
 
-Look at the bundled icon sets: https://github.com/oblador/react-native-vector-icons#bundled-icon-sets
+Look at the bundled icon sets: https://github.com/oblador/react-native-vector-icons#bundled-icon-sets.
+
+Challenges: 
+
+- Make some icons in a Screen. You'll need to: 
+	- Import the icon set you want to use
+	- Figure out the name of the icon you want to see (this might take some experimentation)
+	- Add and configure an Icon component in your Screen
+	
+Stretch Challenge: 
+
+- Make an Icon button. 
+	- Follow the guide [here](https://github.com/oblador/react-native-vector-icons#iconbutton-component)
 
 ## Tab Bar Icons 
 
@@ -236,13 +248,16 @@ Do this now in class!
 
 ## Additional Resources
 
-- https://reactnavigation.org/docs/en/drawer-based-navigation.html
-- https://reactnavigation.org/docs/en/tab-based-navigation.html
-- https://reactnavigation.org/docs/en/tab-based-navigation.html#minimal-example-of-tab-based-navigation
-- https://github.com/oblador/react-native-vector-icons
-- https://reactnavigation.org/docs/en/tab-based-navigation.html#customizing-the-appearance
-- https://reactnavigation.org/docs/en/bottom-tab-navigator.html#bottomtabnavigatorconfig
-- https://reactnavigation.org/docs/en/drawer-based-navigation.html
-- https://reactnavigation.org/docs/en/tab-based-navigation.html
-- https://snack.expo.io/@aboutreact/navigationdrawer-example?session_id=snack-session-5vdX_nqe_
+- React Navigation
+	- Tabs
+		- https://reactnavigation.org/docs/en/tab-based-navigation.html
+		- https://reactnavigation.org/docs/en/tab-based-navigation.html#minimal-example-of-tab-based-navigation
+		- https://reactnavigation.org/docs/en/tab-based-navigation.html#customizing-the-appearance
+		- https://reactnavigation.org/docs/en/bottom-tab-navigator.html#bottomtabnavigatorconfig
+	- Vector Icons 
+		- https://github.com/oblador/react-native-vector-icons
+		- https://github.com/oblador/react-native-vector-icons#iconbutton-component
+	- Drawers 
+		- https://reactnavigation.org/docs/en/drawer-based-navigation.html
+		- https://snack.expo.io/@aboutreact/navigationdrawer-example?session_id=snack-session-5vdX_nqe_
 
