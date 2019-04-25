@@ -180,19 +180,15 @@ const message = navigation.getParam('message', 'default value')
 ...
 ```
 
-## Tabs and Drawers
+## Table View Detail View 
 
-Generally Tabbed navigation is used on iOS and Drawers/Hamburger menu is used on Android, material on Android also has it's own tabbed nav. 
+On iOS the TableView is the equivalent of the FlatList in React Native. Tapping a list cell to display a another view with information realted to selected cell is a very common navigation pattern.
 
-Expo init provides an option for creating a tabbed app. This might be a good starting point. The app it creates is moderately complex. 
+The class example will take a secon look at the By Breed app from a previous class. This time we will display a list of breed names in a FlatList, tapping a breed will display information about the breed in a detail screen. 
 
-Alternately you can follow the guide here: 
+[**Download the starter project**](https://github.com/soggybag/navigation-list-starter)
 
-- https://reactnavigation.org/docs/en/tab-based-navigation.html
-
-For Drawer navigation you can follow the guide here: 
-
-- https://reactnavigation.org/docs/en/drawer-based-navigation.html
+Follow the instructions in the Readme for the project. 
 
 ## Plan your navigation
 
