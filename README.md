@@ -53,7 +53,7 @@ Students by the end of the course will be able to:
 | 10 |  Thursday, May 2                         | [Lesson 10] |
 | 11 |  Tuesday, May 7                          | [Lesson 11] |  
 | 12 |  Thursday, May 9                         | [Lesson 12] |
-| 13 |  Tuesday, May 14                         | Final Class (presentations, etc) |
+| 13 |  Tuesday, May 14                         | [Final Class (presentations, etc)](Lessons/Lesson-13.md) |
 | 14 |  Thursday, May 16                        | Final Exams/Presentations |
 
 [Lesson 1]: Lessons/Lesson-01.md
