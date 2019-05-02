@@ -1,47 +1,29 @@
-# Styling Components
+# React Native APIs
 
-## Learning Objectives/Competencies
+## Learning Outcomes
 
-- Build Native apps with Native Components
-- Compare and contrast native Android vs Native iOS components
-- Identify Android and iOS UI paradigms 
-- Use FlexBox to layout user interfaces
+By the end of this class, you'll learn how to...
 
-## Initial Exercise
+- Integrate react native APIs into your app that utilize hardware components
+- Animate components
 
-- Discussion Android and iOS
-	- Who uses Android? 
-		- What are the UI systems in use? 
-	- Who uses iOS?
-		- What are UI systems in use? 
-	
+## Motion Sensors Example
 
-## In Class Activity I
+Example of how to integrate with sensors in a phone, such as the accelerometer and gyroscope
 
-- I do, We do, You do
-- Reading & Discussion Questions in small groups
-- Draw a picture/diagram
-- Complete Challenges solo or in pair
-- Q&A about tutorials
-- Pair up and code review
-- Pair program
-- Formative assessment
-- Form into groups
-- etc (get creative :D)
+## TT/Activity - Camera API
 
-## Overview/TT II (optional)
+Walking through a live coding example of using a camera API in a react native app
 
-## In Class Activity II (optional)
+## TT - Animation Example
 
-## After Class
+Showcase an animated splash screen example
 
-- Continue working on your current tutorial
-- Complete reading
-- Complete challenges
+## Animation Activity
 
-## Additional Resources
+Given some starter code, animate 1+ components in the project, or extend existing animations
 
-- Compare Android and iOS
-	- https://medium.com/@chunchuanlin/android-vs-ios-compare-20-ui-components-patterns-part-1-ad33c2418b45
-	- https://medium.com/@vedantha/interaction-design-patterns-ios-vs-android-111055f8a9b7
-	- https://www.ready4s.com/blog/android-vs-ios-comparing-ui-design
+## Resources
+
+- [https://medium.com/react-native-training/using-sensors-in-react-native-b194d0ad9167](https://medium.com/react-native-training/using-sensors-in-react-native-b194d0ad9167)
+- [https://github.com/react-native-community/react-native-camera](https://github.com/react-native-community/react-native-camera)
