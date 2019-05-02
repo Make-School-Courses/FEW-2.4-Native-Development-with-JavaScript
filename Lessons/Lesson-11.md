@@ -1,47 +1,32 @@
-# React Native APIs
+# Publishing to the App Store
 
-## Learning Objectives/Competencies
+## Learning Outcomes
 
-- Build Native apps with Native Components
-- Compare and contrast native Android vs Native iOS components
-- Identify Android and iOS UI paradigms 
-- Use FlexBox to layout user interfaces
+By the end of this class, you will learn how to...
 
-## Initial Exercise
+- Publish a native app to the App Store and the Google Play Store
 
-- Discussion Android and iOS
-	- Who uses Android? 
-		- What are the UI systems in use? 
-	- Who uses iOS?
-		- What are UI systems in use? 
+## TT - Marketing Material
+
+Before you can publish, you'll need to create all the marketing material needed to publish to a store. This includes:
+
+- App description
+- App Screenshots
+- Icons
+- Promo images/videos
 	
+## TT - Keys, Certificates, Provisioning Profiles, Oh my!
 
-## In Class Activity I
+Need keys and certificates for Android
 
-- I do, We do, You do
-- Reading & Discussion Questions in small groups
-- Draw a picture/diagram
-- Complete Challenges solo or in pair
-- Q&A about tutorials
-- Pair up and code review
-- Pair program
-- Formative assessment
-- Form into groups
-- etc (get creative :D)
+iOS requires the provisioning profile and certificate
 
-## Overview/TT II (optional)
+## Activity - Make icons and take screenshots
 
-## In Class Activity II (optional)
+Take some screenshots of your app. Learn how to do it like a pro through a class discusssion with Mitchell!
 
-## After Class
+Make icons for your app. These need to be exact sizes, and we'll go through it as a class
 
-- Continue working on your current tutorial
-- Complete reading
-- Complete challenges
+## Resources
 
-## Additional Resources
-
-- Compare Android and iOS
-	- https://medium.com/@chunchuanlin/android-vs-ios-compare-20-ui-components-patterns-part-1-ad33c2418b45
-	- https://medium.com/@vedantha/interaction-design-patterns-ios-vs-android-111055f8a9b7
-	- https://www.ready4s.com/blog/android-vs-ios-comparing-ui-design
+- [https://apiko.com/blog/deploying-react-native-apps-to-app-store-and-play-market/](https://apiko.com/blog/deploying-react-native-apps-to-app-store-and-play-market/)
