@@ -1,32 +1,46 @@
-# Publishing to the App Store
+# FEW 2.4 Animation 
 
-## Learning Outcomes
+Making things move on mobile provides that thing that makes your apps interesting and irresistible. 
 
-By the end of this class, you will learn how to...
+## Objectives 
 
-- Publish a native app to the App Store and the Google Play Store
+- Make things that move on mobile
+- Use Animated for discreet animated objects 
+- Use LayoutAnimation for animating groups of elements
 
-## TT - Marketing Material
+## Animation
 
-Before you can publish, you'll need to create all the marketing material needed to publish to a store. This includes:
+Animation is about making things change over time. On the computer this boils down to changing numeric values over time. The appearance of any component on the screen is controlled by a series of numeric values. Change these values and and the appearance of the things changes. Continuously change the values and it looks like it's moving. 
 
-- App description
-- App Screenshots
-- Icons
-- Promo images/videos
-	
-## TT - Keys, Certificates, Provisioning Profiles, Oh my!
+For the record motion includes changes in color and opacity, size, shape, and rotation. 
 
-Need keys and certificates for Android
+While we could changes values using timers React Native has provides more abstract systems for making things move.
 
-iOS requires the provisioning profile and certificate
+React Native provides two complimentry animation systems: `Animated` for animating specific elements and interactions, and `LayoutAnimation` for animating global layout transactions. 
 
-## Activity - Make icons and take screenshots
+## `Animated`
 
-Take some screenshots of your app. Learn how to do it like a pro through a class discusssion with Mitchell!
+Animation is making things move on the screen. Behind the scenes this is handled by changing values over time. 
 
-Make icons for your app. These need to be exact sizes, and we'll go through it as a class
+For example if you wanted a view to fade you would animate the opacity of the view from 0 to 1. 
 
-## Resources
+Animated is a built in Component, you'll use it to handle animating other components. 
 
-- [https://apiko.com/blog/deploying-react-native-apps-to-app-store-and-play-market/](https://apiko.com/blog/deploying-react-native-apps-to-app-store-and-play-market/)
+`import { Animated } from 'react-native'`
+
+Define a property to animate on state. This example will animate the opacity of a component. 
+
+```JS
+state = {
+	fade: new Animated.Value(0),
+}
+```
+
+Start the animation by defining the starting value, and providing a config object. The config object sets the `duration` and the `toValue`.
+
+
+
+
+
+
+
