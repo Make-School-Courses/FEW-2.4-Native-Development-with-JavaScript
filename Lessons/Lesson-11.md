@@ -26,19 +26,23 @@ For example if you wanted a view to fade you would animate the opacity of the vi
 
 Animated is a built in Component, you'll use it to handle animating other components. 
 
-`import { Animated } from 'react-native'`
+Animated has many options!
 
-Define a property to animate on state. This example will animate the opacity of a component. 
+**Use Animated for discreet animations**. This would be single elements that move or change. 
 
-```JS
-state = {
-	fade: new Animated.Value(0),
-}
-```
+## `LayoutAnimation`
 
-Start the animation by defining the starting value, and providing a config object. The config object sets the `duration` and the `toValue`.
+LayoutAnimation 
 
+## Demo Example 
 
+Follow the example here: https://github.com/Make-School-Labs/react-native-animation-examples
+
+There are several example Components: Animated_1-6 that show introductory examples of motion using animated. 
+
+## Resources 
+
+- 
 
 
 
