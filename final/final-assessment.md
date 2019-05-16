@@ -55,7 +55,7 @@ Look at the images and try to match the general styles you see.
 
 - Basic styles (5)
   - Background Color is #000
-  - Text color is whit #fff
+  - Text color is white #fff
 - Tab bar Styles (5)
   - Inactive Background color #000
   - active background color #111
@@ -117,7 +117,7 @@ Try any of the problems below.
 	- Year formed
 	- Country of origin
 - Add a tab that shows 
-	- Band with most
+	- Band with most fans
 - Show the musical styles
 	- Make a tab view 
 	- Find all of the different musical styles represented in the data
