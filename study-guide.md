@@ -1,55 +1,64 @@
 # FEW 2.4 Final Assessment Study Guide 
 
-JavaScript General 
+## Suggestions 
+
+- Finish projects implement ideas from study guide in project 
+- Doing one project with all of these ideas 
+- Go class...
+- Get sleep 8hr 
+- Continue practicing with projects 
+	- Demo projects with ideas from study guide 
+
+## JavaScript General 
 
 - Map
 - Filter 
 - Reduce
 
-Native Applications General
+## Native Applications General
 
 - Be able to identify use cases for native applications vs web based applications. 
 
-Electron 
+## Electron 
 
 - Create an electron app from an HTML project
 
-React Native 
+## React Native
 
 - Be able to create a React Native Project 
 
-Write components
+## Write components 
 
 - Class 
 - Function 
 
-Redux 
+## Redux 
 
 - Actions - Define actions and action cvreators
 - Reducers - Define reducers, combine reducers
-- Store - create store 
+- Store - create store
 
-React Redux 
+## React Redux 
 
 - Provider - 
 - Create Connected components 
 	- connect()()
 	- mapStateToProps()
-	- mapActionsToProps()
+	- mapActionsToProps() (mapDispatchToProps())
 
-Implement Native Components 
+## Implement Native Components 
 	
 - ScrollView 
 - FlatList 
 	
-React Navigation 
+## React Navigation 
 
 - Stack Navigator
 - Tab Navigator 
 
-Layout Element with Flex 
+## Layout Element with Flex 
 
-Animation 
+## Animation 
 
 - Animated
 - LayoutAnimation
