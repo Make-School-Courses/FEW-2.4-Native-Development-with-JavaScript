@@ -74,7 +74,7 @@ Look at the images and try to match the general styles you see.
     - font size 18
 - Band List Cell styles (5)
   - Layout looks like the image
-    - Band Name and formation dyearate on the left
+    - Band Name and formation date are on the left
     - Country of Origin and fans on the right
   - Band name
     - font size 18
