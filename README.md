@@ -2,9 +2,7 @@
 
 ## Course Description
 
-This class covers how JavaScript can be used to create native desktop and mobile applications.  Using Electron on the desktop and React Native for mobile, applications have the ease of being cross platform and written in JavaScript while still benefiting most of the features of writing in the native language.  Students will deepen their JavaScript knowledge and gain understanding where these JavaScript frameworks can and can not effectively replace native programming.
-
-Tools: JavaScript ES6, React JS, Electron, React Native
+This course covers how JavaScript can be used to create native desktop and mobile applications for both Android and iOS. JavaScript provides a path to applications that have the ease of being cross platform and written in JavaScript while still benefiting most of the features of writing in the native language. Students will deepen their JavaScript knowledge and gain understanding where these JavaScript frameworks can and can not effectively replace native programming.
 
 ### Why you should should take this class?
 
