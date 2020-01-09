@@ -1,4 +1,4 @@
-# FEW 2.4 Class 8 Defining a project
+# FEW 2.4 Class 6 Defining a project
 
 From here until the end of the term you will be working on your final project. Your goal is to define what the project is and plan how you will complete it between now and the end of the term. 
 
