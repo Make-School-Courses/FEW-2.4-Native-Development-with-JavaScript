@@ -2,9 +2,7 @@
 
 ## Course Description
 
-This class covers how JavaScript can be used to create native desktop and mobile applications.  Using Electron on the desktop and React Native for mobile, applications have the ease of being cross platform and written in JavaScript while still benefiting most of the features of writing in the native language.  Students will deepen their JavaScript knowledge and gain understanding where these JavaScript frameworks can and can not effectively replace native programming.
-
-Tools: JavaScript ES6, React JS, Electron, React Native
+This course covers how JavaScript can be used to create native desktop and mobile applications for both Android and iOS. JavaScript provides a path to applications that have the ease of being cross platform and written in JavaScript while still benefiting most of the features of writing in the native language. Students will deepen their JavaScript knowledge and gain understanding where these JavaScript frameworks can and can not effectively replace native programming.
 
 ### Why you should know this (optional)
 
@@ -24,6 +22,7 @@ Students by the end of the course will be able to:
 1. Design and build applications using Android and or iOS UI Paradigms
 
 ## Schedule
+
 **Course Dates:** Monday, January 20 – Wednesday, March 4, 2020 (7 weeks)
 
 **Class Times:** Monday and Wednesday at 3:30–5:20pm (13 class sessions)
@@ -52,6 +51,19 @@ Students by the end of the course will be able to:
 | [Assignment 1 React/Redux Tutorial](Assignments/Assignment-1-react-redux.md) | Tue, Oct 15 | Tue, Oct 22 | - |
 | [Assignment 2 Desktop Application](Assignments/Assignment-2-desktop-app.md) | day, Date | day, Date | - |
 | [Assignment 3 Mobile Application](Assignments/Assignment-3-mobile-app.md) | day, Date | day, Date | - |
+
+### Projects
+
+- Electron Project
+- React Native Project
+- Custom Project 
+
+### Final Exam
+
+-  **Passing the exam is a requirement for passing the class.**
+- You will have 2 hours to complete this exam - it will be in class using paper and pencil, or a format of the instructor's choosing
+- There are no retakes of the exam.
+- If you have a disability that needs an accommodation such as extended time or a different format, please take advantage of our [accommodations program](make.sc/disability-policy).
 
 ## Evaluation
 
