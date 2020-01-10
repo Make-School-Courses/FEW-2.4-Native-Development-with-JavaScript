@@ -1,144 +1,110 @@
-# FEW 2.4 Class 8 Defining a project
+<!-- .slide: data-background="./Images/header.svg" data-background-repeat="none" data-background-size="40% 40%" data-background-position="center 10%" class="header" -->
+# Class - Lesson Title
 
-From here until the end of the term you will be working on your final project. Your goal is to define what the project is and plan how you will complete it between now and the end of the term. 
+<!-- Put a link to the slides so that students can find them -->
 
-## Learning Objectives
+➡️ [**Slides**](/Syllabus-Template/Slides/Lesson1.html ':ignore')
 
-- Apply Styles to components 
-- Explore Native Components and read documentation apply what you find
-- Define project goals
-- Identify the platform
-- Map out milestones
+<!-- > -->
 
-## Styling Components 
+## Minute-by-Minute [OPTIONAL]
 
-Components in React Native are styled using inline styles. 
+| **Elapsed** | **Time**  | **Activity**              |
+| ----------- | --------- | ------------------------- |
+| 0:00        | 0:05      | Objectives                |
+| 0:05        | 0:15      | Overview                  |
+| 0:20        | 0:30      | In Class Activity I       |
+| 0:50        | 0:10      | BREAK                     |
+| 1:00        | 0:45      | In Class Activity II      |
+| 1:45        | 0:05      | Wrap up review objectives |
+| TOTAL       | 1:50      | -                         |
 
-```JavaScript
-...
-return <View style={{width: 100}}>...</View>
-...
-```
 
-Use `StyleSheet.create()` for some reason not clearly explained in the docs. The `StyleSheet` also has some helper functions. 
+<!-- > -->
 
-```JavaScript
-...
-return <View style={styles.container}></View>
-...
-import { StyleSheet }
-const styles = StyleSheet.create({
-	container: {
-		width: 100
-	}
-})
-```
+## Why you should know this or industry application (optional) (5 min)
 
-**Important!** React Native uses CSS styles but there are a few differences between React Native and the Web. 
+Explain why students should care to learn the material presented in this class.
 
-- Does not support all styles 
-- Not all components support all styles 
-- All units are pixels/points (with a few expections)
+<!-- > -->
 
-### Flex Box
+## Learning Objectives (5 min)
 
-Everything is styled with Flex. The following properties will take your layouts far. 
+1. Identify and describe
+1. Define
+1. Design
+1. Implement
 
-- flex
-- justifyContent
-- alignItems 
+<!-- > -->
 
-Keep in mind that Flexbox applies to children. While Flexbox applies toa . single axis you can mix axis by nesting elements in in a view. 
+## Initial Exercise (15 min)
 
-## React Native Q and A
+- Funny comic
+- Prime the Pump (e.g. think and jot, think pair share, etc)
+- Productivity Tip/Tool
+- Review of current event (e.g. tech news relevant to your track/topic)
+- Quiz on homework or topic(s) of past class
+- Concept Test
 
-What kinds of questions do you have so far about React Native? 
+<!-- > -->
 
-## Handling Input 
+# Topic 1
 
-Touch screen devices have their own input paradigms. Touch screen interaction is a very different experience from mouse driven interaction. 
+<!-- v -->
 
-Discuss the differences
+## Overview/TT I (20 min)
 
-https://facebook.github.io/react-native/docs/handling-touches
+- Why learn this?
+- Industry examples of usage
+- Best practices
+- Personal anecdote
 
-React Native provides a few interactive components. 
+<aside class="notes">
+Place more detailed information or speaker notes in "aside" elements - it will appear in GitHub Pages but not in the slides.
+</aside>
 
-- Button - Good for basic button
-- Touchables - Good when the button isn't enough or can't be styled to meet your needs. 
-	- TouchableHighlight
-	- TouchableNativeFeedback
-	- TouchableOpacity
-	- TouchableWithoutNativeFeedback
-- TextInput
+<!-- v -->
 
-Use the 'Touchable' components to create custom buttons and things you can tap to handle input. 
+## In Class Activity I (30 min)
 
-## Forms 
+- I do, We do, You do
+- Reading & Discussion Questions in small groups
+- Draw a picture/diagram
+- Complete Challenges solo or in pair
+- Q&A about tutorials
+- Pair up and code review
+- Pair program
+- Formative assessment
+- Form into groups
+- etc (get creative :D)
 
-Forms on native follow the same patterns used with React on the web with a few unique issues. 
+<!-- > -->
 
-Keyboard avoiding!
+<!-- .slide: data-background="#087CB8" -->
+## [**10m**] BREAK
 
-Mobile screens are small and space is limited. On mobile the keyboard will often obscure an input field. React Native solves this with it's: 
+<!-- > -->
 
-[KeyboardAvoidingView](https://facebook.github.io/react-native/docs/keyboardavoidingview)
+# Topic 2
 
-For Text input use: 
+<!-- v -->
 
-- [InputAccessoryView]( https://facebook.github.io/react-native/docs/inputaccessoryview) - Customizes keyboard input view
-- [Picker](https://facebook.github.io/react-native/docs/picker) - Handles multi-choice input with a scrolling list of choices. Good for many choices.
-- [PickerIOS](https://facebook.github.io/react-native/docs/pickerios) - iOS Picker View
-- [SegmentedConreolIOS](https://facebook.github.io/react-native/docs/segmentedcontrolios) - Multi-choice input, iOS only, good for a few choices. 
-- [Slider](https://facebook.github.io/react-native/docs/slider)
-- [Switch](https://facebook.github.io/react-native/docs/switch) - Like a checkbox
-- [TextInput](https://facebook.github.io/react-native/docs/textinput) - Use for Single line and multi-line text input 
+## Overview/TT II (optional) (20 min)
 
-## Controlled Component Pattern
+<!-- v -->
 
-Use the [Controlled Component pattern](https://reactjs.org/docs/forms.html) with form elements. 
+## In Class Activity II (optional) (30 min)
 
-**tl;dr** Store the value of the input element on state, set the state when the element changes, and set the value of the element from state. 
+<!-- > -->
 
-- Define a property on state
-- Set the valuse of the form element it value on state
-- Set state when the form element changes
+## Wrap Up (5 min)
 
-## Activity 
+- Continue working on your current tutorial
+- Complete reading
+- Complete challenges
 
-Use components to solve these problems. 
-
-- ScrollView 
-	- Make a scrolling view with content Use any components to fill the view.
-- FlatList
-	- Use header, footer, and or separator in the list
-	- Use TextInput to filter list 
-- TextInput 
-	- Input zip code in Wthr app to show whether
-	- Use KeyBoardAvoidingView
-
-## After Class
-
-Define your final project. This must be a native app of some kind. 
-
-## Defining the final 
-
-What are you going to make? 
-
-What platform will it use? 
-
-- Mobile
-- Desktop
-
-Define milestones for the project. A milestone is a a step in the construction of your project and should have a deliverable.
+<!-- > -->
 
 ## Additional Resources
 
-- [Controlled Component pattern](https://reactjs.org/docs/forms.html) 
-- [InputAccessoryView]( https://facebook.github.io/react-native/docs/inputaccessoryview) - Customizes keyboard input view
-- [Picker](https://facebook.github.io/react-native/docs/picker) - Handles multi-choice input with a scrolling list of choices. Good for many choices.
-- [PickerIOS](https://facebook.github.io/react-native/docs/pickerios) - iOS Picker View
-- [SegmentedConreolIOS](https://facebook.github.io/react-native/docs/segmentedcontrolios) - Multi-choice input, iOS only, good for a few choices. 
-- [Slider](https://facebook.github.io/react-native/docs/slider)
-- [Switch](https://facebook.github.io/react-native/docs/switch) - Like a checkbox
-- [TextInput](https://facebook.github.io/react-native/docs/textinput) - Use for Single line and multi-line text input 
+1. Links to additional readings and videos
