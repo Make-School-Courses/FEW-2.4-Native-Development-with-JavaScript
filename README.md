@@ -23,26 +23,26 @@ Students by the end of the course will be able to:
 
 ## Schedule
 
-**Course Dates:** Monday, January 20 – Wednesday, March 4, 2020 (7 weeks)
+**Course Dates:** Tuesday, June 2 – Thursday, July 16, 2020 (7 weeks)
 
-**Class Times:** Monday and Wednesday at 3:30–5:20pm (13 class sessions)
+**Class Times:** Tuesday and Thursday at 2:00–4:45 pm (14 class sessions)
 
 | Class | Date | Topics | Assignments |
 |:-----:|:----:|:------:|:-----------:|
-|  - |  Mon, January 20 | **NO CLASS** - MLK Day |  |
-|  1 |  Wed, January 22 | [Lesson 1](Lessons/Lesson-01.md) | [Assignment 1 React/Redux Tutorial](Assignments/Assignment-1-react-redux.md) |
-|  2 |  Mon, January 27 | [Lesson 2](Lessons/Lesson-02.md) |  |
-|  3 |  Wed, January 29 | [Lesson 3](Lessons/Lesson-03.md) | [Assignment 2 Desktop Application](Assignments/Assignment-2-desktop-app.md) |
-|  4 |  Mon, February 3 | [Lesson 4](Lessons/Lesson-04.md) |  |
-|  5 |  Wed, February 5 | [Lesson 5](Lessons/Lesson-05.md) | [Assignment 3 Mobile Application](Assignments/Assignment-3-mobile-app.md) |
-|  6 |  Mon, February 10| [Lesson 6](Lessons/Lesson-06.md) |  |
-|  7 |  Wed, February 12| [Lesson 7](Lessons/Lesson-07.md) |  |
-|  8 |  Mon, February 17| [Lesson 8](Lessons/Lesson-08.md) |  |
-|  9 |  Wed, February 19| [Lesson 9](Lessons/Lesson-09.md) |  |
-| 10 |  Mon, February 24| [Lesson 10](Lessons/Lesson-10.md)|  |
-| 11 |  Wed, February 26| [Lesson 11](Lessons/Lesson-11.md)|  |
-| 12 |  Mon, March 2    | [Lesson 12](Lessons/Lesson-12.md)|  |
-| 13 |  Wed, March 4    | [Final Exam/Presentations](Lessons/Lesson-14.md) |  |
+|  1 |  Tue, June 2  | [Lesson 1](Lessons/Lesson-01.md) | [Assignment 1 React/Redux Tutorial](Assignments/Assignment-1-react-redux.md) |
+|  2 |  Thu, June 4  | [Lesson 2](Lessons/Lesson-02.md) |  |
+|  3 |  Tue, June 9  | [Lesson 3](Lessons/Lesson-03.md) | [Assignment 2 Desktop Application](Assignments/Assignment-2-desktop-app.md) |
+|  4 |  Thu, June 11 | [Lesson 4](Lessons/Lesson-04.md) |  |
+|  5 |  Tue, June 16 | [Lesson 5](Lessons/Lesson-05.md) | [Assignment 3 Mobile Application](Assignments/Assignment-3-mobile-app.md) |
+|  6 |  Thu, June 18 | [Lesson 6](Lessons/Lesson-06.md) |  |
+|  7 |  Tue, June 23 | [Lesson 7](Lessons/Lesson-07.md) |  |
+|  8 |  Thu, June 25 | [Lesson 8](Lessons/Lesson-08.md) |  |
+|  9 |  Tue, June 30 | [Lesson 9](Lessons/Lesson-09.md) |  |
+| 10 |  Thu, July 2  | [Lesson 10](Lessons/Lesson-10.md)|  |
+| 11 |  Tue, July 7  | [Lesson 11](Lessons/Lesson-11.md)|  |
+| 12 |  Thu, July 9  | [Lesson 12](Lessons/Lesson-12.md)|  |
+| 13 |  Tue, July 14 | [Final Assessment](Lessons/Lesson-14.md) |  |
+| 14 |  Thu, July 16 | [Final Presentations](Lessons/Lesson-14.md) |  |
 
 ## Assignment Schedule 
 
@@ -56,7 +56,7 @@ Students by the end of the course will be able to:
 
 - Electron Project
 - React Native Project
-- Custom Project 
+- Custom Project
 
 ### Final Exam
 
