@@ -4,7 +4,7 @@
 
 This course covers how JavaScript can be used to create native desktop and mobile applications for both Android and iOS. JavaScript provides a path to applications that have the ease of being cross platform and written in JavaScript while still benefiting most of the features of writing in the native language. Students will deepen their JavaScript knowledge and gain understanding where these JavaScript frameworks can and can not effectively replace native programming.
 
-### Why you should know this (optional)
+### Why you should know this
 
 If your goal is to make the best possible user experiences and products having the ability to make truly native applications is a great tool to have in your arsenal. If you want to broaden your skill set out from the web adding native development is a good direction. If you want get a deeper understanding of the JavaScript language, and if you want to develop your programming knowledge by practicing with Reactive and functional programming concepts. 
 
