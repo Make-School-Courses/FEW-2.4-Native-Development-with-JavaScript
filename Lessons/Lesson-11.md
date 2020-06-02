@@ -1,110 +1,63 @@
-<!-- .slide: data-background="./Images/header.svg" data-background-repeat="none" data-background-size="40% 40%" data-background-position="center 10%" class="header" -->
-# Class - Lesson Title
+# React Native APIs
 
-<!-- Put a link to the slides so that students can find them -->
+## Learning Outcomes
 
-➡️ [**Slides**](/Syllabus-Template/Slides/Lesson1.html ':ignore')
+By the end of this class, you'll learn how to...
 
-<!-- > -->
+- Integrate react native APIs into your app that utilize hardware components
+- Animate components
 
-## Minute-by-Minute [OPTIONAL]
+## Motion Sensors Example
 
-| **Elapsed** | **Time**  | **Activity**              |
-| ----------- | --------- | ------------------------- |
-| 0:00        | 0:05      | Objectives                |
-| 0:05        | 0:15      | Overview                  |
-| 0:20        | 0:30      | In Class Activity I       |
-| 0:50        | 0:10      | BREAK                     |
-| 1:00        | 0:45      | In Class Activity II      |
-| 1:45        | 0:05      | Wrap up review objectives |
-| TOTAL       | 1:50      | -                         |
+Example of how to integrate with sensors in a phone, such as the accelerometer and gyroscope
 
+## Camera API
 
-<!-- > -->
+Walking through a live coding example of using a camera API in a react native app
 
-## Why you should know this or industry application (optional) (5 min)
+## Animation Example
 
-Explain why students should care to learn the material presented in this class.
+Showcase an animated splash screen example
 
-<!-- > -->
+## Animation Activity
 
-## Learning Objectives (5 min)
+Given some starter code, animate 1+ components in the project, or extend existing animations
 
-1. Identify and describe
-1. Define
-1. Design
-1. Implement
+## Resources
 
-<!-- > -->
+- [https://medium.com/react-native-training/using-sensors-in-react-native-b194d0ad9167](https://medium.com/react-native-training/using-sensors-in-react-native-b194d0ad9167)
+- [https://github.com/react-native-community/react-native-camera](https://github.com/react-native-community/react-native-camera)
 
-## Initial Exercise (15 min)
+# Publishing to the App Store
 
-- Funny comic
-- Prime the Pump (e.g. think and jot, think pair share, etc)
-- Productivity Tip/Tool
-- Review of current event (e.g. tech news relevant to your track/topic)
-- Quiz on homework or topic(s) of past class
-- Concept Test
+## Learning Outcomes
 
-<!-- > -->
+By the end of this class, you will learn how to...
 
-# Topic 1
+- Publish a native app to the App Store and the Google Play Store
 
-<!-- v -->
+## TT - Marketing Material
 
-## Overview/TT I (20 min)
+Before you can publish, you'll need to create all the marketing material needed to publish to a store. This includes:
 
-- Why learn this?
-- Industry examples of usage
-- Best practices
-- Personal anecdote
+- App description
+- App Screenshots
+- Icons
+- Promo images/videos
+	
+## TT - Keys, Certificates, Provisioning Profiles, Oh my!
 
-<aside class="notes">
-Place more detailed information or speaker notes in "aside" elements - it will appear in GitHub Pages but not in the slides.
-</aside>
+Need keys and certificates for Android
 
-<!-- v -->
+iOS requires the provisioning profile and certificate
 
-## In Class Activity I (30 min)
+## Activity - Make icons and take screenshots
 
-- I do, We do, You do
-- Reading & Discussion Questions in small groups
-- Draw a picture/diagram
-- Complete Challenges solo or in pair
-- Q&A about tutorials
-- Pair up and code review
-- Pair program
-- Formative assessment
-- Form into groups
-- etc (get creative :D)
+Take some screenshots of your app. Learn how to do it like a pro through a class discusssion with Mitchell!
 
-<!-- > -->
+Make icons for your app. These need to be exact sizes, and we'll go through it as a class
 
-<!-- .slide: data-background="#087CB8" -->
-## [**10m**] BREAK
+## Resources
 
-<!-- > -->
+- [https://apiko.com/blog/deploying-react-native-apps-to-app-store-and-play-market/](https://apiko.com/blog/deploying-react-native-apps-to-app-store-and-play-market/)
 
-# Topic 2
-
-<!-- v -->
-
-## Overview/TT II (optional) (20 min)
-
-<!-- v -->
-
-## In Class Activity II (optional) (30 min)
-
-<!-- > -->
-
-## Wrap Up (5 min)
-
-- Continue working on your current tutorial
-- Complete reading
-- Complete challenges
-
-<!-- > -->
-
-## Additional Resources
-
-1. Links to additional readings and videos

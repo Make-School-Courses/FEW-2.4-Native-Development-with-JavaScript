@@ -1,110 +1,109 @@
-<!-- .slide: data-background="./Images/header.svg" data-background-repeat="none" data-background-size="40% 40%" data-background-position="center 10%" class="header" -->
-# Class - Lesson Title
+# FEW 2.4 Class 1 - Native Applications with JavaScript
 
-<!-- Put a link to the slides so that students can find them -->
+## Introduction
 
-➡️ [**Slides**](/Syllabus-Template/Slides/Lesson1.html ':ignore')
+The purpose of this class is expand your JavaScript skills by exploring native applications built with JS. 
 
-<!-- > -->
+## Your Goals
 
-## Minute-by-Minute [OPTIONAL]
+Goals - 
 
-| **Elapsed** | **Time**  | **Activity**              |
-| ----------- | --------- | ------------------------- |
-| 0:00        | 0:05      | Objectives                |
-| 0:05        | 0:15      | Overview                  |
-| 0:20        | 0:30      | In Class Activity I       |
-| 0:50        | 0:10      | BREAK                     |
-| 1:00        | 0:45      | In Class Activity II      |
-| 1:45        | 0:05      | Wrap up review objectives |
-| TOTAL       | 1:50      | -                         |
+There are two goals that will bring you success: building portfolio projects and mastering learning objectives. 
 
+During the course of this class you will build two portfolio projects that show off your front end skills. I will present ideas and projects, you need to take them to completion. 
 
-<!-- > -->
+If you have ideas that outside the description of the project talk to the instructor. We will always be willing to work with you. My only request will be the projects include the learning objectives and the scope of the project be reasonable.
 
-## Why you should know this or industry application (optional) (5 min)
+What are learning objectives? 
 
-Explain why students should care to learn the material presented in this class.
+I’ll present ideas in class and give them a descriptor. These are learning objectives, concepts and ideas that you need to know to claim mastery of the subject. Learning Objectives are often skills that are related to success at job interviews and on the job. 
 
-<!-- > -->
+When you understand a learning objective you will be able to explain it and put it into practice. There will be learning objectives for each class. You should test your knowledge by explaining the concepts to someone else. Implement the learning objectives in code when the learning objectives are code. Some objectives are larger overarching concepts, in these cases you should identify the learning objective in your code, your project as a whole, or in the larger software ecosystem or the world at large. 
 
-## Learning Objectives (5 min)
+If you are having trouble understanding a learning objective you need to take action. Discuss the topic with another student, talk with a TA, bring questions to class, talk to an instructor during lab or office hours. 
 
-1. Identify and describe
-1. Define
-1. Design
-1. Implement
+## Learning Objectives
 
-<!-- > -->
+1. Define Components with Class and function syntax
+  - Component Architecture
+  - Props and State
+  - JSX
+1. Compare and constrast Web and Native Applications 
+1. Compare and constrast Mobile vs Desktop experiences  
 
-## Initial Exercise (15 min)
+## Initial Exercise
 
-- Funny comic
-- Prime the Pump (e.g. think and jot, think pair share, etc)
-- Productivity Tip/Tool
-- Review of current event (e.g. tech news relevant to your track/topic)
-- Quiz on homework or topic(s) of past class
-- Concept Test
+- Dicussion: 
+  - What is native?
+  - Native vs Web
+    - What makes a good native app? 
+    - What makes a good web app? 
+  - Desktop vs Mobile? 
+    - What makes a good desktop app?
+    - What makes a good mobile app?
 
-<!-- > -->
+## Why Learn React?  
 
-# Topic 1
+React is one of the most popular libraries around today. Seriously, you should know it! React is good to learn now since it has huge and well-deserved popularity.
 
-<!-- v -->
+[Hacker News top 5 Hiring trends 2019](https://www.hntrends.com/2019/oct-no-sign-of-react-falling-back.html?compare=React&compare=Vue&compare=Angular&compare=)
 
-## Overview/TT I (20 min)
+[Hacker News Hiring Trends: React, Vue, Angular, Angular 2](https://www.hntrends.com/2019/oct-no-sign-of-react-falling-back.html?compare=AngularJS&compare=Ember&compare=React&compare=Vue)
 
-- Why learn this?
-- Industry examples of usage
-- Best practices
-- Personal anecdote
+[NPM Downloads: React, Vue, Angular, Angular 2](https://npm-stat.com/charts.html?package=react&package=vue&package=angular&package=angular%202&from=2016-06-01&to=2018-05-31)
 
-<aside class="notes">
-Place more detailed information or speaker notes in "aside" elements - it will appear in GitHub Pages but not in the slides.
-</aside>
+Looks to me like it's a good time to learn React. That said, it won't be here forever and you are capable of learning any framework. React is a good place to invest your time right now. 
 
-<!-- v -->
+## React Review
 
-## In Class Activity I (30 min)
+<!-- - Components
+  - Function vs Class
+  - Props and State
+  - JSX
 
-- I do, We do, You do
-- Reading & Discussion Questions in small groups
-- Draw a picture/diagram
-- Complete Challenges solo or in pair
-- Q&A about tutorials
-- Pair up and code review
-- Pair program
-- Formative assessment
-- Form into groups
-- etc (get creative :D)
+Build a Cookie Clicker in class?
 
-<!-- > -->
+- What is a [clicker](https://en.wikipedia.org/wiki/Cookie_Clicker)? 
+- [Universal Paper Clips](http://www.decisionproblem.com/paperclips/)
+- [Incremental Game Math](https://gamedevelopment.tutsplus.com/articles/numbers-getting-bigger-the-design-and-math-of-incremental-games--cms-24023)
 
-<!-- .slide: data-background="#087CB8" -->
-## [**10m**] BREAK
+Redux would be a great way to create a complext cookie clicker game. 
 
-<!-- > -->
+Build the following components
 
-# Topic 2
+- Couter Display
+- Counter 
+	- Button add to count
+	- Upgrade button
+- Auto Counter
+	- Upgrade button
 
-<!-- v -->
+## After Class -->
 
-## Overview/TT II (optional) (20 min)
+Review practice and brush up your React and Redux skills by completing one of the tutorials below.
 
-<!-- v -->
+Choose a tutorial to work on. Your goal is to complete your chosen tutorial before class next week.
 
-## In Class Activity II (optional) (30 min)
+There are three tutorials listed by level of difficulty.
 
-<!-- > -->
-
-## Wrap Up (5 min)
-
-- Continue working on your current tutorial
-- Complete reading
-- Complete challenges
-
-<!-- > -->
+1. [Password App](https://github.com/MakeSchool-Tutorials/web-7-react-redux-passwords-app)
+2. [Timers App](https://github.com/MakeSchool-Tutorials/web-7-react-redux-timers-app)
+3. [Tetris App](https://github.com/MakeSchool-Tutorials/web-7-react-redux-tetris-app)
 
 ## Additional Resources
 
-1. Links to additional readings and videos
+- [Hacker News Hiring Trends: React, Vue, Angular, Angular 2](https://www.hntrends.com/2018/jun-no-signs-of-slowing-for-react.html?compare1=React&compare2=AngularJS&compare3=Angular+2&compare4=Vue)
+- [NPM Downloads: React, Vue, Angular, Angular 2](https://npm-stat.com/charts.html?package=react&package=vue&package=angular&package=angular%202&from=2016-06-01&to=2018-05-31)
+- [React](https://reactjs.org)
+- [Redux](https://redux.js.org)
+- [Incremental (Clicker) Games](https://en.wikipedia.org/wiki/Incremental_game)
+- [Universal Paperclips](http://www.decisionproblem.com/paperclips/)
+- [Password App](https://github.com/MakeSchool-Tutorials/web-7-react-redux-passwords-app)
+- [Timers App](https://github.com/MakeSchool-Tutorials/web-7-react-redux-timers-app)
+- [Tetris App](https://github.com/MakeSchool-Tutorials/web-7-react-redux-tetris-app) 
+
+
+5 intro 
+10 Objectives 
+5  why react?
+10 

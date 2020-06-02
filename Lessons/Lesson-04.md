@@ -1,110 +1,51 @@
-<!-- .slide: data-background="./Images/header.svg" data-background-repeat="none" data-background-size="40% 40%" data-background-position="center 10%" class="header" -->
-# Class - Lesson Title
+# FEW 2.4 Class 4 - Electron Lab
 
-<!-- Put a link to the slides so that students can find them -->
+Debugging Electron. 
 
-➡️ [**Slides**](/Syllabus-Template/Slides/Lesson1.html ':ignore')
+Communication between the Main Process and rendering Processes. 
 
-<!-- > -->
+## Learning Objectives
 
-## Minute-by-Minute [OPTIONAL]
+1. Identify problems 
+1. Create solutions
+1. Use CSS to create user interfaces 
+1. Implement communication between main and rendering processes
 
-| **Elapsed** | **Time**  | **Activity**              |
-| ----------- | --------- | ------------------------- |
-| 0:00        | 0:05      | Objectives                |
-| 0:05        | 0:15      | Overview                  |
-| 0:20        | 0:30      | In Class Activity I       |
-| 0:50        | 0:10      | BREAK                     |
-| 1:00        | 0:45      | In Class Activity II      |
-| 1:45        | 0:05      | Wrap up review objectives |
-| TOTAL       | 1:50      | -                         |
+## Initial Exercise
 
+- CSS and UI issues
+	- forms elements
+- Electron Options 
+	- Size of Window
+	- Saving data
 
-<!-- > -->
+## Main Process vs Rendering Process
 
-## Why you should know this or industry application (optional) (5 min)
+- What is the main process? 
+- What is the rendering process? 
+- Creating communication between the two
 
-Explain why students should care to learn the material presented in this class.
+## Review CSS Grid and Flexbox
 
-<!-- > -->
+Use Grid for two dimensional layouts and Flexbox for arranging things on a single axis. 
 
-## Learning Objectives (5 min)
+Both are applied to a parent container and affect the children. 
 
-1. Identify and describe
-1. Define
-1. Design
-1. Implement
+You can use Flex box inside a grid or one grid within another grid. 
 
-<!-- > -->
+- Use Grid for two dimensional layouts.
+- Use `grid-template-area` for arbitrary layouts use `grid-template-columns` for dynamic content. 
 
-## Initial Exercise (15 min)
+- Use Flexbox for one dimensional layout
+- Use think in terms of main axis and cross axis
 
-- Funny comic
-- Prime the Pump (e.g. think and jot, think pair share, etc)
-- Productivity Tip/Tool
-- Review of current event (e.g. tech news relevant to your track/topic)
-- Quiz on homework or topic(s) of past class
-- Concept Test
+## After Class
 
-<!-- > -->
-
-# Topic 1
-
-<!-- v -->
-
-## Overview/TT I (20 min)
-
-- Why learn this?
-- Industry examples of usage
-- Best practices
-- Personal anecdote
-
-<aside class="notes">
-Place more detailed information or speaker notes in "aside" elements - it will appear in GitHub Pages but not in the slides.
-</aside>
-
-<!-- v -->
-
-## In Class Activity I (30 min)
-
-- I do, We do, You do
-- Reading & Discussion Questions in small groups
-- Draw a picture/diagram
-- Complete Challenges solo or in pair
-- Q&A about tutorials
-- Pair up and code review
-- Pair program
-- Formative assessment
-- Form into groups
-- etc (get creative :D)
-
-<!-- > -->
-
-<!-- .slide: data-background="#087CB8" -->
-## [**10m**] BREAK
-
-<!-- > -->
-
-# Topic 2
-
-<!-- v -->
-
-## Overview/TT II (optional) (20 min)
-
-<!-- v -->
-
-## In Class Activity II (optional) (30 min)
-
-<!-- > -->
-
-## Wrap Up (5 min)
-
-- Continue working on your current tutorial
-- Complete reading
-- Complete challenges
-
-<!-- > -->
+- Wrap up the Electron project. You should have a functional Electron application that runs on the desktop. 
+- 
 
 ## Additional Resources
 
-1. Links to additional readings and videos
+- [Electron Passing Data Demo](https://github.com/soggybag/electron-passing-data-demo)
+- [ipcRenderer](https://electronjs.org/docs/api/ipc-renderer)
+- [ipcMain](https://electronjs.org/docs/api/ipc-main)

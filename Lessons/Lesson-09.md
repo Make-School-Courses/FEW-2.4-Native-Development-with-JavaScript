@@ -1,110 +1,33 @@
-<!-- .slide: data-background="./Images/header.svg" data-background-repeat="none" data-background-size="40% 40%" data-background-position="center 10%" class="header" -->
-# Class - Lesson Title
+# FEW 2.4 React Native Elements
 
-<!-- Put a link to the slides so that students can find them -->
+React native ELements is a library of cross platform UI elements. This library fills in many of the gaps in the default React Native components making it quicker and easier to spin up mobile applications. 
 
-➡️ [**Slides**](/Syllabus-Template/Slides/Lesson1.html ':ignore')
+https://react-native-training.github.io/react-native-elements/docs/overview.html
 
-<!-- > -->
+## Learning Objectives/Competencies
 
-## Minute-by-Minute [OPTIONAL]
+- Build Native apps with Native Components
+- Compare and contrast native Android vs Native iOS components
+- Identify Android and iOS UI paradigms 
+- Use FlexBox to layout user interfaces
 
-| **Elapsed** | **Time**  | **Activity**              |
-| ----------- | --------- | ------------------------- |
-| 0:00        | 0:05      | Objectives                |
-| 0:05        | 0:15      | Overview                  |
-| 0:20        | 0:30      | In Class Activity I       |
-| 0:50        | 0:10      | BREAK                     |
-| 1:00        | 0:45      | In Class Activity II      |
-| 1:45        | 0:05      | Wrap up review objectives |
-| TOTAL       | 1:50      | -                         |
+## Initial Exercise
 
+- Discussion Android and iOS
+	- Who uses Android? 
+		- What are the UI systems in use? 
+	- Who uses iOS?
+		- What are UI systems in use? 
 
-<!-- > -->
-
-## Why you should know this or industry application (optional) (5 min)
-
-Explain why students should care to learn the material presented in this class.
-
-<!-- > -->
-
-## Learning Objectives (5 min)
-
-1. Identify and describe
-1. Define
-1. Design
-1. Implement
-
-<!-- > -->
-
-## Initial Exercise (15 min)
-
-- Funny comic
-- Prime the Pump (e.g. think and jot, think pair share, etc)
-- Productivity Tip/Tool
-- Review of current event (e.g. tech news relevant to your track/topic)
-- Quiz on homework or topic(s) of past class
-- Concept Test
-
-<!-- > -->
-
-# Topic 1
-
-<!-- v -->
-
-## Overview/TT I (20 min)
-
-- Why learn this?
-- Industry examples of usage
-- Best practices
-- Personal anecdote
-
-<aside class="notes">
-Place more detailed information or speaker notes in "aside" elements - it will appear in GitHub Pages but not in the slides.
-</aside>
-
-<!-- v -->
-
-## In Class Activity I (30 min)
-
-- I do, We do, You do
-- Reading & Discussion Questions in small groups
-- Draw a picture/diagram
-- Complete Challenges solo or in pair
-- Q&A about tutorials
-- Pair up and code review
-- Pair program
-- Formative assessment
-- Form into groups
-- etc (get creative :D)
-
-<!-- > -->
-
-<!-- .slide: data-background="#087CB8" -->
-## [**10m**] BREAK
-
-<!-- > -->
-
-# Topic 2
-
-<!-- v -->
-
-## Overview/TT II (optional) (20 min)
-
-<!-- v -->
-
-## In Class Activity II (optional) (30 min)
-
-<!-- > -->
-
-## Wrap Up (5 min)
+## After Class
 
 - Continue working on your current tutorial
 - Complete reading
 - Complete challenges
 
-<!-- > -->
-
 ## Additional Resources
 
-1. Links to additional readings and videos
+- Compare Android and iOS
+	- https://medium.com/@chunchuanlin/android-vs-ios-compare-20-ui-components-patterns-part-1-ad33c2418b45
+	- https://medium.com/@vedantha/interaction-design-patterns-ios-vs-android-111055f8a9b7
+	- https://www.ready4s.com/blog/android-vs-ios-comparing-ui-design

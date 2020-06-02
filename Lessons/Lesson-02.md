@@ -1,110 +1,106 @@
-<!-- .slide: data-background="./Images/header.svg" data-background-repeat="none" data-background-size="40% 40%" data-background-position="center 10%" class="header" -->
-# Class - Lesson Title
+# FEW 2.4 Class 2 - Redux Review 
 
-<!-- Put a link to the slides so that students can find them -->
+## Review and Dig into Redux
 
-➡️ [**Slides**](/Syllabus-Template/Slides/Lesson1.html ':ignore')
+## Learning Objectives 
 
-<!-- > -->
+1. Define Actions, Reducers, and Store
+1. Use Redux to manage application state 
+1. Create container components implement React Redux
+1. Use the react controlled component pattern
 
-## Minute-by-Minute [OPTIONAL]
+## Why learn this?
 
-| **Elapsed** | **Time**  | **Activity**              |
-| ----------- | --------- | ------------------------- |
-| 0:00        | 0:05      | Objectives                |
-| 0:05        | 0:15      | Overview                  |
-| 0:20        | 0:30      | In Class Activity I       |
-| 0:50        | 0:10      | BREAK                     |
-| 1:00        | 0:45      | In Class Activity II      |
-| 1:45        | 0:05      | Wrap up review objectives |
-| TOTAL       | 1:50      | -                         |
+The controlled component pattern is a common pattern to know with Redux. 
 
+Redux is a great system from managing state. If you've ever struggled with complex application state in the past you know how much trouble you can have, amnd how much work it can be to reinvent the wheel for each new project. 
 
-<!-- > -->
+Using Redux will solve many common problems and give you a system that you apply to almost any project. 
 
-## Why you should know this or industry application (optional) (5 min)
+## Build a todolist
 
-Explain why students should care to learn the material presented in this class.
+Build a Todo list. Look at the [sample code](https://github.com/soggybag/redux-todo). 
 
-<!-- > -->
+Currently the application allows you to add items to the list. Each item shows a name and a "completed" state as an X on the right. 
 
-## Learning Objectives (5 min)
+Items are stored in Redux. `TodoList` displays a list of `Todo`. 
 
-1. Identify and describe
-1. Define
-1. Design
-1. Implement
+New Todo uses the [controlled pattern](https://reactjs.org/docs/forms.html). Use this with all form elements. 
 
-<!-- > -->
+### Organizing code
 
-## Initial Exercise (15 min)
+The project contains several components organized in folders. 
 
-- Funny comic
-- Prime the Pump (e.g. think and jot, think pair share, etc)
-- Productivity Tip/Tool
-- Review of current event (e.g. tech news relevant to your track/topic)
-- Quiz on homework or topic(s) of past class
-- Concept Test
+- `App` : The main view of the project. You can think of this as the entry point for you code. 
+- `todo-new` : An input field and button that creates a new todo with a name
+- `todo-list` : Displays a list of `todo` items
+- `todo` : Displays a single todo item with a name and completed status
 
-<!-- > -->
+Components that use more than one file are organized in folders. 
 
-# Topic 1
+### Using Stylesheets
 
-<!-- v -->
+Components have been styled using stylesheets. By convention  by making a name of the stylesheet match the component. 
 
-## Overview/TT I (20 min)
+Use class names within the stylesheet to assign styles to elements. 
 
-- Why learn this?
-- Industry examples of usage
-- Best practices
-- Personal anecdote
+Import the stylesheet into a component using: 
 
-<aside class="notes">
-Place more detailed information or speaker notes in "aside" elements - it will appear in GitHub Pages but not in the slides.
-</aside>
+`import './component-name.css`
 
-<!-- v -->
+### Connecting Components 
 
-## In Class Activity I (30 min)
+Components can connect themselves to the store using 'react-redux'. This library provides the connect method for this purpose. 
 
-- I do, We do, You do
-- Reading & Discussion Questions in small groups
-- Draw a picture/diagram
-- Complete Challenges solo or in pair
-- Q&A about tutorials
-- Pair up and code review
-- Pair program
-- Formative assessment
-- Form into groups
-- etc (get creative :D)
+`connect` takes two parameters. 
 
-<!-- > -->
+- `mapStateToProps(state)` takes state as a parameter and maps values to props on a components. This means you get valeus from state from props! The return value should be an object with the properties that you want to map to props. 
+- `mapDispatchToProps()` this function returns an object with properties whose values are 
 
-<!-- .slide: data-background="#087CB8" -->
-## [**10m**] BREAK
+## Local Storage 
 
-<!-- > -->
+Local storage allows your apps to save data in the browser. This gives your apps the abilioty to save information without and internet connection, a login, database, or other tooling. 
 
-# Topic 2
+Local storage saves data in key value pairs. Values must be simple either strings or numbers. 
 
-<!-- v -->
+This sounds pretty limited. Using JSON allows you to convert collections, like objects and arrays, to a string which can be saved. 
 
-## Overview/TT II (optional) (20 min)
+Save data with: 
 
-<!-- v -->
+`localStorage.setItem(key, data)`
 
-## In Class Activity II (optional) (30 min)
+Fetch data with: 
 
-<!-- > -->
+`localStorage.getItem(key)`
 
-## Wrap Up (5 min)
+Convert complex values with `JSON.stringify()`
 
-- Continue working on your current tutorial
-- Complete reading
-- Complete challenges
+NOTE! Objects and Arrays can contain functions which can not be converted to JSON!
 
-<!-- > -->
+Use this with 
+
+## Adding features 
+
+You need to implement some features. How would you implement the following features? 
+
+- Mark todos when completed
+- Sort the todo list by completed
+- Filter for completed or not completed
+- Delete a todo from the list
+- Edit the name of a todo in the list
+
+## After Class
+
+- Complete your tutorial from [Lesson 1](Lesson-01.md)
 
 ## Additional Resources
 
-1. Links to additional readings and videos
+- [Incremental (Clicker) Games](https://en.wikipedia.org/wiki/Incremental_game)
+- [Universal Paperclips]
+- [React](https://reactjs.org)
+- [Redux](https://redux.js.org)
+- [Password App](https://github.com/MakeSchool-Tutorials/web-7-react-redux-passwords-app)
+- [Timers App](https://github.com/MakeSchool-Tutorials/web-7-react-redux-timers-app)
+- [Tetris App](https://github.com/MakeSchool-Tutorials/web-7-react-redux-tetris-app) 
+- [Hiring Trends](https://www.hntrends.com/2018/jun-no-signs-of-slowing-for-react.html?compare1=React&compare2=Redux&compare3=Angular+2&compare4=AngularJS)
+- [NPM Trends](https://npm-stat.com/charts.html?package=react&package=vue&package=angular&package=angular%202&package=redux&from=2016-06-01&to=2018-05-31)
