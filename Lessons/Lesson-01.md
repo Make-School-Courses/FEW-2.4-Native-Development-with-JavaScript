@@ -2,25 +2,25 @@
 
 ## Introduction
 
-The purpose of this class is expand your JavaScript skills by exploring native applications built with JS. 
+The purpose of this class is to expand your JavaScript skills by exploring native applications built with JS. 
 
 ## Your Goals
 
 Goals - 
 
-There are two goals that will bring you success: building portfolio projects and mastering learning objectives. 
+Two goals will bring you success: building portfolio projects and mastering learning objectives. 
 
-During the course of this class you will build two portfolio projects that show off your front end skills. I will present ideas and projects, you need to take them to completion. 
+During this class, you will build two portfolio projects that show off your front end skills. I will present ideas and projects, you need to take them to completion.
 
-If you have ideas that outside the description of the project talk to the instructor. We will always be willing to work with you. My only request will be the projects include the learning objectives and the scope of the project be reasonable.
+If you have ideas that are outside the description of the project talk to the instructor. We will always be willing to work with you. My only request will be the projects include the learning objectives and the scope of the project to be reasonable.
 
-What are learning objectives? 
+What are the learning objectives? 
 
-I’ll present ideas in class and give them a descriptor. These are learning objectives, concepts and ideas that you need to know to claim mastery of the subject. Learning Objectives are often skills that are related to success at job interviews and on the job. 
+I’ll present ideas in class and give them a descriptor. These are learning objectives, concepts, and ideas that you need to know to claim mastery of the subject. Learning Objectives are often skills that are related to success at job interviews and on the job. 
 
-When you understand a learning objective you will be able to explain it and put it into practice. There will be learning objectives for each class. You should test your knowledge by explaining the concepts to someone else. Implement the learning objectives in code when the learning objectives are code. Some objectives are larger overarching concepts, in these cases you should identify the learning objective in your code, your project as a whole, or in the larger software ecosystem or the world at large. 
+When you understand a learning objective you will be able to explain it and put it into practice. There will be learning objectives for each class. You should test your knowledge by explaining the concepts to someone else. Implement the learning objectives in code when the learning objectives are code. Some objectives are larger overarching concepts, in these cases, you should identify the learning objective in your code, your project as a whole, or in the larger software ecosystem or the world at large. 
 
-If you are having trouble understanding a learning objective you need to take action. Discuss the topic with another student, talk with a TA, bring questions to class, talk to an instructor during lab or office hours. 
+If you are having trouble understanding a learning objective you need to take action. Discuss the topic with another student, talk with a TA, bring questions to the class, talk to an instructor during lab or office hours. 
 
 ## Learning Objectives
 
@@ -28,21 +28,21 @@ If you are having trouble understanding a learning objective you need to take ac
   - Component Architecture
   - Props and State
   - JSX
-1. Compare and constrast Web and Native Applications 
-1. Compare and constrast Mobile vs Desktop experiences  
+1. Compare and contrast Web and Native Applications 
+1. Compare and contrast Mobile vs Desktop experiences 
 
 ## Initial Exercise
 
-- Dicussion: 
+- Discussion: 
   - What is native?
   - Native vs Web
-    - What makes a good native app? 
-    - What makes a good web app? 
+  - What makes a good native app? 
+  - What makes a good web app? 
   - Desktop vs Mobile? 
-    - What makes a good desktop app?
-    - What makes a good mobile app?
+  - What makes a good desktop app?
+  - What makes a good mobile app?
 
-## Why Learn React?  
+## Why Learn React? 
 
 React is one of the most popular libraries around today. Seriously, you should know it! React is good to learn now since it has huge and well-deserved popularity.
 
@@ -67,16 +67,16 @@ Build a Cookie Clicker in class?
 - [Universal Paper Clips](http://www.decisionproblem.com/paperclips/)
 - [Incremental Game Math](https://gamedevelopment.tutsplus.com/articles/numbers-getting-bigger-the-design-and-math-of-incremental-games--cms-24023)
 
-Redux would be a great way to create a complext cookie clicker game. 
+Redux would be a great way to create a complex cookie clicker game. 
 
 Build the following components
 
 - Couter Display
 - Counter 
-	- Button add to count
-	- Upgrade button
+  - Button add to count
+  - Upgrade button
 - Auto Counter
-	- Upgrade button
+  - Upgrade button
 
 ## After Class -->
 
@@ -101,9 +101,3 @@ There are three tutorials listed by level of difficulty.
 - [Password App](https://github.com/MakeSchool-Tutorials/web-7-react-redux-passwords-app)
 - [Timers App](https://github.com/MakeSchool-Tutorials/web-7-react-redux-timers-app)
 - [Tetris App](https://github.com/MakeSchool-Tutorials/web-7-react-redux-tetris-app) 
-
-
-5 intro 
-10 Objectives 
-5  why react?
-10 
