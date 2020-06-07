@@ -57,65 +57,17 @@ Electron Builder is a tool that handles a lot of the work of building your elect
 
 Note! React apps have some special requirements, they are a little more than simple web pages. They also require a special build process. Luckily Electron  Builder supports with Create React App projects out of the box.
 
-Below I've sumarized the steps from this [article](https://www.codementor.io/randyfindley/how-to-build-an-electron-app-using-create-react-app-and-electron-builder-ss1k0sfer)
+Below I've sumarized the steps from this [article](https://www.codementor.io/@randyfindley/how-to-build-an-electron-app-using-create-react-app-and-electron-builder-ss1k0sfer)
 
-- Create a new React App. You can skip this step if you already have an app. Just start the next from your app's directory. 
-	- `npx create-react-app my-app`
-	- `cd my-app`
-- Add some dependencies
-	- `yarn add electron electron-builder --dev`
-	- `yarn add wait-on concurrently --dev`
-	- `yarn add electron-is-dev`
-- Add public/electron.js to setup electron
-	- below...
-- Add to scripts in package.json
-	- `"electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\""`
-- Add to root of package.json
-	- `"main": "public/electron.js",`
+Use one of your existing prjects created with creat-react-app. Add the electron dependencies: 
 
-Test dev mode
-
-- `yarn electron-dev`
-
-Setup production 
-
-- Add to root of package.json
-	- `"homepage": "./",`
-- Add to scripts in package.json
-	- `"postinstall": "electron-builder install-app-deps",`
-	- `"preelectron-pack": "yarn build",`
-	- `"electron-pack": "build -mw"`
-- Add to root of package.json
 ```JSON
-"author": {
-  "name": "Your Name",
-  "email": "your.email@domain.com",
-  "url": "https://your-website.com"
-},
-"build": {
-  "appId": "com.my-website.my-app",
-  "productName": "MyApp",
-  "copyright": "Copyright © 2019 ${author}",
-  "mac": {
-    "category": "public.app-category.utilities"
-  },
-  "files": [
-    "build/**/*",
-    "node_modules/**/*"
-  ],
-  "directories": {
-    "buildResources": "assets"
-  }
-}
+yarn add electron electron-builder --dev
+yarn add wait-on concurrently --dev
+yarn add electron-is-dev
 ```
 
-Build your app for production
-
-- `yarn electron-pack`
-
----
-
-- electron.js
+Create a new file, public/electron.js, with the following contents.
 
 ```JS
 const electron = require('electron');
@@ -152,7 +104,105 @@ app.on('activate', () => {
   }
 });
 ```
----
+
+Add the following to package.json: 
+
+`"main": "public/electron.js",`
+
+Add the following to scripts in package.json: 
+
+`"electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\""`
+
+### Test your Electron app
+
+Use this command to to test your electron app in development mode: 
+
+`yarn electron-dev`
+
+
+### Set up a production build 
+
+We need some build scripts: 
+
+`yarn add @rescripts/cli @rescripts/rescript-env --dev`
+
+Edit package.json and replace these keys in scripts with these: 
+
+```JSON
+"start": "rescripts start",
+"build": "rescripts build",
+"test": "rescripts test",
+```
+
+Now add a new file called .rescriptsrc.js with the following contents:
+
+```JS
+module.exports = [require.resolve('./.webpack.config.js')]
+```
+
+Finally add another new file called .webpack.config.js with the following contents:
+
+```JS
+// define child rescript
+module.exports = config => {
+  config.target = 'electron-renderer';
+  return config;
+}
+```
+
+Add Electron Builder & Typescript:
+
+`yarn add electron-builder typescript --dev`
+
+Edit package.json again add:
+
+`"homepage": "./",`
+
+Now add these to the scripts: 
+
+```JSON
+"postinstall": "electron-builder install-app-deps",
+"preelectron-pack": "yarn build",
+"electron-pack": "build -mw"
+```
+
+Now add all of this to package.json
+
+```json
+"author": {
+  "name": "Your Name",
+  "email": "your.email@domain.com",
+  "url": "https://your-website.com"
+},
+"build": {
+  "appId": "com.my-website.my-app",
+  "productName": "MyApp",
+  "copyright": "Copyright © 2019 ${author}",
+  "mac": {
+    "category": "public.app-category.utilities"
+  },
+  "files": [
+    "build/**/*",
+    "node_modules/**/*"
+  ],
+  "directories": {
+    "buildResources": "assets"
+  }
+},
+```
+
+
+Now, build your app for production: 
+
+`yarn electron-pack`
+
+**NOTE:** Follow the instructions from the article I wasn't able to get it to build until I changed: 
+
+`"electron-pack": "build -mw"` 
+
+to:
+
+`"electron-pack": "electron-builder -mw"`
 
 ## Customizing the App
 
