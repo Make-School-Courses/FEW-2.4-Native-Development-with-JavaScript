@@ -53,11 +53,11 @@ Getting started with Electron is easy. Follow the quick start guide to make a "h
 
 ## Electron Builder
 
-Electron Builder is a tool that handles a lot of the work of building your electron apps. We will use it here.
+Electron Builder is a tool that handles a lot of the work of building your electron apps. You'll use it to create a desktop app from the a tutorial project you created in the last assignment. You can follow these steps to create a desktop app from any other React project also. 
 
-Note! React apps have some special requirements, they are a little more than simple web pages. They also require a special build process. Luckily Electron  Builder supports with Create React App projects out of the box.
+Note! React apps have some special requirements, they are a little more than simple web pages. They also require a special build process. The steps below create an electron app using a Create React App (CRA) project.
 
-Below I've sumarized the steps from this [article](https://www.codementor.io/@randyfindley/how-to-build-an-electron-app-using-create-react-app-and-electron-builder-ss1k0sfer)
+Below I've sumarized the steps from this [article](https://www.codementor.io/@randyfindley/how-to-build-an-electron-app-using-create-react-app-and-electron-builder-ss1k0sfer) with a few changes. 
 
 Use one of your existing prjects created with creat-react-app. Add the electron dependencies: 
 
@@ -80,12 +80,18 @@ const isDev = require('electron-is-dev');
 let mainWindow;
 
 function createWindow() {
-  mainWindow = new BrowserWindow({width: 900, height: 680});
+  mainWindow = new BrowserWindow({
+    width: 900, 
+    height: 680,
+    webPreferences: {
+      nodeIntegration: true
+    }
+  });
   mainWindow.loadURL(isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '../build/index.html')}`);
   if (isDev) {
     // Open the DevTools.
-    //BrowserWindow.addDevToolsExtension('<location to your react chrome extension>');
-    mainWindow.webContents.openDevTools();
+    // BrowserWindow.addDevToolsExtension('<location to your react chrome extension>');
+    // mainWindow.webContents.openDevTools();
   }
   mainWindow.on('closed', () => mainWindow = null);
 }
@@ -119,10 +125,11 @@ Use this command to to test your electron app in development mode:
 
 `yarn electron-dev`
 
+You'll use development mode while to test, modify, and add new features to your app. 
 
 ### Set up a production build 
 
-We need some build scripts: 
+We need some build scripts. These scripts replace the existing react scripts that come with the CRA boilerplate code.  
 
 `yarn add @rescripts/cli @rescripts/rescript-env --dev`
 
@@ -163,7 +170,7 @@ Now add these to the scripts:
 ```JSON
 "postinstall": "electron-builder install-app-deps",
 "preelectron-pack": "yarn build",
-"electron-pack": "build -mw"
+"electron-pack": "electron-builder -mw"
 ```
 
 Now add all of this to package.json
@@ -204,12 +211,30 @@ to:
 
 `"electron-pack": "electron-builder -mw"`
 
+I also added the following to the electron.js script. Without these my project wouldn't build.  
+
+```JS
+webPreferences: {
+  nodeIntegration: true
+}
+```
+
+
 ## Customizing the App
+
+The electron.js file has configuration code that is used to by the process that runs the electron app. The HTML/CSS/JS code that was your original CRA project is displayed by electron and is the user interface for your project. 
+
+You can modify the application in a few says. Try changing the size of the app and adding an icon. 
+
+While the icon might not sound important in reality it is. It's the first thing people see when they use your app. So it's a chance to brand your product and set impressions. It's also required to publish your apps to the app store. Without an icon your app will automatically be rejected. 
+
+Icons are actually more complex than you might think. You'll need images for all of the different screen resolutions your app might support. 
 
 - Set window size in electron.js:11
 	- `mainWindow = new BrowserWindow({width: 400, height: 600});`
 - App Icon
-	- https://www.christianengvall.se/electron-app-icons/
+	- https://dev.to/onmyway133/changing-electron-app-icon
+  - https://www.christianengvall.se/electron-app-icons/
 	- https://www.electron.build/icons
 	
 ## Build an Electron App

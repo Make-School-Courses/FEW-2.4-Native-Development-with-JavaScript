@@ -6,10 +6,29 @@ Communication between the Main Process and rendering Processes.
 
 ## Learning Objectives
 
+1. Dog Fooding...
 1. Identify problems 
 1. Create solutions
 1. Use CSS to create user interfaces 
 1. Implement communication between main and rendering processes
+
+## What is Dog Fooding? 
+
+https://en.wikipedia.org/wiki/Eating_your_own_dog_food
+
+In a nutshell it's using the product you create! How many times have you done this? If the answer is less than the number of products you have created you're missing a big opportunity to improve those products! 
+
+The goal: Now that you have created your desktop app you should use it. 
+
+If you created the password generator save some passwords. Every time you create a password save it to the app. You can mock this up if you don't want to save real passwords (security). Open it and retreive passwords when you need them. 
+
+If you made the timers app use it to track the time you spend working on homework, studying, reading, working out, and other activities. 
+
+If you made tetris play the game when you're bored. 
+
+The goal is to identify areas where the app could be improved through real world use! You will use your own work and evaluate it. 
+
+Take notes and make changes to the work. Keep a list of all of these changes. 
 
 ## Initial Exercise
 
