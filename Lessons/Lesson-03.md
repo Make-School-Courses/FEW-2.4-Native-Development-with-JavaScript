@@ -7,6 +7,20 @@
 1. Create an Electron project with React
 1. Build a Desktop application with Electron
 
+## Before Starting! 
+
+During this lesson you will be building desktop applications which are large binary files. You should not push this to your GitHub repository. 
+
+Add a .gitignore if you haven't already. Add the following to it: 
+
+```
+build/
+dist/
+nod_modules/
+```
+
+Commit and push.
+
 ## What is Electron? 
 
 [Electron](https://electronjs.org) is a platform for building desktop applications with JavaScript, HTML, and CSS. It's [open source](https://github.com/electron/electron).
