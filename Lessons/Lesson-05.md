@@ -1,11 +1,11 @@
 # FEW 2.4 class 5 - Native Components Part 1
 
-Mobile is the land of small screens in portrait orientation. This is a different environment from the desktop. Building mobile apps require developers to think different to work with the limited space. 
+Mobile is the land of small screens in portrait orientation, tall and narrow. This is a different environment from the desktop where screens are large and wide. Building mobile apps require developers to think differently to make applications that work in small spaces.
 
 ## Learning Objectives
 
 - Display data on mobile (lots of data on a small screen)
-- Differentiate list view and scrollview and their use cases
+- Differentiate list view and scrollView and their use cases
 - Use a FlatList
 
 ## ScrollView vs ListView 
@@ -15,15 +15,13 @@ Mobile screens are small you'll always be scrolling. There are two ways to handl
 - Scrolling a **small** amount of content
 - Scrolling a **large** amount of content
 
-**tl;dr** For a small amount of content use a ScrollView. For a large amount of content use a ListView or Flatlist.
+**tl;dr** For a small amount of content use a ScrollView. For a large amount of content use a ListView or FlatList.
 
 ScrollView scrolls things when the things take up more space than the ScrollView displays.
 
 Why is there a ListView and why would you use one?
 
-The ListView manages a large amount of data. Remember when Steve Jobs said you could have 10,000 songs in your pocket? People though it was great. 
-
-There was a developer somewhere that needed to solve the problem of how to scroll through a list of 10,000 items! 
+The ListView manages a large amount of data. Remember when Steve Jobs said you could have 10,000 songs in your pocket? People thought it was great. There was a developer somewhere that needed to solve the problem of how to scroll through a list of 10,000 items! 
 
 Seriously, imagine creating 10,000 views and loading them in RAM. Sounds like a memory problem. Heck! imagine rendering the pixels that made up a list of table cells where each cell is 40 pixels tall...
 
@@ -41,23 +39,42 @@ So with 10,000 table cells listing all of your favorite songs on your iPhone SE 
 
 What does the ListView do differently? 
 
-The ListView generates enough views to fill the screen. It displays only a subset of data at any moment. As each row view scrolls off the screen it is recycled and populated with new data. 
+The ListView generates enough views to fill the screen. It displays only a subset of data at any moment. As each row view scrolls off the screen it is recycled and populated with new data.
 
-## Try it yourself!
+The ListView uses a limited set of views to scroll through an unlimited amount of data. 
 
-For these examples you'll be using a data set that has information about cat and dog breeds. 
+## Getting Started 
 
-Follow the challenges here: https://github.com/Make-School-Labs/few-2-4-by-breed-starter
+For these examples, you'll be using a data set that has information about cat and dog breeds. 
 
-You can follow the instructions there to get started.
+Initialize a new React Native Project with expo. 
+
+`expo init by-breed`
+
+Choose: Blank project.
+
+Then run the project to test it. 
+
+`cd by-breed`
+
+`yarn start`
+
+Get the sample files here: https://github.com/Make-School-Labs/few-2-4-by-breed-starter 
+
+Copy these files into your project folder. 
+
+- `breeds.js`
+- `cat-and-dog-breeds.json`
+
+The `cat-and-dog-breeds.json` file contains all of the data as one larger object. The `breeds.js` has some helper code to turn this object into arrays of cats and dogs. 
 
 ## Implement ScrollView
 
 - Create a scrollView 
-- add some content 
-- scroll!
+- Add some content 
+- Scroll!
 
-Import ScrollView component. 
+Import ScrollView component.
 
 `import { ScrollView, View, Text } from 'react-native'`
 
@@ -67,7 +84,7 @@ Then import the list of cats, or dogs if you prefer!
 
 The `cats` array contains a list of objects with information about a cat breed. 
 
-Something like: 
+One record might look like: 
 
 ```JSON
 {
@@ -83,23 +100,23 @@ Something like:
 }
 ```
 
-Keep things simple at first. Just make a View and Text component for each breed. 
+Keep things simple at first. Just make a View and Text component to display each breed. 
 
 Make a component: 
 
 ```JS 
 function Item({ title }) {
-  return (
-    <View style={styles.item}>
-      <Text style={styles.title}>{title}</Text>
-    </View>
-  );
+	return (
+		<View style={styles.item}>
+		<Text style={styles.title}>{title}</Text>
+		</View>
+	);
 }
 ```
 
-Notice this component is using `styles.item`. You can add soem styles for this later. 
+Notice this component is using `styles.item`. You can add some styles for this later. 
 
-In your App.js component use the ScrollView and map the list of cats to Item components. 
+In your App.js component use the ScrollView and `map` the list of cats into `Item` components. 
 
 ```JSX
 <ScrollView>
@@ -111,7 +128,7 @@ In your App.js component use the ScrollView and map the list of cats to Item com
 
 When you get this working you may see that it overlaps the status bar at the top or the 'notch' on newer iPhones. 
 
-You can take this into account by adjusting padding an margin on the scrollview. This might prove problematic for the range of phones available. Luckily React Native Provides a `SafeAreaView` component that takes care of this for us! 
+You can take this into account by adjusting padding and margin on the ScrollView. This might prove problematic for the range of phones available. Luckily React Native Provides a `SafeAreaView` component that takes care of this for us! 
 
 import `SafeAreaView`
 
@@ -135,32 +152,32 @@ Wrap your `ScrollView` in the `SafeAreaView`.
 - Define data 
 - Create a FlatList 
 - Define props 
-	- renderItem
-	- keyExtractor
+ - renderItem
+ - keyExtractor
 
-The FlatFlist is a component that is used to display large amounts of data in a scrolling list. 
+The `FlatFlist` is a component that is used to display large amounts of data in a scrolling list. 
 
-The FlatList takes `data` as a prop. Rather than assigning it child components to render you'll give it the data instead. 
+The `FlatList` takes `data` as a prop. Rather than assigning it child components to render you'll give it the `data` instead. 
 
-FlatList also takes a prop called `renderItem`. This is a function that returns an itme to render. 
-	
 Why `data`? 
 
-FlatList needs to know how many rows you have to work with. Only a subset of the data will be displayed in the list. FlatList keeps track of the starting and ending indexs that are currently displayed. 
-	
+FlatList needs to know how many rows you have to work with. Only a subset of the data will be displayed in the list. FlatList keeps track of the starting and ending indexes that are currently displayed. 
+
+FlatList also takes a prop called `renderItem`. This is a function that returns an item to render.
+ 
 Why `renderItem`?
 
-This function returns takes an object with the data and returns a React Native Component which displays as the list cell. FlatList will ask us for the cells it needs, we supply the cell from the data and index. 
+This function returns an object with the data and returns a React Native Component which displays as the list cell. FlatList will ask us for the cells it needs, we supply the cell from the data and index. 
 
 The Object passed to renderItem includes three keys: 
 
-- `item` : The `data` item for this row
-- `index` : the `index` of this row in `data`
-- `separators` : An object with properties that can be used to render separators between rows
+- `item`: The `data` item for this row
+- `index`: the `index` of this row in `data`
+- `separators`: An object with properties that can be used to render separators between rows
 
-Why `keyExtractor`? 
+What's `keyExtractor`? 
 
-Each cell needs a unique id, `keyExtractor` is a method that generates a unique id for each row. You supply a function that takes two prarameters: 
+Each cell needs a unique id, `keyExtractor` is used for this. `keyExtractor` is a prop that you assign a function to. This function receives the data item and index for the current row from which you will extract the key.
 
 - `item` : The `data` item for this row
 - `index` : The `index` of the row in `data`
@@ -185,24 +202,24 @@ Use this function to generate unique row ids.
 	- keyExtractor
 - Define a Row Component
 
-The data source includes a list of cat and a list of dogs. Each animal has an object that inlcudes a breed property, and a list of other properties that rate the `breed` in different areas such as: friendliness, Affection, Shedding, Health etc. Each of these fields is rated with a value of 0 to 5. 
+The data source includes a list of cats and a list of dogs. Each record is an object that inlcudes a breed property, and a list of other properties that rate the `breed` in different areas such as friendliness, Affection, Shedding, Health, etc. Each of these fields is rated with a value of 0 to 5. 
 
 **NOTE!** Not all properties appear with every animal. Only `breed` is guaranteed to appear with each object. 
 
-Create the FlatList component. Add set it's props. 
+Create the FlatList component. Add set its props.
 
 - `data` - Set the data source to an array. 
-- renderItem - A function that returns a Component
-	- The function takes an object with the following properties: 
-		- `item` - An item from data
-		- `index` - the index of the item in data
-		- `separators` - An object with properties used for customizing custom separator Components (not used in this example)
-		
+- `renderItem` - A function that returns a Component
+	- The `renderItem` function takes an object with the following properties: 
+	- `item` - An item from data
+	- `index` - the index of the item in data
+	- `separators` - An object with properties used for customizing custom separator Components (not used in this example)
+ 
 Set data to an array:
 
 ```JSX
 <FlatList 
-	data={cats}
+ 	data={cats}
 />
 ```
 
@@ -221,11 +238,11 @@ Set renderItem:
 
 The `renderItem` function returns a component to display for each row. The function receives an object with the `item` and the `index`. 
 
-The `item` is an element from the data array and `index` is it's position in the array. In this example `item` would be one of the values from data array.
+The `item` is an element from the data array and `index` is its position in the array. In this example, `item` would be one of the values from the data array.
 
-When you get this working you may see a wanring telling you that your list is missing keys. Fix this by defining a key extractor. 
+When you get this working you may see a warning telling you that your list is missing keys. Fix this by defining a key extractor.
 
-Define `keyExtractor`. React requires all children of a JSX list to have a unique key. `FlatList` handles this with `keyExtractor` which is a function that receives the item to render and returns a unique key.
+Define `keyExtractor`. React requires all children of a JSX list to have a unique key. `FlatList` handles this with `keyExtractor` a function that receives the item from data and returns a unique key.
 
 All of the breeds are unique. You can use that as a key. 
 
@@ -247,7 +264,7 @@ https://reactnative.dev/docs/flatlist#docsNav
 1. Display the other data. Note that each breed doesn't always have the same data/keys as other breeds. You'll need to get the keys and display the data for the available keys. You can use `Object.keys(data)` to get an array of keys on `data`. 
 1. Display dogs, if you haven't, cats if you have. 
 1. Display both dogs and cats. 
-1. Add an option to switch between cats and dogs. You'll need a UI element to choose the pet type. On iOS you can use SegmentedControlIOS. On Android you can use one or buttons, there are also a couple [third party segmented controls](https://stackoverflow.com/questions/35313387/segmentedcontrolios-for-android-in-react-native)
+1. Add an option to switch between cats and dogs. You'll need a UI element to choose the pet type. On iOS, you can use SegmentedControlIOS. On Android you can use one or buttons, there are also a couple [third party segmented controls](https://stackoverflow.com/questions/35313387/segmentedcontrolios-for-android-in-react-native)
 
 ## After class
 
@@ -263,3 +280,4 @@ Start planning your final project. This can be Electron or React Native.
 	- [data](https://facebook.github.io/react-native/docs/flatlist#data)
 	- [renderItem](https://facebook.github.io/react-native/docs/flatlist#renderitem)
 	- [keyExtractor](https://facebook.github.io/react-native/docs/flatlist#keyextractor)
+
