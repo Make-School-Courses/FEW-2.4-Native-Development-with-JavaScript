@@ -251,13 +251,14 @@ https://reactnative.dev/docs/flatlist#docsNav
 
 ## After class
 
-Complete the challenges [here](https://github.com/Make-School-Labs/few-2-4-by-breed-starter). 
+Complete the challenges here. 
 
-Start defining your custom project. 
+Start planning your final project. This can be Electron or React Native. 
 
 ## Resources 
 
 - [ScrollView](https://facebook.github.io/react-native/docs/scrollview)
+- [SafeAreaView](https://reactnative.dev/docs/safeareaview#docsNav)
 - [FlatList](https://facebook.github.io/react-native/docs/flatlist)
 	- [data](https://facebook.github.io/react-native/docs/flatlist#data)
 	- [renderItem](https://facebook.github.io/react-native/docs/flatlist#renderitem)
