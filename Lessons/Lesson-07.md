@@ -1,10 +1,6 @@
 # FEW 2.4 React Navigation
 
-**Switch this over to React Native Router**
-
-https://medium.com/osedea/react-native-navigation-solutions-in-2018-6ff1dd7f6d20
-
-This goal of this leasson is to introduce navigation concepts on mobile and apply them. 
+This goal of this lesson is to introduce navigation concepts on mobile and apply them. 
 
 ## Learning Objectives/Competencies
 
@@ -29,6 +25,10 @@ Each new whole page of stuff is a screen. Really it's a view with many child vie
 
 For this dicussion let's use the name **Screen** when we are talking about a view that contains the entire current screen of content and use the term Component or View when we are talking about a sub view. 
 
+A good resource for understanding navigation is the Human Interface Design Guidelines: HIG. 
+
+https://developer.apple.com/design/human-interface-guidelines/ios/app-architecture/navigation/
+
 ## Navigating Screens
 
 On the web we navigate between pages and the browser keeps track of navigation in the history. On mobile we don't have this convenience as a default behavior. 
@@ -42,7 +42,7 @@ Generally speaking on mobile your apps will use one of four navigation schemes:
 
 Your app might use any combination of these at the same time. 
 
-A **Stack** is a series of Screens. This is similar to what you see in the browser. There is a history. You can push and pop Screens on a stack the same way you can push and pop elements in an array. When you see the back button in a mobile app you're using a stack. 
+A **Stack** is a series of Screens. This is similar to what you see in the browser. There is a history. You can _push_ and _pop_ Screens on a stack the same way you can push and pop elements in an array. When you see the back button in a mobile app you're using a stack. 
 
 **Tabs** appear at the bottom of the screen and manage a fixed set of Screens. The tabs appear on top of all Screens! Any Screen in tabbed navigation might be a Stack! 
 
@@ -68,7 +68,7 @@ I chose [React Navigation](https://reactnavigation.org/) for these examples sinc
 
 React Navigation is a library for React Native that is open source. It provides all of the basic native navigation systems and works on Android and iOS. 
 
-- https://reactnavigation.org/docs/en/getting-started.html
+- https://reactnavigation.org/docs/getting-started
 - https://facebook.github.io/react-native/docs/navigation
 
 **Get started by importing the library**
