@@ -56,143 +56,310 @@ A **Stack** is a series of Screens. This is similar to what you see in the brows
 
 A Navigator is the parent for any set of screens. A navigator is usually a Stack, Tab, or Drawer. Any of the screens displayed might be a Stack. 
 
+Navigator is the top level view that manages displaying subviews. 
+
 ## Navigation Libraries for native
 
 - [React Navigation](https://reactnavigation.org/)
 - [React Native Router Flux](https://github.com/aksonov/react-native-router-flux)
 - [React Router Native](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-native)
 
-I chose [React Navigation](https://reactnavigation.org/) for these examples since it has all of the features any project might need, works on Android and iOS, and was recommended by React Native. This is an open source solution. 
+I chose [React Navigation](https://reactnavigation.org/) for these examples since it has all of the features any project might need, works on Android and iOS, and was recommended by React Native. It's also an open source solution.
 
 ## React Native Navigation
 
 React Navigation is a library for React Native that is open source. It provides all of the basic native navigation systems and works on Android and iOS. 
 
 - https://reactnavigation.org/docs/getting-started
-- https://facebook.github.io/react-native/docs/navigation
+
+Start with a new Expo project: 
+
+`expo init react-navigation-example`
+
+Choose blank project. 
+
+`cd react-navigation-example`
+
+Test your project. 
 
 **Get started by importing the library**
 
-- `npm install --save react-navigation`
+- `npm install @react-navigation/native`
+
+**Install Expo dependancies**
+
+- `expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view`
 
 **Creating a Stack View** 
 
 Create a root component that will act as the main navigator. This can be the App component. If you're using a single Stack it should be App. 
 
+- `npm install @react-navigation/stack`
+
+I had to run `npm install` at this step.
+
 ```JS
-import { createStackNavigator, createAppContainer } from 'react-navigation'
-import HomeScreen from './HomeScreen'
-import DetailScreen from './DetailScreen'
+// In App.js in a new project
 
-const MainNavigator = createStackNavigator({
-  Home: { screen: HomeScreen },
-  Detail: { screen: DetailScreen }
-})
+import * as React from 'react';
+import { View, Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-const App = createAppContainer(MainNavigator)
+function HomeScreen() {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Home Screen</Text>
+    </View>
+  );
+}
 
-export default App
+const Stack = createStackNavigator();
+
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default App;
 ```
-The example above creates a main navigator that displays one of two components: HomeScreen, and DetailScreen. Before this will work you need to create both of these components. 
 
-- Create HomeScreen. 
-- Create DetailScreen.
+The sample code above Defines a HomeScreen component, creates an instance of StackNavigator and wraps these in a NavigationContainer. 
 
-Use a class component for these. While you can use a stateless component it becomes difficult to access `navigationOptions`. Using a class based components avoids this. 
+There is a single route: Stack.Screen which will display: HomeScreen. 
 
-With these created running the project should create a navigator component that displays HomeScreen. 
+The example so far only displays the a single Screen: Home Screen. But, it does this using the StackNavigator. 
+
+Notice that Stack navigator provides the title bar at the top. 
 
 ### Navigating to another screen
 
-Screens defined in a stack navigator component, HomeScreen and DetailScreen in this example receive a `navigation` object in props. This object has properties and methods that facilitate navigation. 
-
-To navigate to another screen call: 
+Add another Component screen. 
 
 ```JS
-navigation.navigate('Detail')
-```
-
-or 
-
-```JS
-props.navigation.navigate('Home')
-```
-
-### Navigation Bar
-
-The navigation bar is a standard UI element. It displays a title in the center and buttons on the left and the right. 
-
-Setting the title will cause the navigation bar to display. Do this by setting some navigation options on a `static` property of your HomeScreen. 
-
-```JS
-class HomeScreen extends Component {
-	...
-	static navigationOptions = {
-		title: 'Navigation Example'
-	}
-	...
+function DetailsScreen() {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Details Screen</Text>
+    </View>
+  );
 }
 ```
 
-This `static navigationOptions` should appear inside the class body, and not in a method or the constructor. 
-
-**Note!** Static properties are properties that are accessed through the class instead of through an instance of a class. You can think of static properties as shared by all instances of a class, where each instance of a class stores it's own values for properties assigned to `this`.
-
-Here state is used to share navigationOptions with all screens in a stack navigator. 
-
-Add a title to HomeScreen and DetailScreen. 
-
-## Passing Data to a Screen
-
-When navigating to a screen you will sometimes want to pass some data that screen will display. This allows you to reuse a screen, for example a user profile screen could display any user profile. 
-
-**Sending params to a Screen**
-
-To pass data to a screen follow these steps. 
-
-- Organize data in an object. 
-- Pass the object as the second parameter of navigation.navigate(Screen, DataObject). 
-
-For example: 
-
-HomeScreen.js
+Now add a route to that screen in your stack navigator: 
 
 ```JS
-...
-this.props.navigation.navigate('Detail', { message: 'Hello!' })
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Details" component={DetailsScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+```
+
+The homescreen will navigate to the details screen: 
+
+```JS 
+import * as React from 'react';
+import { Button, View, Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+function HomeScreen({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Home Screen</Text>
+      <Button
+        title="Go to Details"
+        onPress={() => navigation.navigate('Details')}
+      />
+    </View>
+  );
+}
+
 ...
 ```
 
-**Receiving Data in a Screen**
 
-Props are passed as an object with values assigned to properties. You can get at these properties individually by key with `getParams()` or get the entire object. 
+Navigate to the same screen multiple times: 
 
-Gets named prop and supplies default value if missing.
+```js 
+...
+function DetailsScreen({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Details Screen</Text>
+      <Button
+        title="Go to Details... again"
+        onPress={() => navigation.push('Details')}
+      />
+    </View>
+  );
+}
+...
+```
 
-`props.navigation.getParam('message', 'world') // 'Hello!'` 
-
-or gets the entire params object
-
-`props.navigation.state.params // { message: 'Hello!' }`
-
-DetailScreen.js
+Going back from one screen to the previous screen in the stack. Or jump to a screen on the stack.
 
 ```js
 ...
-const { navigation } = this.props
-const message = navigation.getParam('message', 'default value')
+function DetailsScreen({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Details Screen</Text>
+      <Button
+        title="Go to Details... again"
+        onPress={() => navigation.push('Details')}
+      />
+      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
+      <Button title="Go back" onPress={() => navigation.goBack()} />
+    </View>
+  );
+}
+...
+```
+
+## Passing params to routes
+
+Pass params from home to details. The second parameter to `navigation.navigate('Screen', { params })` is an object containing params. 
+
+```js 
+...
+function HomeScreen({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Home Screen</Text>
+      <Button
+        title="Go to Details"
+        onPress={() => {
+          /* 1. Navigate to the Details route with params */
+          navigation.navigate('Details', {
+            itemId: 86,
+            otherParam: 'anything you want here',
+          });
+        }}
+      />
+    </View>
+  );
+}
+...
+```
+
+The details screen can access the params object to receive data from the route that called it: 
+
+```JS
+...
+function DetailsScreen({ route, navigation }) {
+  /* 2. Get the param */
+  const { itemId } = route.params;
+  const { otherParam } = route.params;
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Details Screen</Text>
+      <Text>itemId: {JSON.stringify(itemId)}</Text>
+      <Text>otherParam: {JSON.stringify(otherParam)}</Text>
+      <Button
+        title="Go to Details... again"
+        onPress={() =>
+          navigation.push('Details', {
+            itemId: Math.floor(Math.random() * 100),
+          })
+        }
+      />
+      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
+      <Button title="Go back" onPress={() => navigation.goBack()} />
+    </View>
+  );
+}
+...
+```
+
+### Configure the Navigation Bar
+
+On any screen you can set options. 
+
+```js
+<Stack.Screen 
+  name="Home" 
+  component={HomeScreen} 
+  options={{ title: "Hello World"}}
+/>
+```
+
+Set some more styles for the navigsation bar: 
+
+```JS
+<Stack.Screen 
+  name="Home" 
+  component={HomeScreen} 
+  options={{ 
+    title: "Hello World",
+    headerStyle: {
+      backgroundColor: '#f4511e'
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+      fontSize: 24
+    }
+  }}
+/>
+```
+
+You can set styles across all views by applying them to the navigator. 
+
+```js
+...
+<Stack.Navigator 
+	initialRouteName="Home"
+	screenOptions={{
+		headerStyle: {
+			backgroundColor: '#f4511e',
+		},
+		headerTintColor: '#fff',
+		headerTitleStyle: {
+			fontWeight: 'bold',
+		},
+	}}
+>
 ...
 ```
 
 ## Table View Detail View 
 
-On iOS the TableView is the equivalent of the FlatList in React Native. Tapping a list cell to display a another view with information realted to selected cell is a very common navigation pattern.
+A common pattern in mobile development is the listview and detail view. At the root level you have stack view that contains list view. Tapping one of the cells in the list shows a detail view. 
 
-The class example will take a secon look at the By Breed app from a previous class. This time we will display a list of breed names in a FlatList, tapping a breed will display information about the breed in a detail screen. 
+You see this pattern in many apps. 
 
-[**Download the starter project**](https://github.com/soggybag/navigation-list-starter)
+- Mail
+- Settings
+- Slack
+- Instagram
 
-Follow the instructions in the Readme for the project. 
+Almost every app you use will make use of this pattern. 
+
+## Challenges 
+
+Set up an app following the structions above. It should use React Navigation have a Home Screen and a Detail Screen. 
+
+Set up the navigation to allow switching between the Home Screen and the Detial Screen. 
+
+Use the By Breed example from last week to create a list of cats or dogs using a FlatList in the Home Screen component. 
+
+Use the TouchableHighlight to handle a press on a list Item. 
+
+Navigate to the the Detail Screen when a List Item is pressed. 
+
+Pass the cat or dog data to the Detail screen and display it. 
 
 ## Plan your navigation
 
