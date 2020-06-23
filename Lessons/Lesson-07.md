@@ -50,7 +50,7 @@ A **Stack** is a series of Screens. This is similar to what you see in the brows
 
 **Modal** Views appear above the current Screen. Imagine a modal as out side of a stack. Anytime you close/dismiss a modal view you are returned to previous Screen. Really you never left, the modal view just appeared on top to ask a clarifying question then went away.
 
-![Navigation Illustration](./images/lesson-07.png)
+![Navigation Illustration](./images/Lesson-07.png)
 
 ## Navigator
 
