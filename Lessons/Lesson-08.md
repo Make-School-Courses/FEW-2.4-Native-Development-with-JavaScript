@@ -138,6 +138,14 @@ if (route.name === 'Home') {
 
 Here I used the icons 'ios-star' and 'ios-star-outline' for the icon used in the 'Other' route. 
 
+### Stretch Challenges
+
+- Import the breed data from the previous assignments. You can use the components from theose assignments also! 
+	- Make a cats tab, display all the cat breeds in the cats tab, use FlatList.
+		- Give this a cat icon
+	- Make a dogs tab and display dog breeds in a list here.
+		- Give this tab a Dog icon. 
+
 ### Tab Navigator Recap
 
 Discussion: 
