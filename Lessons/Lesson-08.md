@@ -18,91 +18,55 @@ I tested these both on my iOS device.
 
 ### Tab Navigator 
 
-This was easy to get working. I started by copy and paste the code here: 
+To get started with tabbed navigation you'll need to spin up a react native app along with the required dependancies. 
 
-- [Tabbed Navigator starter](https://reactnavigation.org/docs/en/tab-based-navigation.html)
+`expo init tabbed-example`
 
-This worked right off. I pasted everything into App.js. You could build off this to get started with a new app. 
+Install react navigation:
 
-I also tested the default **Tabbed Application** option when running `expo init`, this is the second option "Tabs". While this project worked it had a lot of extra files and things that I would imagine myself having to undo to make my own app. This seemed like more work, your mileage may vary. 
+`npm install @react-navigation/native`
 
-## Build a Tab bar application!
+Get the expo dependancies:
 
-In this section, you will build your own tabbed application to test the tabbed navigator. 
+`expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view`
 
-### Getting started
+Get the bottom tabs:
 
-Start a new React Native application. Be sure to choose **blank** app as the starter. We will write the code to make the tab navigator ourselves. 
+`npm install @react-navigation/bottom-tabs`
 
-`expo init tabbed-app`
-
-Navigate into this folder:
-
-`cd tabbed-app`
-
-We will use React Navigation for this
-
-`npm install --save react-navigation`
-
-Install dependencies 
+One more time in case soemthing was missing:
 
 `npm install`
 
-Run the app to make sure everything is working: 
+Test your app with `yarn start`, `npm start`, `yarn ios` or which ever method you prefer. 
 
-`yarn start`
+If everything is working create some tabbed navigation. 
 
-### Minimal Tabbed Application
+Copy yhe sample code here: 
 
-Paste the code snippet from the [minimal example of tab-based navigation](https://reactnavigation.org/docs/en/tab-based-navigation.html#minimal-example-of-tab-based-navigation) into App.js. 
+https://reactnavigation.org/docs/tab-based-navigation/
 
-I reproduced it here for convenience: 
+This creates a bare bones application with two tabs. 
 
-```JSX
-import React from 'react';
-import { Text, View } from 'react-native';
-import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
+**Challenge:**
 
-class HomeScreen extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Home!</Text>
-      </View>
-    );
-  }
-}
-
-class SettingsScreen extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Settings!</Text>
-      </View>
-    );
-  }
-}
-
-const TabNavigator = createBottomTabNavigator({
-  Home: HomeScreen,
-  Settings: SettingsScreen,
-});
-
-export default createAppContainer(TabNavigator);
-```
-
-Quick discussion: 
-
-- What is happening here? 
-- Can we improve on this code block?
+- Add another tab to the tab bar. Follow these steps: 
+  - Make a new component screen. This can be a function that returns a `<View>` with some `<Text>`
+  - Add a new `<Tab.Screen>` as a child of `<Tab.Navigator>`. You can put this below the existing tab screens. Assign it your new component. 
 
 ## Icons 
 
-Icons appear on mobile in many places. If you can make them flexible in size that's even better.  There are several libraries that make icons these notes will cover [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons).
+Icons appear on mobile in many places. If you can make them flexible in size that's even better. There are several libraries that make icons these notes will cover [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons).
 
 This library has several sets of bundled icons. Start by importing the library. 
 
 `npm install --save react-native-vector-icons`
+
+I had to link my icons using, this may not be needed for everyone: 
+
+`npx react-native link`
+
+`npx react-native link react-native-vector-icons`
 
 In your React Native project import the icon with: 
 
@@ -114,13 +78,15 @@ Use the icon with:
 
 This should display a 32pt icon that looks like a circle with a plus in the center.
 
+You can put this component almost anywhere! Seems like these need to be wrapped in a `<Text></Text>` component. 
+
 **Note!** Finding the name to use for a specific icon is not as easy as you might think. The names shown with the icon bundles are not always what you need to set as the name in the component!
 
 If you get a warning that the name isn't working for an icon open the warning and read the names! It will list all of the names that are possible values. 
 
-Activity: Add some icons to the Home and Settings Screens. 
+**Activity:** Add some icons to the Home and Settings Screens. 
 
-Challenges: 
+**Challenges:**
 
 - Make an icon that appears on the Home Screen
 - Make an icon that appears on the Settings Screen 
@@ -130,70 +96,47 @@ Explore Icons here:
 
 Look at the bundled icon sets: https://github.com/oblador/react-native-vector-icons#bundled-icon-sets.
 
-Challenges: 
+**Challenges:** 
 
 - Make some icons in a Screen. You'll need to: 
 	- Import the icon set you want to use
 	- Figure out the name of the icon you want to see (this might take some experimentation)
 	- Add and configure an Icon component in your Screen
 	
-Stretch Challenge: 
+**Stretch Challenge:**
 
 - Make an Icon button. 
 	- Follow the guide [here](https://github.com/oblador/react-native-vector-icons#iconbutton-component)
 
 ## Tab Bar Icons 
 
-The docs show a solution in the [customizing the appearance](https://reactnavigation.org/docs/en/tab-based-navigation.html#customizing-the-appearance) section of the React Navigation Tab Bar Example. This example looks a little complex as it uses the React-Native-Vector-Icons and includes a badge on the icon.
+The docs show a solution in the [customizing the appearance](https://reactnavigation.org/docs/tab-based-navigation/#customizing-the-appearance) section of the React Navigation Tab Bar Example. This example looks a little complex as it uses the React-Native-Vector-Icons and includes a badge on the icon.
 
-Set the tab icons by 
+Notice that big block of code inside:
 
-`createBottomTabNavigator(RouteConfigs, BottomTabNavigatorConfig)`
+`<Tab.Navigator screenOptions={...lots of code here...} >`
 
-The first parameter defines the routes/Screens the tab navigator will display. The second parameter defines options for the tab navigator which includes defining the icons to display and the colors. 
+This function returns an object thqt includes a property: `tabBarIcon`. This property is a function that receives an object with three properties: `focused, color, size`. You'll use these values to generate an icon and return it. 
 
-[BottomTabNavigatorConfig](https://reactnavigation.org/docs/en/bottom-tab-navigator.html#bottomtabnavigatorconfig) read option here. This doesn't explain a whole lot but the example code provides some insights. You can use the following snippet to generate icons for the Simple Tab bar example: 
+The sample code 
+
+**Challenge:**
+
+Add a custom icon for your new tab bar view. Find an icon you like. In the `tabBarIcon` function add a new else if block. This case should look for `route.name` to identify the icon. Look up an icon in the icon set. 
+
+Note: Many icons have a solid and outline version. You can use the solid for the focussed state and the outline when the tab is not focussed. 
 
 ```JS
-{
-    defaultNavigationOptions: ({ navigation}) => ({
-        tabBarIcon: ({ focused, horizontal, tintColor }) => {
-            const { routeName } = navigation.state
-            let iconName 
-            switch(routeName) {
-                case 'Home': 
-                    iconName = 'ios-home'
-                    break
-                case 'Settings': 
-                    iconName = 'ios-settings'
-            }
-            return <Ionicons name={iconName} size={25} color={tintColor} />
-        }
-    })
+if (route.name === 'Home') {
+  iconName = focused ? 'ios-information-circle' : 'ios-information-circle-outline';
+} else if (route.name === 'Settings') {
+  iconName = focused ? 'ios-list-box' : 'ios-list';
+} else if (route.name === 'Other') {
+  iconName = focused ? 'ios-star' : 'ios-star-outline';
 }
 ```
 
-Discussion: 
-
-- What is going on here? 
-- How can we customize this? 
-
-**More Options**
-
-There are a lot more options. One option that you may want to work with is tint and background colors for the active and inactive states. 
-
-You can add this to the BottomTabNavigatorConfig object. 
-
-```JS
-tabBarOptions: {
-    activeTintColor: 'tomato',
-    inactiveTintColor: 'gray',
-    activeBackgroundColor: 'gray',
-    inactiveBackgroundColor: 'black'
-}
-```
-
-I used keyword colors, you can use RGB or other color values. Yes, tomato is a color, try rebecapurple, aliceblue, blanchedalmond. On second thought don't, make up your own colors instead! 
+Here I used the icons 'ios-star' and 'ios-star-outline' for the icon used in the 'Other' route. 
 
 ### Tab Navigator Recap
 
