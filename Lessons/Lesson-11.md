@@ -60,4 +60,3 @@ Make icons for your app. These need to be exact sizes, and we'll go through it a
 ## Resources
 
 - [https://apiko.com/blog/deploying-react-native-apps-to-app-store-and-play-market/](https://apiko.com/blog/deploying-react-native-apps-to-app-store-and-play-market/)
-
