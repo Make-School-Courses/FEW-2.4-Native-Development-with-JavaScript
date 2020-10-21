@@ -29,26 +29,35 @@ Students by the end of the course will be able to:
 
 ## Schedule
 
-**Course Dates:** Tuesday, June 2 – Thursday, July 16, 2020 (7 weeks)
+**Course Dates:** Wednesday, October 21 – Friday, December 11, 2020 (8 weeks)
 
-**Class Times:** Tuesday and Thursday at 2:00–4:45 pm (14 class sessions)
+**Class Times:** Monday, Wednesday, Friday at 9:30am–10:30pm (20 class sessions)
 
 | Class | Date | Topics | Assignments |
 |:-----:|:----:|:------:|:-----------:|
-|  1 |  Tue, June 2  | [Lesson 1](Lessons/Lesson-01.md) | [Assignment 1 React/Redux Tutorial](Assignments/Assignment-1-react-redux.md) |
-|  2 |  Thu, June 4  | [Lesson 2](Lessons/Lesson-02.md) |  |
-|  3 |  Tue, June 9  | [Lesson 3](Lessons/Lesson-03.md) | [Assignment 2 Desktop Application](Assignments/Assignment-2-desktop-app.md) |
-|  4 |  Thu, June 11 | [Lesson 4](Lessons/Lesson-04.md) |  |
-|  5 |  Tue, June 16 | [Lesson 5](Lessons/Lesson-05.md) | [Assignment 3 Mobile Application](Assignments/Assignment-3-mobile-app.md) |
-|  6 |  Thu, June 18 | [Lesson 6](Lessons/Lesson-06.md) |  |
-|  7 |  Tue, June 23 | [Lesson 7](Lessons/Lesson-07.md) |  |
-|  8 |  Thu, June 25 | [Lesson 8](Lessons/Lesson-08.md) |  |
-|  9 |  Tue, June 30 | [Lesson 9](Lessons/Lesson-09.md) |  |
-| 10 |  Thu, July 2  | [Lesson 10](Lessons/Lesson-10.md)|  |
-| 11 |  Tue, July 7  | [Lesson 11](Lessons/Lesson-11.md)|  |
-| 12 |  Thu, July 9  | [Lesson 12](Lessons/Lesson-12.md)|  |
-| 13 |  Tue, July 14 | [Final Assessment](Lessons/Lesson-14.md) |  |
-| 14 |  Thu, July 16 | [Final Presentations](Lessons/Lesson-14.md) |  |
+|  1 |  Wed, Oct 21  | [Lesson 1](Lessons/Lesson-01.md) | [Assignment 1 React/Redux Tutorial](Assignments/Assignment-1-react-redux.md) |
+|  2 |  Fri, Oct 23  | [Lesson 2](Lessons/Lesson-02.md) |  |
+|  3 |  Mon, Oct 26  | [Lesson 3](Lessons/Lesson-03.md) | [Assignment 2 Desktop Application](Assignments/Assignment-2-desktop-app.md) |
+|  4 |  Wed, Oct 28  | [Lesson 4](Lessons/Lesson-04.md) |  |
+|  5 |  Fri, Oct 30  | [Lesson 5](Lessons/Lesson-05.md) | [Assignment 3 Mobile Application](Assignments/Assignment-3-mobile-app.md) |
+|  - |  Mon, Nov 2   | **Vote! - Civic Responsibility Break** |
+|  6 |  Wed, Nov 4   | [Lesson 6](Lessons/Lesson-06.md) |  |
+|  7 |  Fri, Nov 6   | [Lesson 7](Lessons/Lesson-07.md) |  |
+|  8 |  Mon, Nov 9   | [Lesson 8](Lessons/Lesson-08.md) |  |
+|  9 |  Wed, Nov 11  | [Lesson 9](Lessons/Lesson-09.md) |  |
+| 10 |  Fri, Nov 13  | [Lesson 10](Lessons/Lesson-10.md)|  |
+| 11 |  Mon, Nov 16  | [Lesson 11](Lessons/Lesson-11.md)|  |
+| 12 |  Wed, Nov 18  | [Lesson 12](Lessons/Lesson-12.md)|  |
+| 13 |  Fri, Nov 20  | [Final Assessment](Lessons/Lesson-14.md) |  |
+| 14 |  Mon, Nov 23 | [Final Presentations](Lessons/Lesson-14.md) |  |
+|  - |  Wed, Nov 25               | **Holiday- Thanksgiving** |
+|  - |  Fri, Nov 27               | **Holiday- Thanksgiving** |
+| 15 |  Mon, Nov 30              | [Lesson 16] |
+| 16 |  Wed, Dec 2              | [Lesson 17] |
+| 17 |  Fri, Dec 4              | [Lesson 18] |
+| 18 |  Mon, Dec 7              | [Lesson 19] |
+| 19 |  Wed, Dec 9                | [Lesson 20] |  
+| 20 |  Fri, Dec 11                | Final Exam/Presentations | 
 
 ## Assignment Schedule 
 
