@@ -25,22 +25,22 @@ If you are having trouble understanding a learning objective you need to take ac
 ## Learning Objectives
 
 1. Define Components with Class and function syntax
-  - Component Architecture
-  - Props and State
-  - JSX
+    - Component Architecture
+    - Props and State
+    - JSX
 1. Compare and contrast Web and Native Applications 
 1. Compare and contrast Mobile vs Desktop experiences 
 
 ## Initial Exercise
 
 - Discussion: 
-  - What is native?
-  - Native vs Web
-  - What makes a good native app? 
-  - What makes a good web app? 
-  - Desktop vs Mobile? 
-  - What makes a good desktop app?
-  - What makes a good mobile app?
+    - What is native?
+    - Native vs Web
+    - What makes a good native app? 
+    - What makes a good web app? 
+    - Desktop vs Mobile? 
+    - What makes a good desktop app?
+    - What makes a good mobile app?
 
 ## Why Learn React? 
 
@@ -54,10 +54,12 @@ Looks to me like it's a good time to learn React. That said, it won't be here fo
 
 ## React Review
 
-<!-- - Components
-  - Function vs Class
-  - Props and State
-  - JSX
+<!-- 
+
+- Components
+    - Function vs Class
+    - Props and State
+    - JSX
 
 Build a Cookie Clicker in class?
 
@@ -71,12 +73,12 @@ Build the following components
 
 - Couter Display
 - Counter 
-  - Button add to count
-  - Upgrade button
+    - Button add to count
+    - Upgrade button
 - Auto Counter
-  - Upgrade button
-
-## After Class -->
+    - Upgrade button
+    
+-->
 
 Review practice and brush up your React and Redux skills by completing one of the tutorials below.
 
