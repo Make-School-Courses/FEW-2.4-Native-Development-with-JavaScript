@@ -50,6 +50,10 @@ React is one of the most popular libraries around today. Seriously, you should k
 
 [NPM Downloads: React, Vue, Angular, Angular 2](https://npm-stat.com/charts.html?package=react&package=vue&package=angular&package=angular%202&from=2016-06-01&to=2018-05-31)
 
+Here is a good look at the reasons to learn React, Vue, or Angular. 
+
+[https://levelup.gitconnected.com/angular-vs-react-vs-vue-which-is-the-best-choice-for-2020-81f577697c7e](https://levelup.gitconnected.com/angular-vs-react-vs-vue-which-is-the-best-choice-for-2020-81f577697c7e)
+
 Looks to me like it's a good time to learn React. That said, it won't be here forever and you are capable of learning any framework. React is a good place to invest your time right now. 
 
 ## React Review
