@@ -36,11 +36,11 @@ If you are having trouble understanding a learning objective you need to take ac
 - Discussion: 
     - What is native?
     - Native vs Web
-    - What makes a good native app? 
-    - What makes a good web app? 
+        - What makes a good native app? 
+        - What makes a good web app? 
     - Desktop vs Mobile? 
-    - What makes a good desktop app?
-    - What makes a good mobile app?
+        - What makes a good desktop app?
+        - What makes a good mobile app?
 
 ## Why Learn React? 
 
