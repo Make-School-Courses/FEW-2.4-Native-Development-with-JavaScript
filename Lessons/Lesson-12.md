@@ -390,8 +390,6 @@ Try these easing functions
 	- `easing: Easing.out(Easing.exp)`
 	- `easing: Easing.inOut(Easing.elastic(1))`
 
-
-
 ## Demo Example 
 
 Follow the example here: https://github.com/Make-School-Labs/react-native-animation-examples
