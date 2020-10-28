@@ -21,19 +21,22 @@ nod_modules/
 
 Commit and push.
 
-## What is Electron? 
+## What is Electron?
 
 [Electron](https://electronjs.org) is a platform for building desktop applications with JavaScript, HTML, and CSS. It's [open source](https://github.com/electron/electron).
 
-Electron is built on top of the Chrome engine. All of the things that are possible in Chrome are possible in Electron and more. In some ways you can think you're making an application that runs a single dedicated website with some special privilleges not available to websites notmally.
+Electron is built on top of the Chrome engine. All of the things that are possible in Chrome are possible in Electron and more. In soime ways you're making an application that runs a single dedicated website with some special privilleges not available to websites normally.
 
 Looking deeper Electron is built on a minimal Chromium browser. It uses HTML/CSS/JS to create graphical user interfaces.
 
-Electron is built on Node.js and uses the same concepts. Code is written in JS and packages are imported with NPM. 
+Electron uses Node.js and uses the same concepts. Code is written in JS and packages are imported with NPM. 
 
-Electron runs a single main process. This is the process that is named in package.json. 
+The main process is named in package.json under "main". Usually "electron.js".
 
-Every window you create a separate render process. 
+Every window you create a separate **render** process. 
+
+- Main process - core application process Node.js
+- Render process - The HTML, CSS, and JS that display in a window.
 
 ### Who is using Electron? 
 
@@ -55,15 +58,19 @@ In most use cases you'll want to make a website. But for cases where you really 
 
 ### When do you need a desktop app?
 
-- Offline
-- Security is an issue
-- Needs the file system
+- When you want apps to run **Offline**
+- When **security** is an issue
+- When you need the **file system**
 
 ## Getting started with Electron
 
 Getting started with Electron is easy. Follow the quick start guide to make a "hello world" app with Electron. 
 
 - https://electronjs.org/docs/tutorial/quick-start
+
+You can follow this guide to create a barbones electron app. This is good when you want to experiment. 
+
+If you're making an app with React you have to do a little more work. 
 
 ## Electron Builder
 
@@ -143,7 +150,7 @@ You'll use development mode while to test, modify, and add new features to your 
 
 ### Set up a production build 
 
-We need some build scripts. These scripts replace the existing react scripts that come with the CRA boilerplate code.  
+We need some build scripts. These scripts replace the existing react scripts that come with the CRA boilerplate code.
 
 `yarn add @rescripts/cli @rescripts/rescript-env --dev`
 
@@ -217,7 +224,7 @@ Now, build your app for production:
 
 `yarn electron-pack`
 
-**NOTE:** Follow the instructions from the article I wasn't able to get it to build until I changed: 
+**NOTE:** Following the instructions from the article I wasn't able to get it to build until I changed: 
 
 `"electron-pack": "build -mw"` 
 
@@ -236,7 +243,7 @@ webPreferences: {
 
 ## Customizing the App
 
-The electron.js file has configuration code that is used to by the process that runs the electron app. The HTML/CSS/JS code that was your original CRA project is displayed by electron and is the user interface for your project. 
+The electron.js file has configuration code that is used to by the process that runs the electron app. The HTML/CSS/JS code that was your original CRA project is displayed by electron and is the user interface for your project.
 
 You can modify the application in a few says. Try changing the size of the app and adding an icon. 
 
@@ -250,6 +257,8 @@ Icons are actually more complex than you might think. You'll need images for all
 	- https://dev.to/onmyway133/changing-electron-app-icon
   - https://www.christianengvall.se/electron-app-icons/
 	- https://www.electron.build/icons
+
+
 	
 ## Build an Electron App
 
