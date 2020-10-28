@@ -25,22 +25,22 @@ If you are having trouble understanding a learning objective you need to take ac
 ## Learning Objectives
 
 1. Define Components with Class and function syntax
-  - Component Architecture
-  - Props and State
-  - JSX
+    - Component Architecture
+    - Props and State
+    - JSX
 1. Compare and contrast Web and Native Applications 
 1. Compare and contrast Mobile vs Desktop experiences 
 
 ## Initial Exercise
 
 - Discussion: 
-  - What is native?
-  - Native vs Web
-  - What makes a good native app? 
-  - What makes a good web app? 
-  - Desktop vs Mobile? 
-  - What makes a good desktop app?
-  - What makes a good mobile app?
+    - What is native?
+    - Native vs Web
+        - What makes a good native app? 
+        - What makes a good web app? 
+    - Desktop vs Mobile? 
+        - What makes a good desktop app?
+        - What makes a good mobile app?
 
 ## Why Learn React? 
 
@@ -50,14 +50,24 @@ React is one of the most popular libraries around today. Seriously, you should k
 
 [NPM Downloads: React, Vue, Angular, Angular 2](https://npm-stat.com/charts.html?package=react&package=vue&package=angular&package=angular%202&from=2016-06-01&to=2018-05-31)
 
+Here is a good look at the reasons to learn React, Vue, or Angular. 
+
+[https://levelup.gitconnected.com/angular-vs-react-vs-vue-which-is-the-best-choice-for-2020-81f577697c7e](https://levelup.gitconnected.com/angular-vs-react-vs-vue-which-is-the-best-choice-for-2020-81f577697c7e)
+
+Check out the state of JavaScript 2019:
+
+[https://2019.stateofjs.com/front-end-frameworks/](https://2019.stateofjs.com/front-end-frameworks/)
+
 Looks to me like it's a good time to learn React. That said, it won't be here forever and you are capable of learning any framework. React is a good place to invest your time right now. 
 
 ## React Review
 
-<!-- - Components
-  - Function vs Class
-  - Props and State
-  - JSX
+<!-- 
+
+- Components
+    - Function vs Class
+    - Props and State
+    - JSX
 
 Build a Cookie Clicker in class?
 
@@ -71,12 +81,12 @@ Build the following components
 
 - Couter Display
 - Counter 
-  - Button add to count
-  - Upgrade button
+    - Button add to count
+    - Upgrade button
 - Auto Counter
-  - Upgrade button
-
-## After Class -->
+    - Upgrade button
+    
+-->
 
 Review practice and brush up your React and Redux skills by completing one of the tutorials below.
 
