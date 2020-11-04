@@ -1,188 +1,62 @@
-# FEW 2.4 Animation 
+# React Native APIs
 
-Making things move on mobile provides that thing that makes your apps interesting and irresistible. 
+## Learning Outcomes
 
-## Objectives 
+By the end of this class, you'll learn how to...
 
-- Make things that move on mobile
-- Use Animated for discreet animated objects 
-- Use LayoutAnimation for animating groups of elements
+- Integrate react native APIs into your app that utilize hardware components
+- Animate components
 
-## Animation
+## Motion Sensors Example
 
-Animation is about making things change over time. On the computer this boils down to changing numeric values over time. The appearance of any component on the screen is controlled by a series of numeric values. Change these values and and the appearance of the things changes. Continuously change the values and it looks like it's moving. 
+Example of how to integrate with sensors in a phone, such as the accelerometer and gyroscope
 
-For the record motion includes changes in color, opacity, size, shape, and rotation. 
+## Camera API
 
-While you could changes values using timers React Native has provides more abstract systems for making things move.
+Walking through a live coding example of using a camera API in a react native app
 
-React Native provides two complimentry animation systems: `Animated` for animating specific elements and interactions, and `LayoutAnimation` for animating global layout transactions. 
+## Animation Example
 
-## `Animated`
+Showcase an animated splash screen example
 
-Animation is making things move on the screen. Behind the scenes this is handled by changing values over time. 
+## Animation Activity
 
-For example if you wanted a view to fade you would animate the opacity of the view from 0 to 1. 
+Given some starter code, animate 1+ components in the project, or extend existing animations
 
-Animated is a built in Component, you'll use it to handle animating other components. 
+## Resources
 
-Animated has many options!
+- [https://medium.com/react-native-training/using-sensors-in-react-native-b194d0ad9167](https://medium.com/react-native-training/using-sensors-in-react-native-b194d0ad9167)
+- [https://github.com/react-native-community/react-native-camera](https://github.com/react-native-community/react-native-camera)
 
-**Use Animated for discreet animations**. This would be single elements that move or change. 
+# Publishing to the App Store
 
-### Example
+## Learning Outcomes
 
-```JS
-// A simple animation. This example fades a view in by animating 
-// the opacity
+By the end of this class, you will learn how to...
 
-// 1. Import Animated from react native 
-// 2. Define a property to be animate
-// 3. Define and start an Animation
-// 4. Use the animated to value 
+- Publish a native app to the App Store and the Google Play Store
 
-import React from 'react';
-// 1. Import Animated
-import { StyleSheet, Text, View, Animated } from 'react-native';
+## TT - Marketing Material
 
-export default class Animated_1 extends React.Component {
-  // 2. Define a value to animate on state: fade with an initial value of 0
-  state = {
-    fade: new Animated.Value(0),
-  }
+Before you can publish, you'll need to create all the marketing material needed to publish to a store. This includes:
 
-  // Start the animation when this view loads
-  componentDidMount() {
-    // 3. Call Animated.timing() and set the ending value, duration, and delay
-    Animated.timing(
-      this.state.fade, {
-        toValue: 1,
-        duration: 3000,
-        delay: 1000
-      }
-    ).start() // Start the Animation
-  }
+- App description
+- App Screenshots
+- Icons
+- Promo images/videos
+	
+## TT - Keys, Certificates, Provisioning Profiles, Oh my!
 
-  render() {
-    // 4. Get the fade value 
-    const { fade } = this.state
-    return (
-      <View style={styles.container}>
-        {/* Apply the fade value to a CSS property */}
-        <Animated.View style={{ ...styles.box, opacity: fade }}>
-          <Text style={styles.title}>Animation 1</Text>
-          <Text>Fades in using Animated</Text>
-        </Animated.View>
-      </View>
-    );
-  }
-}
+Need keys and certificates for Android
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  box: {
-    backgroundColor: 'rgba(255, 0, 0, 0.5)',
-    width: 200,
-    height: 200,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold'
-  }
-});
-```
+iOS requires the provisioning profile and certificate
 
-Here is the same example written with a hooks. This example uses `useEffect()` a React Hook that handles lifecycle events. 
+## Activity - Make icons and take screenshots
 
-https://medium.com/recraftrelic/usestate-and-useeffect-explained-cdb5dc252baf
+Take some screenshots of your app. Learn how to do it like a pro through a class discusssion with Mitchell!
 
-https://leewarrick.com/blog/react-use-effect-explained/
+Make icons for your app. These need to be exact sizes, and we'll go through it as a class
 
+## Resources
 
-```JS
-
-// A simple animation. This example fades a view in by animating 
-// the opacity
-
-// 0. Import Hooks useEffect and useRef
-// 1. Import Animated from react native 
-// 2. Define a property to be animate
-// 3. Define and start an Animation
-// 4. Use the animated to value 
-
-// 0. Import some hooks 
-import React, { useEffect, useRef } from 'react';
-// 1. Import Animated
-import { StyleSheet, Text, View, Animated } from 'react-native';
-
-export default function Animated_1_hooks() {
-  // 2. Define a value to animate on state: fade with an initial value of 0
-  const fadeAnim = useRef(new Animated.Value(0)).current 
-  
-  // This acts as a lifecycle method
-  useEffect(() => {
-    Animated.timing(
-      fadeAnim,
-      {
-        toValue: 1,
-        duration: 5000,
-      }
-    ).start();
-  }, [])
-
-  return (
-    <View style={styles.container}>
-      {/* Apply the fade value to a CSS property */}
-      <Animated.View style={{ ...styles.box, opacity: fadeAnim }}>
-        <Text style={styles.title}>Animation 1</Text>
-        <Text>Fades in using Animated</Text>
-      </Animated.View>
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  box: {
-    backgroundColor: 'rgba(255, 0, 0, 0.5)',
-    width: 200,
-    height: 200,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold'
-  }
-});
-```
-
-
-## Demo Example 
-
-Follow the example here: https://github.com/Make-School-Labs/react-native-animation-examples
-
-There are several example Components: Animated_1-6 that show introductory examples of motion using animated. 
-
-## Resources 
-
-- 
-
-
-
-
-
+- [https://apiko.com/blog/deploying-react-native-apps-to-app-store-and-play-market/](https://apiko.com/blog/deploying-react-native-apps-to-app-store-and-play-market/)

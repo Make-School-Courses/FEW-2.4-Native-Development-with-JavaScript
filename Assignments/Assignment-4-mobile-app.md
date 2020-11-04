@@ -1,20 +1,36 @@
-# Class - Assignment Title 
+# Class - By Breed - React Native 
 
 ## Description 
 
-A short description of your assignment
+The goal of this assignment is to make an app using the by breed animal data. 
 
 ### Why this assignment?
 
-A short description that hits home as to why this assignment is important to do. 
+This is an introduction to React Native and should give you a good look at the process and work of React Native. It should also give you some experience working wit mobile UI components like the List View. 
 
 ## Project requirements
 
-Describe the requirements of this assignment.
+Comnplete the challenges listed below. 
+
+### Challenges 
+ 
+1. Customize the `Item` component to display other info related to the breed. 
+
+2. Use Styles to customize the appearance of cells. 
+
+3. Display the other data. Note that each breed doesn't always have the same data/keys as other breeds. You'll need to get the keys and display the data for the available keys. You can use `Object.keys(data)` to get an array of keys on `data`. 
+
+4. Display dogs, if you haven't, cats if you have. 
+
+5. Display both dogs and cats. 
+
+6. Add an option to switch between cats and dogs. You'll need a UI element to choose the pet type. On iOS, you can use SegmentedControlIOS. On Android you can use one or buttons, there are also a couple [third party segmented controls](https://stackoverflow.com/questions/35313387/segmentedcontrolios-for-android-in-react-native)
 
 ### Deliverable
 
-Describe what is due, file, type, link to repo etc. 
+Submit your your completed project to gradescope. 
+
+**Be sure to add a .gitignore** top your project to avoid uploading your node_modules. 
 
 ### Due date
 

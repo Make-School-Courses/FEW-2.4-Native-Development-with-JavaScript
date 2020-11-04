@@ -1,144 +1,383 @@
-# FEW 2.4 Class 8 Defining a project
+# FEW 2.4 React Navigation
 
-From here until the end of the term you will be working on your final project. Your goal is to define what the project is and plan how you will complete it between now and the end of the term. 
+This goal of this lesson is to introduce navigation concepts on mobile and apply them. 
 
-## Learning Objectives
+## Learning Objectives/Competencies
 
-- Apply Styles to components 
-- Explore Native Components and read documentation apply what you find
-- Define project goals
-- Identify the platform
-- Map out milestones
+- Identify navigation paradigms on mobile
+	- Stack
+	- Tab
+	- Drawer
+	- Modal
+- Implement and build stack navigator
+	- Manage a navigation stack
+- Use static properties and methods
 
-## Styling Components
+## Navigation on Native
 
-Components in React Native are styled using inline styles. 
+On mobile devices space is at a premium and primary content is text which runs horizontally while we are usually viewing in portrait. 
 
-```JavaScript
-...
-return <View style={{width: 100}}>...</View>
+The nature of this environment is such that design dictates that we usually want to make content fill the space and minimize the number of items displayed. 
+
+Rather than showing mulitple content elements simultaneously we opt to focus on a single item. To fit all of your content into a mobile application you're either scrolling or navigating between views. 
+
+Each new whole page of stuff is a screen. Really it's a view with many child views. In iOS native development it's called a ViewController. In React we call it a Component. 
+
+For this dicussion let's use the name **Screen** when we are talking about a view that contains the entire current screen of content and use the term Component or View when we are talking about a sub view. 
+
+A good resource for understanding navigation is the Human Interface Design Guidelines: HIG. 
+
+https://developer.apple.com/design/human-interface-guidelines/ios/app-architecture/navigation/
+
+## Navigating Screens
+
+On the web we navigate between pages and the browser keeps track of navigation in the history. On mobile we don't have this convenience as a default behavior. 
+
+Generally speaking on mobile your apps will use one of four navigation schemes:
+
+- Stacks
+- Tabs
+- Drawers
+- Modals
+
+Your app might use any combination of these at the same time. 
+
+A **Stack** is a series of Screens. This is similar to what you see in the browser. There is a history. You can _push_ and _pop_ Screens on a stack the same way you can push and pop elements in an array. When you see the back button in a mobile app you're using a stack. 
+
+**Tabs** appear at the bottom of the screen and manage a fixed set of Screens. The tabs appear on top of all Screens! Any Screen in tabbed navigation might be a Stack! 
+
+**Drawers** act like tabs but the drawer is hidden until displayed, usually by tapping the "Hamburger" menu. Like Tabs, Drawers are available from any Screen, and anything they display might be a Stack. 
+
+**Modal** Views appear above the current Screen. Imagine a modal as out side of a stack. Anytime you close/dismiss a modal view you are returned to previous Screen. Really you never left, the modal view just appeared on top to ask a clarifying question then went away.
+
+![Navigation Illustration](./images/Lesson-07.png)
+
+## Navigator
+
+A Navigator is the parent for any set of screens. A navigator is usually a Stack, Tab, or Drawer. Any of the screens displayed might be a Stack. 
+
+Navigator is the top level view that manages displaying subviews. 
+
+## Navigation Libraries for native
+
+- [React Navigation](https://reactnavigation.org/)
+- [React Native Router Flux](https://github.com/aksonov/react-native-router-flux)
+- [React Router Native](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-native)
+
+I chose [React Navigation](https://reactnavigation.org/) for these examples since it has all of the features any project might need, works on Android and iOS, and was recommended by React Native. It's also an open source solution.
+
+## React Native Navigation
+
+React Navigation is a library for React Native that is open source. It provides all of the basic native navigation systems and works on Android and iOS. 
+
+- https://reactnavigation.org/docs/getting-started
+
+Start with a new Expo project: 
+
+`expo init react-navigation-example`
+
+Choose blank project. 
+
+`cd react-navigation-example`
+
+Test your project. 
+
+**Get started by importing the library**
+
+- `npm install @react-navigation/native`
+
+**Install Expo dependancies**
+
+- `expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view`
+
+**Creating a Stack View** 
+
+Create a root component that will act as the main navigator. This can be the App component. If you're using a single Stack it should be App. 
+
+- `npm install @react-navigation/stack`
+
+I had to run `npm install` at this step.
+
+```JS
+// In App.js in a new project
+
+import * as React from 'react';
+import { View, Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+function HomeScreen() {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Home Screen</Text>
+    </View>
+  );
+}
+
+const Stack = createStackNavigator();
+
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default App;
+```
+
+The sample code above Defines a HomeScreen component, creates an instance of StackNavigator and wraps these in a NavigationContainer. 
+
+There is a single route: Stack.Screen which will display: HomeScreen. 
+
+The example so far only displays the a single Screen: Home Screen. But, it does this using the StackNavigator. 
+
+Notice that Stack navigator provides the title bar at the top. 
+
+### Navigating to another screen
+
+Add another Component screen. 
+
+```JS
+function DetailsScreen() {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Details Screen</Text>
+    </View>
+  );
+}
+```
+
+Now add a route to that screen in your stack navigator: 
+
+```JS
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Details" component={DetailsScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+```
+
+The homescreen will navigate to the details screen: 
+
+```JS 
+import * as React from 'react';
+import { Button, View, Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+function HomeScreen({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Home Screen</Text>
+      <Button
+        title="Go to Details"
+        onPress={() => navigation.navigate('Details')}
+      />
+    </View>
+  );
+}
+
 ...
 ```
 
-Use `StyleSheet.create()` for some reason not clearly explained in the docs. The `StyleSheet` also has some helper functions. 
 
-```JavaScript
+Navigate to the same screen multiple times: 
+
+```js 
 ...
-return <View style={styles.container}></View>
+function DetailsScreen({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Details Screen</Text>
+      <Button
+        title="Go to Details... again"
+        onPress={() => navigation.push('Details')}
+      />
+    </View>
+  );
+}
 ...
-import { StyleSheet }
-const styles = StyleSheet.create({
-	container: {
-		width: 100
-	}
-})
 ```
 
-**Important!** React Native uses CSS styles but there are a few differences between React Native and the Web. 
+Going back from one screen to the previous screen in the stack. Or jump to a screen on the stack.
 
-- Does not support all styles 
-- Not all components support all styles 
-- All units are pixels/points (with a few expections)
+```js
+...
+function DetailsScreen({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Details Screen</Text>
+      <Button
+        title="Go to Details... again"
+        onPress={() => navigation.push('Details')}
+      />
+      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
+      <Button title="Go back" onPress={() => navigation.goBack()} />
+    </View>
+  );
+}
+...
+```
 
-### Flex Box
+## Passing params to routes
 
-Everything is styled with Flex. The following properties will take your layouts far. 
+Pass params from home to details. The second parameter to `navigation.navigate('Screen', { params })` is an object containing params. 
 
-- flex
-- justifyContent
-- alignItems 
+```js 
+...
+function HomeScreen({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Home Screen</Text>
+      <Button
+        title="Go to Details"
+        onPress={() => {
+          /* 1. Navigate to the Details route with params */
+          navigation.navigate('Details', {
+            itemId: 86,
+            otherParam: 'anything you want here',
+          });
+        }}
+      />
+    </View>
+  );
+}
+...
+```
 
-Keep in mind that Flexbox applies to children. While Flexbox applies toa . single axis you can mix axis by nesting elements in in a view. 
+The details screen can access the params object to receive data from the route that called it: 
 
-## React Native Q and A
+```JS
+...
+function DetailsScreen({ route, navigation }) {
+  /* 2. Get the param */
+  const { itemId } = route.params;
+  const { otherParam } = route.params;
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Details Screen</Text>
+      <Text>itemId: {JSON.stringify(itemId)}</Text>
+      <Text>otherParam: {JSON.stringify(otherParam)}</Text>
+      <Button
+        title="Go to Details... again"
+        onPress={() =>
+          navigation.push('Details', {
+            itemId: Math.floor(Math.random() * 100),
+          })
+        }
+      />
+      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
+      <Button title="Go back" onPress={() => navigation.goBack()} />
+    </View>
+  );
+}
+...
+```
 
-What kinds of questions do you have so far about React Native? 
+### Configure the Navigation Bar
 
-## Handling Input 
+On any screen you can set options. 
 
-Touch screen devices have their own input paradigms. Touch screen interaction is a very different experience from mouse driven interaction. 
+```js
+<Stack.Screen 
+  name="Home" 
+  component={HomeScreen} 
+  options={{ title: "Hello World"}}
+/>
+```
 
-Discuss the differences
+Set some more styles for the navigsation bar: 
 
-https://facebook.github.io/react-native/docs/handling-touches
+```JS
+<Stack.Screen 
+  name="Home" 
+  component={HomeScreen} 
+  options={{ 
+    title: "Hello World",
+    headerStyle: {
+      backgroundColor: '#f4511e'
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+      fontSize: 24
+    }
+  }}
+/>
+```
 
-React Native provides a few interactive components. 
+You can set styles across all views by applying them to the navigator. 
 
-- Button - Good for basic button
-- Touchables - Good when the button isn't enough or can't be styled to meet your needs. 
-	- TouchableHighlight
-	- TouchableNativeFeedback
-	- TouchableOpacity
-	- TouchableWithoutNativeFeedback
-- TextInput
+```js
+...
+<Stack.Navigator 
+	initialRouteName="Home"
+	screenOptions={{
+		headerStyle: {
+			backgroundColor: '#f4511e',
+		},
+		headerTintColor: '#fff',
+		headerTitleStyle: {
+			fontWeight: 'bold',
+		},
+	}}
+>
+...
+```
 
-Use the 'Touchable' components to create custom buttons and things you can tap to handle input. 
+## Table View Detail View 
 
-## Forms 
+A common pattern in mobile development is the listview and detail view. At the root level you have stack view that contains list view. Tapping one of the cells in the list shows a detail view. 
 
-Forms on native follow the same patterns used with React on the web with a few unique issues. 
+You see this pattern in many apps. 
 
-Keyboard avoiding!
+- Mail
+- Settings
+- Slack
+- Instagram
 
-Mobile screens are small and space is limited. On mobile the keyboard will often obscure an input field. React Native solves this with it's: 
+Almost every app you use will make use of this pattern. 
 
-[KeyboardAvoidingView](https://facebook.github.io/react-native/docs/keyboardavoidingview)
+## Challenges 
 
-For Text input use: 
+Set up an app following the structions above. It should use React Navigation have a Home Screen and a Detail Screen. 
 
-- [InputAccessoryView]( https://facebook.github.io/react-native/docs/inputaccessoryview) - Customizes keyboard input view
-- [Picker](https://facebook.github.io/react-native/docs/picker) - Handles multi-choice input with a scrolling list of choices. Good for many choices.
-- [PickerIOS](https://facebook.github.io/react-native/docs/pickerios) - iOS Picker View
-- [SegmentedConreolIOS](https://facebook.github.io/react-native/docs/segmentedcontrolios) - Multi-choice input, iOS only, good for a few choices. 
-- [Slider](https://facebook.github.io/react-native/docs/slider)
-- [Switch](https://facebook.github.io/react-native/docs/switch) - Like a checkbox
-- [TextInput](https://facebook.github.io/react-native/docs/textinput) - Use for Single line and multi-line text input 
+Set up the navigation to allow switching between the Home Screen and the Detial Screen. 
 
-## Controlled Component Pattern
+Use the By Breed example from last week to create a list of cats or dogs using a FlatList in the Home Screen component. 
 
-Use the [Controlled Component pattern](https://reactjs.org/docs/forms.html) with form elements. 
+Use the TouchableHighlight to handle a press on a list Item. 
 
-**tl;dr** Store the value of the input element on state, set the state when the element changes, and set the value of the element from state. 
+Navigate to the the Detail Screen when a List Item is pressed. 
 
-- Define a property on state
-- Set the valuse of the form element it value on state
-- Set state when the form element changes
+Pass the cat or dog data to the Detail screen and display it. 
 
-## Activity 
+## Plan your navigation
 
-Use components to solve these problems. 
+Look at your final project. Ask yourself what type of navigation it will use? Diagram this in any way you like. Identify navigation systems used. 
 
-- ScrollView 
-	- Make a scrolling view with content Use any components to fill the view.
-- FlatList
-	- Use header, footer, and or separator in the list
-	- Use TextInput to filter list 
-- TextInput 
-	- Input zip code in Wthr app to show whether
-	- Use KeyBoardAvoidingView
+- Stack Navigator
+- Tabbed Navigation 
+- Drawer Navigation
+- Modal Views
+
+Start working on your project. Start by building your navigation system. Mock up the Content Screens with a a view and text to test your navigation. 
 
 ## After Class
 
-Define your final project. This must be a native app of some kind. 
-
-## Defining the final 
-
-What are you going to make? 
-
-What platform will it use? 
-
-- Mobile
-- Desktop
-
-Define milestones for the project. A milestone is a a step in the construction of your project and should have a deliverable.
+- 
 
 ## Additional Resources
 
-- [Controlled Component pattern](https://reactjs.org/docs/forms.html) 
-- [InputAccessoryView]( https://facebook.github.io/react-native/docs/inputaccessoryview) - Customizes keyboard input view
-- [Picker](https://facebook.github.io/react-native/docs/picker) - Handles multi-choice input with a scrolling list of choices. Good for many choices.
-- [PickerIOS](https://facebook.github.io/react-native/docs/pickerios) - iOS Picker View
-- [SegmentedConreolIOS](https://facebook.github.io/react-native/docs/segmentedcontrolios) - Multi-choice input, iOS only, good for a few choices. 
-- [Slider](https://facebook.github.io/react-native/docs/slider)
-- [Switch](https://facebook.github.io/react-native/docs/switch) - Like a checkbox
-- [TextInput](https://facebook.github.io/react-native/docs/textinput) - Use for Single line and multi-line text input 
+- 
+
+

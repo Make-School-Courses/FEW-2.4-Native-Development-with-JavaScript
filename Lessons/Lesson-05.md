@@ -1,283 +1,144 @@
-# FEW 2.4 class 5 - Native Components Part 1
+# FEW 2.4 Class 5 Defining a project
 
-Mobile is the land of small screens in portrait orientation, tall and narrow. This is a different environment from the desktop where screens are large and wide. Building mobile apps require developers to think differently to make applications that work in small spaces.
+From here until the end of the term you will be working on your final project. Your goal is to define what the project is and plan how you will complete it between now and the end of the term. 
 
 ## Learning Objectives
 
-- Display data on mobile (lots of data on a small screen)
-- Differentiate list view and scrollView and their use cases
-- Use a FlatList
+- Apply Styles to components 
+- Explore Native Components and read documentation apply what you find
+- Define project goals
+- Identify the platform
+- Map out milestones
 
-## ScrollView vs ListView 
+## Styling Components
 
-Mobile screens are small you'll always be scrolling. There are two ways to handle scrolling. 
+Components in React Native are styled using inline styles. 
 
-- Scrolling a **small** amount of content
-- Scrolling a **large** amount of content
-
-**tl;dr** For a small amount of content use a ScrollView. For a large amount of content use a ListView or FlatList.
-
-ScrollView scrolls things when the things take up more space than the ScrollView displays.
-
-Why is there a ListView and why would you use one?
-
-The ListView manages a large amount of data. Remember when Steve Jobs said you could have 10,000 songs in your pocket? People thought it was great. There was a developer somewhere that needed to solve the problem of how to scroll through a list of 10,000 items! 
-
-Seriously, imagine creating 10,000 views and loading them in RAM. Sounds like a memory problem. Heck! imagine rendering the pixels that made up a list of table cells where each cell is 40 pixels tall...
-
-That's a 40,000 pixel tall images! If each cell were 320 pixels wide: 
-
-`40 * 320 * 10,000 = 128,000,000`
-
-By comparison the iPhone SE screen is 320 x 568, thats:
-
-`320 * 568 = 181,760`
-
-So with 10,000 table cells listing all of your favorite songs on your iPhone SE you'd need more than 704 screens!
-
-`128,000,000 / 181,760 = 704.2253521127`
-
-What does the ListView do differently? 
-
-The ListView generates enough views to fill the screen. It displays only a subset of data at any moment. As each row view scrolls off the screen it is recycled and populated with new data.
-
-The ListView uses a limited set of views to scroll through an unlimited amount of data. 
-
-## Getting Started 
-
-For these examples, you'll be using a data set that has information about cat and dog breeds. 
-
-Initialize a new React Native Project with expo. 
-
-`expo init by-breed`
-
-Choose: Blank project.
-
-Then run the project to test it. 
-
-`cd by-breed`
-
-`yarn start`
-
-Get the sample files here: https://github.com/Make-School-Labs/few-2-4-by-breed-starter 
-
-Copy these files into your project folder. 
-
-- `breeds.js`
-- `cat-and-dog-breeds.json`
-
-The `cat-and-dog-breeds.json` file contains all of the data as one larger object. The `breeds.js` has some helper code to turn this object into arrays of cats and dogs. 
-
-## Implement ScrollView
-
-- Create a scrollView 
-- Add some content 
-- Scroll!
-
-Import ScrollView component.
-
-`import { ScrollView, View, Text } from 'react-native'`
-
-Then import the list of cats, or dogs if you prefer!
-
-`import { cats } from './breeds'`
-
-The `cats` array contains a list of objects with information about a cat breed. 
-
-One record might look like: 
-
-```JSON
-{
-	"breed": "Abyssinian",
-	"Affectionate with Family": 3,
-	"Amount of Shedding": 3,
-	"Easy to Groom": 3,
-	"General Health": 2,
-	"Intelligence": 5,
-	"Kid Friendly": 5,
-	"Pet Friendly": 5,
-	"Potential for Playfulness": 5
-}
+```JavaScript
+...
+return <View style={{width: 100}}>...</View>
+...
 ```
 
-Keep things simple at first. Just make a View and Text component to display each breed. 
+Use `StyleSheet.create()` for some reason not clearly explained in the docs. The `StyleSheet` also has some helper functions. 
 
-Make a component: 
-
-```JS 
-function Item({ title }) {
-	return (
-		<View style={styles.item}>
-		<Text style={styles.title}>{title}</Text>
-		</View>
-	);
-}
+```JavaScript
+...
+return <View style={styles.container}></View>
+...
+import { StyleSheet }
+const styles = StyleSheet.create({
+	container: {
+		width: 100
+	}
+})
 ```
 
-Notice this component is using `styles.item`. You can add some styles for this later. 
+**Important!** React Native uses CSS styles but there are a few differences between React Native and the Web. 
 
-In your App.js component use the ScrollView and `map` the list of cats into `Item` components. 
+- Does not support all styles 
+- Not all components support all styles 
+- All units are pixels/points (with a few expections)
 
-```JSX
-<ScrollView>
-	{cats.map((item, index) => {
-		return <Item title={`${index} ${item.breed}`} />
-	})}
-</ScrollView>
-```
+### Flex Box
 
-When you get this working you may see that it overlaps the status bar at the top or the 'notch' on newer iPhones. 
+Everything is styled with Flex. The following properties will take your layouts far. 
 
-You can take this into account by adjusting padding and margin on the ScrollView. This might prove problematic for the range of phones available. Luckily React Native Provides a `SafeAreaView` component that takes care of this for us! 
+- flex
+- justifyContent
+- alignItems 
 
-import `SafeAreaView`
+Keep in mind that Flexbox applies to children. While Flexbox applies toa . single axis you can mix axis by nesting elements in in a view. 
 
-`import { ..., SafeAreaView } from 'react-native'`
+## React Native Q and A
 
-Wrap your `ScrollView` in the `SafeAreaView`. 
+What kinds of questions do you have so far about React Native? 
 
-```JSX
-<SafeAreaView>
-	<ScrollView>
-		...
-	</ScrollView>
-</SafeAreaView>
-```
+## Handling Input 
 
-- https://reactnative.dev/docs/scrollview
-- https://reactnative.dev/docs/safeareaview
+Touch screen devices have their own input paradigms. Touch screen interaction is a very different experience from mouse driven interaction. 
 
-## Implement FlatList
+Discuss the differences
 
-- Define data 
-- Create a FlatList 
-- Define props 
- - renderItem
- - keyExtractor
+https://facebook.github.io/react-native/docs/handling-touches
 
-The `FlatFlist` is a component that is used to display large amounts of data in a scrolling list. 
+React Native provides a few interactive components. 
 
-The `FlatList` takes `data` as a prop. Rather than assigning it child components to render you'll give it the `data` instead. 
+- Button - Good for basic button
+- Touchables - Good when the button isn't enough or can't be styled to meet your needs. 
+	- TouchableHighlight
+	- TouchableNativeFeedback
+	- TouchableOpacity
+	- TouchableWithoutNativeFeedback
+- TextInput
 
-Why `data`? 
+Use the 'Touchable' components to create custom buttons and things you can tap to handle input. 
 
-FlatList needs to know how many rows you have to work with. Only a subset of the data will be displayed in the list. FlatList keeps track of the starting and ending indexes that are currently displayed. 
+## Forms 
 
-FlatList also takes a prop called `renderItem`. This is a function that returns an item to render.
- 
-Why `renderItem`?
+Forms on native follow the same patterns used with React on the web with a few unique issues. 
 
-This function returns an object with the data and returns a React Native Component which displays as the list cell. FlatList will ask us for the cells it needs, we supply the cell from the data and index. 
+Keyboard avoiding!
 
-The Object passed to renderItem includes three keys: 
+Mobile screens are small and space is limited. On mobile the keyboard will often obscure an input field. React Native solves this with it's: 
 
-- `item`: The `data` item for this row
-- `index`: the `index` of this row in `data`
-- `separators`: An object with properties that can be used to render separators between rows
+[KeyboardAvoidingView](https://facebook.github.io/react-native/docs/keyboardavoidingview)
 
-What's `keyExtractor`? 
+For Text input use: 
 
-Each cell needs a unique id, `keyExtractor` is used for this. `keyExtractor` is a prop that you assign a function to. This function receives the data item and index for the current row from which you will extract the key.
+- [InputAccessoryView]( https://facebook.github.io/react-native/docs/inputaccessoryview) - Customizes keyboard input view
+- [Picker](https://facebook.github.io/react-native/docs/picker) - Handles multi-choice input with a scrolling list of choices. Good for many choices.
+- [PickerIOS](https://facebook.github.io/react-native/docs/pickerios) - iOS Picker View
+- [SegmentedConreolIOS](https://facebook.github.io/react-native/docs/segmentedcontrolios) - Multi-choice input, iOS only, good for a few choices. 
+- [Slider](https://facebook.github.io/react-native/docs/slider)
+- [Switch](https://facebook.github.io/react-native/docs/switch) - Like a checkbox
+- [TextInput](https://facebook.github.io/react-native/docs/textinput) - Use for Single line and multi-line text input 
 
-- `item` : The `data` item for this row
-- `index` : The `index` of the row in `data`
+## Controlled Component Pattern
 
-Use this function to generate unique row ids. 
+Use the [Controlled Component pattern](https://reactjs.org/docs/forms.html) with form elements. 
 
-## ScrollView demo
+**tl;dr** Store the value of the input element on state, set the state when the element changes, and set the value of the element from state. 
 
-- Create ScrollView 
-- Fill with objects
-- Set styles 
-- Options 
+- Define a property on state
+- Set the valuse of the form element it value on state
+- Set state when the form element changes
 
-## FlatList demo
+## Activity 
 
-- Look at the data source 
-- Import FlatList
-- Render a FlatList
-- Set props
-	- data
-	- renderItem 
-	- keyExtractor
-- Define a Row Component
+Use components to solve these problems. 
 
-The data source includes a list of cats and a list of dogs. Each record is an object that inlcudes a breed property, and a list of other properties that rate the `breed` in different areas such as friendliness, Affection, Shedding, Health, etc. Each of these fields is rated with a value of 0 to 5. 
+- ScrollView 
+	- Make a scrolling view with content Use any components to fill the view.
+- FlatList
+	- Use header, footer, and or separator in the list
+	- Use TextInput to filter list 
+- TextInput 
+	- Input zip code in Wthr app to show whether
+	- Use KeyBoardAvoidingView
 
-**NOTE!** Not all properties appear with every animal. Only `breed` is guaranteed to appear with each object. 
+## After Class
 
-Create the FlatList component. Add set its props.
+Define your final project. This must be a native app of some kind. 
 
-- `data` - Set the data source to an array. 
-- `renderItem` - A function that returns a Component
-	- The `renderItem` function takes an object with the following properties: 
-	- `item` - An item from data
-	- `index` - the index of the item in data
-	- `separators` - An object with properties used for customizing custom separator Components (not used in this example)
- 
-Set data to an array:
+## Defining the final 
 
-```JSX
-<FlatList 
- 	data={cats}
-/>
-```
+What are you going to make? 
 
-Here the array contains data items that rendered into rows in the FlatList. 
+What platform will it use? 
 
-Set renderItem: 
+- Mobile
+- Desktop
 
-```JSX
-<FlatList 
-	...
-	renderItem={({ item, index }) => {
-		return <Item title={`${index} ${item.breed}`} />
-	}}
-/>
-```
+Define milestones for the project. A milestone is a a step in the construction of your project and should have a deliverable.
 
-The `renderItem` function returns a component to display for each row. The function receives an object with the `item` and the `index`. 
+## Additional Resources
 
-The `item` is an element from the data array and `index` is its position in the array. In this example, `item` would be one of the values from the data array.
-
-When you get this working you may see a warning telling you that your list is missing keys. Fix this by defining a key extractor.
-
-Define `keyExtractor`. React requires all children of a JSX list to have a unique key. `FlatList` handles this with `keyExtractor` a function that receives the item from data and returns a unique key.
-
-All of the breeds are unique. You can use that as a key. 
-
-```JSX
-<FlatList 
-	...
-	keyExtractor={item => item.breed}
-/>
-```
-
-The keyExtractor function generates a unique key for each cell. Here the cell was generated from the contents of the row plus the index. If your data had unique ids you could use those. 
-
-https://reactnative.dev/docs/flatlist#docsNav
-
-## Challenges 
- 
-1. Customize the `Item` component to display other info related to the breed. 
-1. Use Styles to customize the appearance of cells. 
-1. Display the other data. Note that each breed doesn't always have the same data/keys as other breeds. You'll need to get the keys and display the data for the available keys. You can use `Object.keys(data)` to get an array of keys on `data`. 
-1. Display dogs, if you haven't, cats if you have. 
-1. Display both dogs and cats. 
-1. Add an option to switch between cats and dogs. You'll need a UI element to choose the pet type. On iOS, you can use SegmentedControlIOS. On Android you can use one or buttons, there are also a couple [third party segmented controls](https://stackoverflow.com/questions/35313387/segmentedcontrolios-for-android-in-react-native)
-
-## After class
-
-Complete the challenges here. 
-
-Start planning your final project. This can be Electron or React Native. 
-
-## Resources 
-
-- [ScrollView](https://facebook.github.io/react-native/docs/scrollview)
-- [SafeAreaView](https://reactnative.dev/docs/safeareaview#docsNav)
-- [FlatList](https://facebook.github.io/react-native/docs/flatlist)
-	- [data](https://facebook.github.io/react-native/docs/flatlist#data)
-	- [renderItem](https://facebook.github.io/react-native/docs/flatlist#renderitem)
-	- [keyExtractor](https://facebook.github.io/react-native/docs/flatlist#keyextractor)
-
+- [Controlled Component pattern](https://reactjs.org/docs/forms.html) 
+- [InputAccessoryView]( https://facebook.github.io/react-native/docs/inputaccessoryview) - Customizes keyboard input view
+- [Picker](https://facebook.github.io/react-native/docs/picker) - Handles multi-choice input with a scrolling list of choices. Good for many choices.
+- [PickerIOS](https://facebook.github.io/react-native/docs/pickerios) - iOS Picker View
+- [SegmentedConreolIOS](https://facebook.github.io/react-native/docs/segmentedcontrolios) - Multi-choice input, iOS only, good for a few choices. 
+- [Slider](https://facebook.github.io/react-native/docs/slider)
+- [Switch](https://facebook.github.io/react-native/docs/switch) - Like a checkbox
+- [TextInput](https://facebook.github.io/react-native/docs/textinput) - Use for Single line and multi-line text input 

@@ -1,383 +1,214 @@
-# FEW 2.4 React Navigation
+# FEW 2.4 Navigation Part 2
 
-This goal of this lesson is to introduce navigation concepts on mobile and apply them. 
+A second look at navigation with Tab Navigator and Drawer Navigator. We will also look at how to display icons in your app. 
 
 ## Learning Objectives/Competencies
 
-- Identify navigation paradigms on mobile
-	- Stack
-	- Tab
-	- Drawer
-	- Modal
-- Implement and build stack navigator
-	- Manage a navigation stack
-- Use static properties and methods
+- Build the List detail view navigation scheme with React Native
 
-## Navigation on Native
+## Tabs and Drawers
 
-On mobile devices space is at a premium and primary content is text which runs horizontally while we are usually viewing in portrait. 
+Tabbed navigation appears is common on iOS and also appears on Android. Drawer navigation appears on Android and rarely on iOS. On iOS, the tab always appears at the bottom. 
 
-The nature of this environment is such that design dictates that we usually want to make content fill the space and minimize the number of items displayed. 
+There is a Tabbed starter project option when using `expo init`, I found this project code to be a little more complex than needed. I suspect most people would end up undoing more than they would use with this project. 
 
-Rather than showing mulitple content elements simultaneously we opt to focus on a single item. To fit all of your content into a mobile application you're either scrolling or navigating between views. 
+- [Drawer Navigator Starter](https://reactnavigation.org/docs/en/drawer-based-navigation.html) (Note! See my notes below tl;dr this did not work for me)
 
-Each new whole page of stuff is a screen. Really it's a view with many child views. In iOS native development it's called a ViewController. In React we call it a Component. 
+I tested these both on my iOS device.  
 
-For this dicussion let's use the name **Screen** when we are talking about a view that contains the entire current screen of content and use the term Component or View when we are talking about a sub view. 
+### Tab Navigator 
 
-A good resource for understanding navigation is the Human Interface Design Guidelines: HIG. 
+To get started with tabbed navigation you'll need to spin up a react native app along with the required dependancies. 
 
-https://developer.apple.com/design/human-interface-guidelines/ios/app-architecture/navigation/
+`expo init tabbed-example`
 
-## Navigating Screens
+Install react navigation:
 
-On the web we navigate between pages and the browser keeps track of navigation in the history. On mobile we don't have this convenience as a default behavior. 
+`npm install @react-navigation/native`
 
-Generally speaking on mobile your apps will use one of four navigation schemes:
+Get the expo dependancies:
 
-- Stacks
-- Tabs
-- Drawers
-- Modals
+`expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view`
 
-Your app might use any combination of these at the same time. 
+Get the bottom tabs:
 
-A **Stack** is a series of Screens. This is similar to what you see in the browser. There is a history. You can _push_ and _pop_ Screens on a stack the same way you can push and pop elements in an array. When you see the back button in a mobile app you're using a stack. 
+`npm install @react-navigation/bottom-tabs`
 
-**Tabs** appear at the bottom of the screen and manage a fixed set of Screens. The tabs appear on top of all Screens! Any Screen in tabbed navigation might be a Stack! 
+One more time in case soemthing was missing:
 
-**Drawers** act like tabs but the drawer is hidden until displayed, usually by tapping the "Hamburger" menu. Like Tabs, Drawers are available from any Screen, and anything they display might be a Stack. 
+`npm install`
 
-**Modal** Views appear above the current Screen. Imagine a modal as out side of a stack. Anytime you close/dismiss a modal view you are returned to previous Screen. Really you never left, the modal view just appeared on top to ask a clarifying question then went away.
+Test your app with `yarn start`, `npm start`, `yarn ios` or which ever method you prefer. 
 
-![Navigation Illustration](./images/Lesson-07.png)
+If everything is working create some tabbed navigation. 
 
-## Navigator
+Copy yhe sample code here: 
 
-A Navigator is the parent for any set of screens. A navigator is usually a Stack, Tab, or Drawer. Any of the screens displayed might be a Stack. 
+https://reactnavigation.org/docs/tab-based-navigation/
 
-Navigator is the top level view that manages displaying subviews. 
+This creates a bare bones application with two tabs. 
 
-## Navigation Libraries for native
+**Challenge:**
 
-- [React Navigation](https://reactnavigation.org/)
-- [React Native Router Flux](https://github.com/aksonov/react-native-router-flux)
-- [React Router Native](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-native)
+- Add another tab to the tab bar. Follow these steps: 
+  - Make a new component screen. This can be a function that returns a `<View>` with some `<Text>`
+  - Add a new `<Tab.Screen>` as a child of `<Tab.Navigator>`. You can put this below the existing tab screens. Assign it your new component. 
 
-I chose [React Navigation](https://reactnavigation.org/) for these examples since it has all of the features any project might need, works on Android and iOS, and was recommended by React Native. It's also an open source solution.
+## Icons 
 
-## React Native Navigation
+Icons appear on mobile in many places. If you can make them flexible in size that's even better. There are several libraries that make icons these notes will cover [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons).
 
-React Navigation is a library for React Native that is open source. It provides all of the basic native navigation systems and works on Android and iOS. 
+This library has several sets of bundled icons. Start by importing the library. 
 
-- https://reactnavigation.org/docs/getting-started
+`npm install --save react-native-vector-icons`
 
-Start with a new Expo project: 
+I had to link my icons using, this may not be needed for everyone: 
 
-`expo init react-navigation-example`
+`npx react-native link`
 
-Choose blank project. 
+`npx react-native link react-native-vector-icons`
 
-`cd react-navigation-example`
+In your React Native project import the icon with: 
 
-Test your project. 
+`import { Ionicons } from 'react-native-vector-icons'`
 
-**Get started by importing the library**
+Use the icon with: 
 
-- `npm install @react-navigation/native`
+`<Ionicons name="ios-add-circle-outline" size={32} />`
 
-**Install Expo dependancies**
+This should display a 32pt icon that looks like a circle with a plus in the center.
 
-- `expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view`
+You can put this component almost anywhere! Seems like these need to be wrapped in a `<Text></Text>` component. 
 
-**Creating a Stack View** 
+**Note!** Finding the name to use for a specific icon is not as easy as you might think. The names shown with the icon bundles are not always what you need to set as the name in the component!
 
-Create a root component that will act as the main navigator. This can be the App component. If you're using a single Stack it should be App. 
+If you get a warning that the name isn't working for an icon open the warning and read the names! It will list all of the names that are possible values. 
 
-- `npm install @react-navigation/stack`
+**Activity:** Add some icons to the Home and Settings Screens. 
 
-I had to run `npm install` at this step.
+**Challenges:**
 
-```JS
-// In App.js in a new project
+- Make an icon that appears on the Home Screen
+- Make an icon that appears on the Settings Screen 
+- Set the and color of the icons
 
-import * as React from 'react';
-import { View, Text } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+Explore Icons here: 
 
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
-    </View>
-  );
-}
+Look at the bundled icon sets: https://github.com/oblador/react-native-vector-icons#bundled-icon-sets.
 
-const Stack = createStackNavigator();
+**Challenges:** 
 
-function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-}
+- Make some icons in a Screen. You'll need to: 
+	- Import the icon set you want to use
+	- Figure out the name of the icon you want to see (this might take some experimentation)
+	- Add and configure an Icon component in your Screen
+	
+**Stretch Challenge:**
 
-export default App;
-```
+- Make an Icon button. 
+	- Follow the guide [here](https://github.com/oblador/react-native-vector-icons#iconbutton-component)
 
-The sample code above Defines a HomeScreen component, creates an instance of StackNavigator and wraps these in a NavigationContainer. 
+## Tab Bar Icons 
 
-There is a single route: Stack.Screen which will display: HomeScreen. 
+The docs show a solution in the [customizing the appearance](https://reactnavigation.org/docs/tab-based-navigation/#customizing-the-appearance) section of the React Navigation Tab Bar Example. This example looks a little complex as it uses the React-Native-Vector-Icons and includes a badge on the icon.
 
-The example so far only displays the a single Screen: Home Screen. But, it does this using the StackNavigator. 
+Notice that big block of code inside:
 
-Notice that Stack navigator provides the title bar at the top. 
+`<Tab.Navigator screenOptions={...lots of code here...} >`
 
-### Navigating to another screen
+This function returns an object thqt includes a property: `tabBarIcon`. This property is a function that receives an object with three properties: `focused, color, size`. You'll use these values to generate an icon and return it. 
 
-Add another Component screen. 
+The sample code 
+
+**Challenge:**
+
+Add a custom icon for your new tab bar view. Find an icon you like. In the `tabBarIcon` function add a new else if block. This case should look for `route.name` to identify the icon. Look up an icon in the icon set. 
+
+Note: Many icons have a solid and outline version. You can use the solid for the focussed state and the outline when the tab is not focussed. 
 
 ```JS
-function DetailsScreen() {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Details Screen</Text>
-    </View>
-  );
+if (route.name === 'Home') {
+  iconName = focused ? 'ios-information-circle' : 'ios-information-circle-outline';
+} else if (route.name === 'Settings') {
+  iconName = focused ? 'ios-list-box' : 'ios-list';
+} else if (route.name === 'Other') {
+  iconName = focused ? 'ios-star' : 'ios-star-outline';
 }
 ```
 
-Now add a route to that screen in your stack navigator: 
+Here I used the icons 'ios-star' and 'ios-star-outline' for the icon used in the 'Other' route. 
 
-```JS
-function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Details" component={DetailsScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-}
-```
+### Stretch Challenges
 
-The homescreen will navigate to the details screen: 
+- Import the breed data from the previous assignments. You can use the components from theose assignments also! 
+	- Make a cats tab, display all the cat breeds in the cats tab, use FlatList.
+		- Give this a cat icon
+	- Make a dogs tab and display dog breeds in a list here.
+		- Give this tab a Dog icon. 
 
-```JS 
-import * as React from 'react';
-import { Button, View, Text } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+### Tab Navigator Recap
 
-function HomeScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
-      <Button
-        title="Go to Details"
-        onPress={() => navigation.navigate('Details')}
-      />
-    </View>
-  );
-}
+Discussion: 
 
-...
-```
+- Quickly describe how tabnavigator is constructed
+- How are icons added? 
+- What other options can be applied? 
 
+Stretch challenges: 
 
-Navigate to the same screen multiple times: 
+- Add a stack navigator to one of the tabs screens
 
-```js 
-...
-function DetailsScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Details Screen</Text>
-      <Button
-        title="Go to Details... again"
-        onPress={() => navigation.push('Details')}
-      />
-    </View>
-  );
-}
-...
-```
+### Drawer Navigator
 
-Going back from one screen to the previous screen in the stack. Or jump to a screen on the stack.
+I had a hard time getting this to work. I suspect this was because I was working on iOS. 
 
-```js
-...
-function DetailsScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Details Screen</Text>
-      <Button
-        title="Go to Details... again"
-        onPress={() => navigation.push('Details')}
-      />
-      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
-      <Button title="Go back" onPress={() => navigation.goBack()} />
-    </View>
-  );
-}
-...
-```
+The default sample code [here](https://reactnavigation.org/docs/en/drawer-based-navigation.html) did NOT work for me on iOS. 
 
-## Passing params to routes
+What DID work for me was this example: 
 
-Pass params from home to details. The second parameter to `navigation.navigate('Screen', { params })` is an object containing params. 
+- https://snack.expo.io/@aboutreact/navigationdrawer-example?session_id=snack-session-5vdX_nqe_
 
-```js 
-...
-function HomeScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
-      <Button
-        title="Go to Details"
-        onPress={() => {
-          /* 1. Navigate to the Details route with params */
-          navigation.navigate('Details', {
-            itemId: 86,
-            otherParam: 'anything you want here',
-          });
-        }}
-      />
-    </View>
-  );
-}
-...
-```
+To get this working I did the following: 
 
-The details screen can access the params object to receive data from the route that called it: 
+- Download the sample code. This was incomplete and possible not using the latest version of React Native and React Navigator. 
+- Make a new blank project with `expo init`. 
+- Copy the following files from [example](https://snack.expo.io/@aboutreact/navigationdrawer-example?session_id=snack-session-5vdX_nqe_) and paste them into a new project you created in the previous step. 
+    - App.js
+    - app.json
+    - assets
+    - image
+    - pages
+    
+The package.json from the example code is missing a few things. Don't copy this! You will need to add react-navigation
 
-```JS
-...
-function DetailsScreen({ route, navigation }) {
-  /* 2. Get the param */
-  const { itemId } = route.params;
-  const { otherParam } = route.params;
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Details Screen</Text>
-      <Text>itemId: {JSON.stringify(itemId)}</Text>
-      <Text>otherParam: {JSON.stringify(otherParam)}</Text>
-      <Button
-        title="Go to Details... again"
-        onPress={() =>
-          navigation.push('Details', {
-            itemId: Math.floor(Math.random() * 100),
-          })
-        }
-      />
-      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
-      <Button title="Go back" onPress={() => navigation.goBack()} />
-    </View>
-  );
-}
-...
-```
+`npm install react-navigation`
 
-### Configure the Navigation Bar
+This worked for me and generated a simple app with a drawer and three subpages. 
 
-On any screen you can set options. 
+Please let me know if missed a step here. It was hard to backtrack over my experiments and note them here. 
 
-```js
-<Stack.Screen 
-  name="Home" 
-  component={HomeScreen} 
-  options={{ title: "Hello World"}}
-/>
-```
+## Apply navigation concepts
 
-Set some more styles for the navigsation bar: 
+Apply the navigation concepts from class to your final project. Choose a navigation scheme for your project and create a minimal implementation to get started. Mockup any Screens you may need with a Text label naming the content that will eventually be there. 
 
-```JS
-<Stack.Screen 
-  name="Home" 
-  component={HomeScreen} 
-  options={{ 
-    title: "Hello World",
-    headerStyle: {
-      backgroundColor: '#f4511e'
-    },
-    headerTintColor: '#fff',
-    headerTitleStyle: {
-      fontWeight: 'bold',
-      fontSize: 24
-    }
-  }}
-/>
-```
-
-You can set styles across all views by applying them to the navigator. 
-
-```js
-...
-<Stack.Navigator 
-	initialRouteName="Home"
-	screenOptions={{
-		headerStyle: {
-			backgroundColor: '#f4511e',
-		},
-		headerTintColor: '#fff',
-		headerTitleStyle: {
-			fontWeight: 'bold',
-		},
-	}}
->
-...
-```
-
-## Table View Detail View 
-
-A common pattern in mobile development is the listview and detail view. At the root level you have stack view that contains list view. Tapping one of the cells in the list shows a detail view. 
-
-You see this pattern in many apps. 
-
-- Mail
-- Settings
-- Slack
-- Instagram
-
-Almost every app you use will make use of this pattern. 
-
-## Challenges 
-
-Set up an app following the structions above. It should use React Navigation have a Home Screen and a Detail Screen. 
-
-Set up the navigation to allow switching between the Home Screen and the Detial Screen. 
-
-Use the By Breed example from last week to create a list of cats or dogs using a FlatList in the Home Screen component. 
-
-Use the TouchableHighlight to handle a press on a list Item. 
-
-Navigate to the the Detail Screen when a List Item is pressed. 
-
-Pass the cat or dog data to the Detail screen and display it. 
-
-## Plan your navigation
-
-Look at your final project. Ask yourself what type of navigation it will use? Diagram this in any way you like. Identify navigation systems used. 
-
-- Stack Navigator
-- Tabbed Navigation 
-- Drawer Navigation
-- Modal Views
-
-Start working on your project. Start by building your navigation system. Mock up the Content Screens with a a view and text to test your navigation. 
+Do this now in class! 
 
 ## After Class
 
-- 
+- Continue working on the final project. Focus on building navigation and passing data to screens. 
 
 ## Additional Resources
 
-- 
-
+- React Navigation
+	- Tabs
+		- https://reactnavigation.org/docs/en/tab-based-navigation.html
+		- https://reactnavigation.org/docs/en/tab-based-navigation.html#minimal-example-of-tab-based-navigation
+		- https://reactnavigation.org/docs/en/tab-based-navigation.html#customizing-the-appearance
+		- https://reactnavigation.org/docs/en/bottom-tab-navigator.html#bottomtabnavigatorconfig
+	- Vector Icons 
+		- https://github.com/oblador/react-native-vector-icons
+		- https://github.com/oblador/react-native-vector-icons#iconbutton-component
+	- Drawers 
+		- https://reactnavigation.org/docs/en/drawer-based-navigation.html
+		- https://snack.expo.io/@aboutreact/navigationdrawer-example?session_id=snack-session-5vdX_nqe_
 

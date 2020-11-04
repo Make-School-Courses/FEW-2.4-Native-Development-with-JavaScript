@@ -257,8 +257,6 @@ Icons are actually more complex than you might think. You'll need images for all
 	- https://dev.to/onmyway133/changing-electron-app-icon
   - https://www.christianengvall.se/electron-app-icons/
 	- https://www.electron.build/icons
-
-
 	
 ## Build an Electron App
 
