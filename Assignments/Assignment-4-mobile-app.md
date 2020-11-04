@@ -34,14 +34,12 @@ Submit your your completed project to gradescope.
 
 ### Due date
 
-Date this project is due
-
-## What is this assignment 
-
-Detailed description... 
+Class 6 Nov. 12
 
 ## Assessing the assignment
 
-[Assignment Name Rubric](./assignment-rubric.md)
-
-
+| Expectations | Does not meet | Meets  | Exceeds  |
+|:-------------|:--------------|:-------|:---------|
+| Completion | Did not complete the challenges | Completed the Challenges | Completed the challenges and some or all of the stretch challenges |
+| Code Quality | Code is not functioning | Code functions | Code has been linted and formatted to professional standards |
+| Work Ethic.  | < 3 comits.   | Commits show consistent work| commits show full 3 hours of work |
