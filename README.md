@@ -39,7 +39,7 @@ Students by the end of the course will be able to:
 |  2 |  Mon, Oct 26  | [Lesson 2](Lessons/Lesson-02.md) |  |
 |  3 |  Wed, Oct 28  | [Lesson 3](Lessons/Lesson-03.md) | [Assignment 2 Desktop Application](Assignments/Assignment-2-desktop-app.md) |
 |  - |  Mon, Nov 2   | **Vote! - Civic Responsibility Break** |
-|  4 |  Wed, Nov 4   | [Lesson 4](Lessons/Lesson-04.md) | [By Breed](Assignmenst/Assignment-4-mobile-app.md) |
+|  4 |  Wed, Nov 4   | [Lesson 4](Lessons/Lesson-04.md) | [By Breed](Assignments/Assignment-4-mobile-app.md) |
 |  5 |  Mon, Nov 9   | [Lesson 5](Lessons/Lesson-05.md) | - |
 |  6 |  Wed, Nov 11  | [Lesson 6](Lessons/Lesson-06.md) |  |
 |  7 |  Mon, Nov 16  | [Lesson 7](Lessons/Lesson-07.md) |  |
