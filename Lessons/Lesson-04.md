@@ -89,7 +89,7 @@ Then run the project to test it.
 
 `cd by-breed`
 
-`yarn start`
+`npm start`
 
 Get the sample files here: https://github.com/Make-School-Labs/few-2-4-by-breed-starter 
 
