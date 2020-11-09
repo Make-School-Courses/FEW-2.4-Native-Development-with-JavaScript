@@ -48,7 +48,7 @@ To do this use `Object.keys()` to get a list of keys and turn this into a list o
 
 Make a component to display each feature and value. 
 
-![By breed list](./images/by-breed-features.png=200)
+![By breed list](./images/by-breed-features.png)
 
 **Challenge 5:**
 
@@ -62,13 +62,13 @@ Modify the feature component to display the value as a bar. Imagine a bar that s
 
 To do this create two Views one nested inside the other. The parent View sets the maximum width of the bar. Style the parent with a size in pixels or a %. The inner View should have a width in percent: value / 5 * 100. 
 
-![By breed list](./images/by-breed-bars.png=200)
+![By breed list](./images/by-breed-bars.png)
 
 **Challenge 7:**
 
 Display a list of stars ⭐️ next to next to each feature. Each animal should have a number of stars equal to the the value of the feature. 
 
-![By breed list](./images/by-breed-stars.png=200)
+![By breed list](./images/by-breed-stars.png)
 
 **Stretch Challenge:** 
 
