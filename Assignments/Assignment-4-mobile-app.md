@@ -38,6 +38,8 @@ Style the components. Try to cover these ideas:
 
 Use the SafeAreaView component to prevent the list from overlapping the status bar. 
 
+<img src="./images/by-breed.png" style="width:200px">
+
 ![By breed list](./images/by-breed.png)
 
 **Challenge 4:** 
