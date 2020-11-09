@@ -36,21 +36,15 @@ Style the components. Try to cover these ideas:
 
 **Challenge 3:** 
 
-Use the SafeAreaView component to prevent the list from overlapping the status bar. 
-
-<img src="./images/by-breed.png" style="width:200px !important; float: left">
-
-![By breed list](./images/by-breed.png)
+<img src="./images/by-breed.png" style="width:200px !important; float: left"> Use the SafeAreaView component to prevent the list from overlapping the status bar. 
 
 **Challenge 4:** 
 
-Display the animal features with each each animals. These would be the data items and their values for example: "Kid Friendly". Each of these properties has a value from 1 to 5. you should display the key and the value. 
+![By breed list](./images/by-breed-features.png) Display the animal features with each each animals. These would be the data items and their values for example: "Kid Friendly". Each of these properties has a value from 1 to 5. you should display the key and the value. 
 
 To do this use `Object.keys()` to get a list of keys and turn this into a list of components. 
 
 Make a component to display each feature and value. 
-
-![By breed list](./images/by-breed-features.png)
 
 **Challenge 5:**
 
