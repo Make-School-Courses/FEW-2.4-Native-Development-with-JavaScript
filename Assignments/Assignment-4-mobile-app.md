@@ -38,7 +38,7 @@ Style the components. Try to cover these ideas:
 
 Use the SafeAreaView component to prevent the list from overlapping the status bar. 
 
-![By breed list](./images/by-breed.png | width=200)
+![By breed list](./images/by-breed.png)
 
 **Challenge 4:** 
 
