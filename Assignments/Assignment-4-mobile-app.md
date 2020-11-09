@@ -10,21 +10,79 @@ This is an introduction to React Native and should give you a good look at the p
 
 ## Project requirements
 
-Comnplete the challenges listed below. 
+Your goal is to build a mobile application with React Native that displays a list of pet breeds along with their features. 
+
+Download the starter code here: 
+
+- https://github.com/Make-School-Labs/few-2-4-by-breed-starter
+
+Complete the challenges below.
 
 ### Challenges 
  
-1. Customize the `Item` component to display other info related to the breed. 
+**Challenge 1:** 
 
-2. Use Styles to customize the appearance of cells. 
+Using the cat and dog data in the [starter code](https://github.com/Make-School-Labs/few-2-4-by-breed-starter) display a list of dogs or cats. 
 
-3. Display the other data. Note that each breed doesn't always have the same data/keys as other breeds. You'll need to get the keys and display the data for the available keys. You can use `Object.keys(data)` to get an array of keys on `data`. 
+Display the list using the React Native Flat List component. Be sure to use a separate component for the cells/rows displayed in the list. 
 
-4. Display dogs, if you haven't, cats if you have. 
+**Challenge 2:** 
 
-5. Display both dogs and cats. 
+Style the components. Try to cover these ideas: 
 
-6. Add an option to switch between cats and dogs. You'll need a UI element to choose the pet type. On iOS, you can use SegmentedControlIOS. On Android you can use one or buttons, there are also a couple [third party segmented controls](https://stackoverflow.com/questions/35313387/segmentedcontrolios-for-android-in-react-native)
+- The FlatList should stretch to fill the width and height of the screen. 
+- Each Row should have a font style where the text is large enough to read and too small. 
+- Add some padding to each cell to keep the text from pushing up flush to the edges. 
+
+**Challenge 3:** 
+
+Use the SafeAreaView component to prevent the list from overlapping the status bar. 
+
+![By breed list](./images/by-breed.png)
+
+**Challenge 4:** 
+
+Display the animal features with each each animals. These would be the data items and their values for example: "Kid Friendly". Each of these properties has a value from 1 to 5. you should display the key and the value. 
+
+To do this use `Object.keys()` to get a list of keys and turn this into a list of components. 
+
+Make a component to display each feature and value. 
+
+![By breed list](./images/by-breed-features.png)
+
+**Challenge 5:**
+
+In your feature component display the value omn the right and the feature on the left. 
+
+Use your styles for this. You'll use flex properties. Use `justifycontent: 'space-between'`
+
+**Challenge 6:**
+
+Modify the feature component to display the value as a bar. Imagine a bar that stretches based on value of the feature. Each feature is rated from 1 to 5. 
+
+To do this create two Views one nested inside the other. The parent View sets the maximum width of the bar. Style the parent with a size in pixels or a %. The inner View should have a width in percent: value / 5 * 100. 
+
+![By breed list](./images/by-breed-bars.png)
+
+**Challenge 7:**
+
+Display a list of stars ⭐️ next to next to each feature. Each animal should have a number of stars equal to the the value of the feature. 
+
+![By breed list](./images/by-breed-stars.png)
+
+**Stretch Challenge:** 
+
+Display dogs, or cats if you're already displaying dogs. 
+
+**Stretch Challenge:**
+
+Add a button to switch between dogs and cats. A segmented control would be a good choice for this. Sadly there React Native doesn't supply this component, they recommend a community solution: 
+
+- https://github.com/react-native-segmented-control/segmented-control
+
+**Stretch Challenge:**
+
+Add a search bar at the top to search animales by name. 
 
 ### Deliverable
 
