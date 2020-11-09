@@ -36,15 +36,19 @@ Style the components. Try to cover these ideas:
 
 **Challenge 3:** 
 
-<img src="./images/by-breed.png" style="width:200px !important; float: left"> Use the SafeAreaView component to prevent the list from overlapping the status bar. 
+Use the SafeAreaView component to prevent the list from overlapping the status bar. 
+
+![By breed list](./images/by-breed.png | width=200)
 
 **Challenge 4:** 
 
-![By breed list](./images/by-breed-features.png) Display the animal features with each each animals. These would be the data items and their values for example: "Kid Friendly". Each of these properties has a value from 1 to 5. you should display the key and the value. 
+Display the animal features with each each animals. These would be the data items and their values for example: "Kid Friendly". Each of these properties has a value from 1 to 5. you should display the key and the value. 
 
 To do this use `Object.keys()` to get a list of keys and turn this into a list of components. 
 
 Make a component to display each feature and value. 
+
+![By breed list](./images/by-breed-features.png | width=200)
 
 **Challenge 5:**
 
@@ -58,13 +62,13 @@ Modify the feature component to display the value as a bar. Imagine a bar that s
 
 To do this create two Views one nested inside the other. The parent View sets the maximum width of the bar. Style the parent with a size in pixels or a %. The inner View should have a width in percent: value / 5 * 100. 
 
-![By breed list](./images/by-breed-bars.png)
+![By breed list](./images/by-breed-bars.png | width=200)
 
 **Challenge 7:**
 
 Display a list of stars ⭐️ next to next to each feature. Each animal should have a number of stars equal to the the value of the feature. 
 
-![By breed list](./images/by-breed-stars.png)
+![By breed list](./images/by-breed-stars.png | width=200)
 
 **Stretch Challenge:** 
 
