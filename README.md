@@ -76,13 +76,11 @@ Students by the end of the course will be able to:
 - If you have a disability that needs an accommodation such as extended time or a different format, please take advantage of our [accommodations program](make.sc/disability-policy).
 
 ## Evaluation
-
 To pass this course you must meet the following requirements:
 
-- Complete all required assignments 
-- Complete and pass all assignments
+- Pass 70% projects according to the associated project rubric
 - Pass the final summative assessment according to the rubric as specified in this class
-    - This will be further explained in the [study guide](ADD_STUDY_GUIDE_LNK)
+    - This will be further explained in the [study guide](study-guide.md)
 - Actively participate in class and abide by the attendance policy
 - Make up all classwork from all absences
 
