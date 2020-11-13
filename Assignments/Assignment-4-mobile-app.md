@@ -90,10 +90,6 @@ Submit your your completed project to gradescope.
 
 **Be sure to add a .gitignore** top your project to avoid uploading your node_modules. 
 
-### Due date
-
-Class 6 Nov. 12
-
 ## Assessing the assignment
 
 | Expectations | Does not meet | Meets  | Exceeds  |

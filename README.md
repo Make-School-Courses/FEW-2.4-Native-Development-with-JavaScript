@@ -53,20 +53,18 @@ Students by the end of the course will be able to:
 
 <!-- | 14 |  Mon, Nov 23  | [Final Presentations](Lessons/Lesson-14.md) |  | -->
 
-## Assignment Schedule 
-
-| Assignment | Date Assigned | Due Date | Submission Form |
-|:----------:|:-------------:|:--------:|:---------------:|
-| [Assignment 1 React/Redux Tutorial](Assignments/Assignment-1-react-redux.md) | Tue, Oct 15 | Tue, Oct 22 | - |
-| [Assignment 2 Desktop Application](Assignments/Assignment-2-desktop-app.md) | day, Date | day, Date | - |
-| [Assignment 3 Mobile Application](Assignments/Assignment-3-mobile-app.md) | day, Date | day, Date | - |
-
 ### Projects
 
-- React + Redux Tutorial
-- Electron Project
-- React Native Project
-- Custom Project
+- [React + Redux Tutorial](Assignments/Assignment-1-react-redux.md)
+- [Electron Project](Assignments/Assignment-2-desktop-app.md)
+- [React Native Project](Assignments/Assignment-4-mobile-app.md)
+- [Custom Project](Assignments/Assignment-final-project.md)
+
+## Evaluation
+
+To pass this course you must meet the following requirements:
+
+- Achieve a passing score according to the rubric on each of the [projects](#projects) listed above.
 
 ### Final Exam
 
@@ -74,17 +72,6 @@ Students by the end of the course will be able to:
 - You will have 2 hours to complete this exam - it will be in class using paper and pencil, or a format of the instructor's choosing
 - There are no retakes of the exam.
 - If you have a disability that needs an accommodation such as extended time or a different format, please take advantage of our [accommodations program](make.sc/disability-policy).
-
-## Evaluation
-
-To pass this course you must meet the following requirements:
-
-- Complete all required assignments 
-- Complete and pass all assignments
-- Pass the final summative assessment according to the rubric as specified in this class
-    - This will be further explained in the [study guide](ADD_STUDY_GUIDE_LNK)
-- Actively participate in class and abide by the attendance policy
-- Make up all classwork from all absences
 
 ##  Information Resources
 
