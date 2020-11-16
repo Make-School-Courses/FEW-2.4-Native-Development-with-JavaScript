@@ -88,7 +88,13 @@ Test your project.
 
 **Install Expo dependancies**
 
+npm install @react-native-community/masked-view
+
 - `expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view`
+
+I had a problem installing all of these at the same time, I tried installing in two passes like this: 
+
+- `expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context`
 
 **Creating a Stack View** 
 
@@ -129,6 +135,13 @@ function App() {
 export default App;
 ```
 
+> At this point I got the error: **expo install react-native-safe-area-context**
+> 
+> I found a solution [here](https://github.com/th3rdwave/react-native-safe-area-context/issues/110#issuecomment-668864576)
+> 
+> `expo install react-native-safe-area-context`
+> `run yarn or npm install`
+
 The sample code above Defines a HomeScreen component, creates an instance of StackNavigator and wraps these in a NavigationContainer. 
 
 There is a single route: Stack.Screen which will display: HomeScreen. 
@@ -139,7 +152,7 @@ Notice that Stack navigator provides the title bar at the top.
 
 ### Navigating to another screen
 
-Add another Component screen. 
+Add another Component screen. You can add the code below to `App.js` or create a new file, if you make a new file at the standard imports at the top and export default at the bottom. 
 
 ```JS
 function DetailsScreen() {
@@ -189,7 +202,6 @@ function HomeScreen({ navigation }) {
 ...
 ```
 
-
 Navigate to the same screen multiple times: 
 
 ```js 
@@ -227,6 +239,12 @@ function DetailsScreen({ navigation }) {
 }
 ...
 ```
+
+Notice the new buttons added to the detail screen. There are three buttons here and they each implement three different choices of navigation. 
+
+- "Go to Details... again" - This button adds a new instance of the Details screen to the stack. Think of this like turning to the nect page in a book. In this case the next looks just like the previous page. 
+- "Go to Home" - This button jumps to the first page of the book. Really all of the screens are stored in ana array and you're jumping to the fisrt screen in the array. 
+- "Go back" - Think of this like turning to the previous page of the book. If you add more more Detail pages you'll be able to go back to each of those until you eventually get back to the Home screen again. 
 
 ## Passing params to routes
 
@@ -295,7 +313,9 @@ On any screen you can set options.
 />
 ```
 
-Set some more styles for the navigsation bar: 
+Here you set the title of the Home Screen. Note `name="Home"` is used for navigation and is also used fo the title if you don't name the title in `options`. 
+
+Set some more styles for the navigation bar: 
 
 ```JS
 <Stack.Screen 
@@ -314,6 +334,8 @@ Set some more styles for the navigsation bar:
   }}
 />
 ```
+
+Here you set the title, background clor and some styles on the title. 
 
 You can set styles across all views by applying them to the navigator. 
 
@@ -374,10 +396,12 @@ Start working on your project. Start by building your navigation system. Mock up
 
 ## After Class
 
-- 
+Start planning your final project. We will covering Tab Navigation in a future class and you will be able to use this in the final project. 
+
+- [Assignment final project](../Assignments/Assignment-final-project.md)
 
 ## Additional Resources
 
-- 
+- https://reactnavigation.org/docs/getting-started/
 
 

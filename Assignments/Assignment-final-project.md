@@ -10,17 +10,19 @@ Revisiting the concepts is the best way to solidify your understanding. Taking t
 
 ## Project requirements
 
-This will be a project of your own design. You will decide the topic, content, and platform. Your project can be anything you like but needs to include the following elements: 
+This will be a project of your own design. You will decide the topic, content, and platform. Your project can be anything you like but needs to include the following: 
 
-- The scope of your project should be something you can complete in the time available. 
-- The project must produce a native application. This can be a desktop or mobile application. 
-- Your project should use React, or React Native. 
-- You project should use Redux. 
+- Tab View Navigation with at leats three tabs
+- FlatList or SectionList 
+- Uses Redux to manage application state
+
+In addition you need to scope your project to be able to complete by the end of the term. 
 
 Here are a few places you might look for ideas for your final project: 
 
 - Could be an a continuation of an earlier project like an intensive project. 
 - Could be a mobile application that acts as a frontend or client for an existing backend or server project. 
+- it could be one of the tutorial projects converted to React Native
 
 ### Deliverable
 
@@ -30,6 +32,6 @@ Your final project should be on GitHub and submitted to GradeScope.
 
 | Expectations | Does not meet | Meets  | Exceeds  |
 |:-------------|:--------------|:-------|:---------|
-| Completion | Did not complete the challenges | Completed the Challenges | Completed the challenges and some or all of the stretch challenges |
-| Code Quality | Code is not functioning | Code functions | Code has been linted and formatted to professional standards |
-| Work Ethic.  | < 3 comits.   | Commits show consistent work| commits show full 3 hours of work |
+| Completion | project is not complete | Project is complete, functional, and includes all of the required features listed above. | The project is complete and has gone through at least one cycle of user testing and review. |
+| Code Quality | Code is not functioning | Code functions without errors or warnings. | Code has been linted and formatted to professional standards |
+| Work Ethic.  | < 3 comits. | Commits document your work process. | Commits show meaningful messages that tell the story of your development process. |

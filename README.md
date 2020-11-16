@@ -41,8 +41,8 @@ Students by the end of the course will be able to:
 |  - |  Mon, Nov 2   | **Vote! - Civic Responsibility Break** |
 |  4 |  Wed, Nov 4   | [Lesson 4](Lessons/Lesson-04.md) | [By Breed](Assignments/Assignment-4-mobile-app.md) |
 |  5 |  Mon, Nov 9   | [Lesson 5](Lessons/Lesson-05.md) | - |
-|  6 |  Wed, Nov 11  | [Lesson 6](Lessons/Lesson-06.md) |  |
-|  7 |  Mon, Nov 16  | [Lesson 7](Lessons/Lesson-07.md) |  |
+|  6 |  Wed, Nov 11  | [Lesson 6](Lessons/Lesson-06.md) | - |
+|  7 |  Mon, Nov 16  | [Lesson 7](Lessons/Lesson-07.md) | [Assignment Final Project](Assignments/Assignment-final-project.md) |
 |  8 |  Wed, Nov 18  | [Lesson 8](Lessons/Lesson-08.md) |  |
 |  9 |  Mon, Nov 23  | [Lesson 9](Lessons/Lesson-09.md) |  |
 |  - |  Wed, Nov 25  | **Holiday - Thanksgiving** |
@@ -58,7 +58,7 @@ Students by the end of the course will be able to:
 - [React + Redux Tutorial](Assignments/Assignment-1-react-redux.md)
 - [Electron Project](Assignments/Assignment-2-desktop-app.md)
 - [React Native Project](Assignments/Assignment-4-mobile-app.md)
-- [Custom Project](Assignments/Assignment-final-project.md)
+- [Final Project](Assignments/Assignment-final-project.md)
 
 ## Evaluation
 
