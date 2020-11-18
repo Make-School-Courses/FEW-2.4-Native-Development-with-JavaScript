@@ -14,7 +14,7 @@ There is a Tabbed starter project option when using `expo init`, I found this pr
 
 - [Drawer Navigator Starter](https://reactnavigation.org/docs/en/drawer-based-navigation.html) (Note! See my notes below tl;dr this did not work for me)
 
-I tested these both on my iOS device.  
+I tested these both on my iOS device.
 
 ### Tab Navigator 
 
@@ -22,13 +22,13 @@ To get started with tabbed navigation you'll need to spin up a react native app 
 
 `expo init tabbed-example`
 
-Install react navigation:
+Choose blank project.
+
+Install the expo dependancies:
 
 `npm install @react-navigation/native`
 
-Get the expo dependancies:
-
-`expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view`
+`expo install react-native-reanimated react-native-screens @react-native-community/masked-view`
 
 Get the bottom tabs:
 
@@ -44,9 +44,45 @@ If everything is working create some tabbed navigation.
 
 Copy yhe sample code here: 
 
-https://reactnavigation.org/docs/tab-based-navigation/
+https://reactnavigation.org/docs/tab-based-navigation#minimal-example-of-tab-based-navigation
 
 This creates a bare bones application with two tabs. 
+
+```JS
+import * as React from 'react';
+import { Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+function HomeScreen() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Home!</Text>
+    </View>
+  );
+}
+
+function SettingsScreen() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Settings!</Text>
+    </View>
+  );
+}
+
+const Tab = createBottomTabNavigator();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Settings" component={SettingsScreen} />
+      </Tab.Navigator>
+    </NavigationContainer>
+  );
+}
+```
 
 **Challenge:**
 
@@ -64,9 +100,9 @@ This library has several sets of bundled icons. Start by importing the library.
 
 I had to link my icons using, this may not be needed for everyone: 
 
-`npx react-native link`
+<!-- `npx react-native link`
 
-`npx react-native link react-native-vector-icons`
+`npx react-native link react-native-vector-icons` -->
 
 In your React Native project import the icon with: 
 
@@ -118,7 +154,32 @@ Notice that big block of code inside:
 
 This function returns an object thqt includes a property: `tabBarIcon`. This property is a function that receives an object with three properties: `focused, color, size`. You'll use these values to generate an icon and return it. 
 
-The sample code 
+```JS
+<Tab.Navigator
+  screenOptions={({ route }) => ({
+    tabBarIcon: ({ focused, color, size }) => {
+      let iconName;
+
+      if (route.name === 'Home') {
+        iconName = focused
+          ? 'ios-information-circle'
+          : 'ios-information-circle-outline';
+      } else if (route.name === 'Settings') {
+        iconName = focused ? 'ios-list-box' : 'ios-list';
+      }
+
+      // You can return any component that you like here!
+      return <Ionicons name={iconName} size={size} color={color} />;
+    },
+  })}
+  tabBarOptions={{
+    activeTintColor: 'tomato',
+    inactiveTintColor: 'gray',
+  }}
+>
+...
+</Tab.Navigator>
+```
 
 **Challenge:**
 
@@ -136,7 +197,7 @@ if (route.name === 'Home') {
 }
 ```
 
-Here I used the icons 'ios-star' and 'ios-star-outline' for the icon used in the 'Other' route. 
+Here I used the icons 'ios-star' and 'ios-star-outline' for the icon used in the 'Other' route.
 
 ### Stretch Challenges
 

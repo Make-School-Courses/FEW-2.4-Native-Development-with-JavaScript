@@ -88,9 +88,8 @@ Test your project.
 
 **Install Expo dependancies**
 
-npm install @react-native-community/masked-view
-
-- `expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view`
+- `npm install @react-native-community/masked-view`
+- `expo install react-native-reanimated react-native-screens @react-native-community/masked-view`
 
 I had a problem installing all of these at the same time, I tried installing in two passes like this: 
 
