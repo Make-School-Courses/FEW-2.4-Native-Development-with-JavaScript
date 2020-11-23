@@ -35,11 +35,13 @@ Here a few ideas you can consider for a final project.
 - Create a Mobile app for a backend app you created previously
 - Create a Mobile app from one of your previous web projects. This could be an intensive or other project.  
 
+### Wireframes for 
+
+
+
 ## After Class
 
-- Continue working on your current tutorial
-- Complete reading
-- Complete challenges
+- 
 
 ## Additional Resources
 
