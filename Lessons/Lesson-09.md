@@ -19,6 +19,22 @@ https://react-native-training.github.io/react-native-elements/docs/overview.html
 	- Who uses iOS?
 		- What are UI systems in use? 
 
+## Defining your final project
+
+To stretch your skills your goal now is to tqke the ideas from class and put them all togetherr into a project of your own design. 
+
+Start with idea. Think about what types of apps people use on mobile and why you would make a mobile app. 
+
+Next scope your app. We have about 2 weeks to put the final project together. You'll need to create your final and complete it before class 13 Wed, Dec 9. You may have to choose which features of your final you implement. 
+
+### Final Project ideas
+
+Here a few ideas you can consider for a final project. 
+
+- Recreate one of the React Redux Tutorials in React Native
+- Create a Mobile app for a backend app you created previously
+- Create a Mobile app from one of your previous web projects. This could be an intensive or other project.  
+
 ## After Class
 
 - Continue working on your current tutorial
