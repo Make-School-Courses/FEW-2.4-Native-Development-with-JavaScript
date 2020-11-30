@@ -11,7 +11,9 @@ Making things move on mobile provides that thing that makes your apps interestin
 
 ## Planning your project
 
-To get the best results for your project you need a plan. Do this: 
+To get the best results for your project you need a plan. Create a **Todo** section in your project readme. 
+
+Do this: 
 
 - Write a short description of your project goals. 
 - Make a list of tasks you'll need to complete to complete your project. 
@@ -20,6 +22,8 @@ To get the best results for your project you need a plan. Do this:
 Assess at the scope of your project. Ask yourself if it looks like there is too much to complete before the end of the term? 
 
 Take stock of what is in your project and compare to the project description. Do you have all of the required elements?
+
+Push these changes to readme on GitHub. 
 
 ## Animation
 
