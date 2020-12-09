@@ -2,7 +2,7 @@
 
 Metal fans need an app and you have to make it. Follow these steps to build the app. 
 
-These images show what you would be making (without any extra credit problems). 
+These images show what you would be making.
 
 ![final-metal-tab-1](final-metal-tab-1.jpeg)
 
@@ -10,60 +10,89 @@ These images show what you would be making (without any extra credit problems).
 
 The core of the assessment is making the app. Save the styling and details for last. This will save you time as you work without wasting time solving problems that are not core to the app. For this reason, I recommend you solve the problems in the order listed here. 
 
-## Step 1: React Native
+## Challenge 1: React Native
 
 Create a new React Native Project. It should be iOS compatible. I should be able to run it with Expo. 
 
-## Step 2: Use React Navigation
+## Challenge 2: Use React Navigation
 
 The app should use a Tab Navigation with two tabs.
 
-Create a tabbed navigation.
+- Install required dependencies 
+  - react-navigation and other 
+  - bottom tabs
+- Create a components for two screens
+- Create a bottom tab navigator
+- Set up your NavigationContainer
+- Add your tab screens
 
-Give Each tab an icon. You can use React Native Vector Icons for this. 
+## Challenge 3: Add icons
 
-## Step 3: Band tab
+Add an icon to each tab on the bar. 
+
+- Install your dependancies: react vector icons
+- import your icon set
+- Add icons to the tab bar
+
+## Challenge 4: Band tab
 
 Use the data from `metal.json`. This file contains stats describing the 50 most popular metal bands. 
 
-In one tab of your tabs display a list of all metal bands. Your list should show: 
+In one tab screen display a list of all metal bands. Use FlatList.
+
+- Import FlatList
+- Import your data from `metal.json`
+- Create a component to represent each row in the list. 
+
+Each cell in the list should display: 
 
 - Band Name
 - Country of origin
 - Number of fans
 - Year formed
 
-Note: The number of fans is provided in thousands. You should multiply the number by 1000 and format it with commas. See the example image.
+## Challenge 5: Format and Style band cell
 
-Notice the arrangement of the four elements. The name and formed dates are on the left and the country of origin and number of fans are on the right. 
+Focus on the list cell now. It should show:
 
-Use FlatList.
+- Band Name
+- Country of origin
+- Number of fans
+- Year formed
 
-## Step 4: Stats Tab
+Look at the image. Your goal is to make yours look like the image. 
 
-This tab shows stats from the data in `metal.json`. Use map, filter, and reduce to find the values displayed here!
+The Band Name and Year formed appears on the left and the country of origin and number of fans appears on the right. Use flex. 
+
+Note: The number of fans is provided in thousands. You should multiply the number by 1000 and format it with commas. See the example image. For example: 
+
+- 4,195,000
+
+## Challenge 6: Stats Tab
+
+This tab shows statistics from the data in `metal.json`. Use map, filter, and reduce to find the values displayed here!
 
 Show the following: 
 
-- Total number of Bands
-- Total metal fans (this is the sum of all fans for each band)
-- Number of Countries represented. You'll need to count each unique country found in all bands. 
-- Number of Active bands (each band has a split property, this is "-" when a band is still active and shows the year they split if they broke up)
-- Number of bands that have split
+- **Total number of Bands**
+- **Total metal fans** (this is the sum of all fans for each band)
+- **Number of Countries represented**. You'll need to count each unique country found in all bands. 
+- **Number of Active bands** (each band has a split property, this is "-" when a band is still active and shows the year they split if they broke up)
+- **Number of bands that have split**
 
-## Step 5: Style your work
+## Challenge 7: Style your work
 
 Look at the images and try to match the general styles you see. 
 
-- Basic styles (5)
+- Basic styles
   - Background Color is #000
   - Text color is white #fff
-- Tab bar Styles (5)
+- Tab bar Styles
   - Inactive Background color #000
   - active background color #111
   - active tint color #f00
-  - inactive tine color #600
-- Metal Stats (5)
+  - inactive tint color #600
+- Metal Stats
   - Color #fff
   - Title/Heading
     - font size 30
@@ -74,54 +103,66 @@ Look at the images and try to match the general styles you see.
     - font weight bold
   - values
     - font size 18
-- Band List Cell styles (5)
+- Band List: Cell styles
   - Layout looks like the image
     - Band Name and formation date are on the left
     - Country of Origin and fans on the right
-  - Band name
+  - Band name and Countery name
     - font size 18
-  - For bands that have not split
-    - color: #fff
-    - font weight bold
-  - For bands that have split
-    - color #666
-    - text decoration line line-through
+  - Fans
+    - font size 12
   - origin
     - font size 18
     - color #999
 
+## Challenge 8: Conditional styles
+
+Some of the bands have splut up and are no longer active. You need to show this in the band cell in the list. Do it by adjusting the styles conditionally on the data. 
+
+In each cell modify the styles of the name based on whether the band is split or active. A band that has split up will have a year in the "split" field for example: 
+
+```JSON
+...
+"split": "1990"
+...
+```
+
+Or it will show "-" if the band has not split. 
+
+```JSON
+...
+"split": "-"
+...
+```
+
+Style the band name: 
+
+- For bands that have not split
+  - color: #fff
+  - font weight bold
+- For bands that have split
+  - color #666
+  - text decoration line-through
+
+## Challenge 9: Styles of Metal
+
+Besides the wide array of interesting and creative bands names metal also has an interesting and creative range of sub genres. Your job is to find all of the all of the sub-genres. 
+
+Each band has a "style" listed in the JSON data. You're goal is to count the unique styles. 
+
+Display the count of unique metal styles on the Statictics screen. Something like: 
+
+- **Styles:** 47
+
+(It's notable that out of 50 bands there are 47 unqiue styles!)
+
+## Challenge 10: List the Styles 
+
+The goal of this challenge is to add a new tab screen and display all of the unique styles in a FlatList. 
+
+- Create a new Tab Screen
+- In the new screen Set up a FlatList that displays all of the unique styles
+
 ## Extra Credit 
 
-Try as much of the extra credit as you like. I will award partial credit for partially functional work. This work may be hard for me to spot be sure to call it out with a comment! 
-
-### Redux
-
-Use Redux and React-Redux to show the selected band. Select the band by tapping it in the list view. Create a third tab that shows all of the stats for the selected band. 
-
-- Actions 
-  - Define an action `SELECT_BAND`
-  - Define an action creator `selectBand(index)`
-- Reducers 
-  - Define a root reducer 
-  - Define a band reducer
-- Create the store 
-- Use the Provider
-- Connect a component to the store
-  - Map your state to props (in the selected band view/component)
-  - Map your action to props (in the band list view)
-
-### More Extra credit
-
-Try any of the problems below. 
-
-- Add a control (button, segmented control, etc.) that sorts bands by: 
-  - Name
-  - Year formed
-  - Country of origin
-- Add a tab that shows 
-  - Band with most fans
-- Show all the metal styles
-  - Make a third tab view 
-  - Find all of the different musical styles represented in the data
-  - List all of the unique styles 
- 
+- Add a search field at the top of the band list. Use it to filter the list of bands displayed by name. 
