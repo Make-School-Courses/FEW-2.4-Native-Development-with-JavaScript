@@ -131,7 +131,7 @@ async function createWindow() {
 
 
     // load index.html document from the react app (make sure to put in the right file path)
-    mainWindow.loadURL(`file://${__dirname}/src/index.html`);
+    mainWindow.loadURL(`file://${__dirname}/public/index.html`);
     
 
   /*  Use this if you want the app window to start with dev tools open   
