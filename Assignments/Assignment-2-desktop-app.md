@@ -35,7 +35,7 @@ Class 4 - Nov. 4
 
 ### Sample Electron side code
 
- #### Getting Started:
+#### Getting Started
 
 - Create a file in your root directory(same folder level where your package.json sits)
 - this file would house the app process for your electron app(you can name it as you please e.g. `index.js`)
@@ -52,6 +52,14 @@ Class 4 - Nov. 4
 - Then you can start out with this starter code in that file
 
 ```javascript
+/** 
+ * This example illustrates a simple electron app
+ * packaged from a react project. 
+ * 
+ * Take note of the comments
+ *  
+ * 
+ * */
 // require electron and destructure the app object and Browser Window class from it
 const { app, BrowserWindow, Menu, ipcMain } = require('electron');
 const path = require('path');
