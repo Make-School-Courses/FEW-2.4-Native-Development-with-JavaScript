@@ -35,9 +35,10 @@ Class 4 - Nov. 4
 
 ### Sample Electron side code
 
- As a start, you should:
+ #### Getting Started:
 
-- Create a file in your root directory(same folder level where your package.json sits) that would house the app process for your electron app(e.g. index.js)
+- Create a file in your root directory(same folder level where your package.json sits)
+- this file would house the app process for your electron app(you can name it as you please e.g. `index.js`)
 - install the electron library with npm `npm install electron -D`
 - include a script in your package.json file to run the electron app:
 
