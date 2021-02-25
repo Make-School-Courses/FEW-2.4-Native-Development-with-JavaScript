@@ -33,31 +33,32 @@ Class 4 - Nov. 4
 | Completion | Project is not working   | Project works and like the tutorial example. | Project is complete and adds new styles and personalized appearance from the tutorial |
 | Electron | Project is not built with electron or doesn't run from the desktop | Project works on the desktop | Project works well and shows customized behaviors as a desktop application |
 
-### Sample Electron side code
+### Sample Electron code
 
 #### Getting Started
 
-- Create a file in your root directory(same folder level where your package.json sits)
-- this file would house the app process for your electron app(you can name it as you please e.g. `index.js`)
-- install the electron library with npm `npm install electron -D`
-- include a script in your package.json file to run the electron app:
+- Create a new `electron.js` file in your public directory.
+- this file would house the Main process for your electron app
+- See instructions on adding electron scripts to your `package.json` file [here](https://github.com/Make-School-Courses/FEW-2.4-Native-Development-with-JavaScript/blob/master/Lessons/Lesson-03.md)
+- update the `main` field your package.json to point to this file and include a script to run the electron app `electron-dev`. See sample below:
 
 ```json
-"scripts": {
-//react server start script
-"electron": "electron index.js"
-}
+  "main": "public/electron.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron-dev": "concurrently \"BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron .\""
+  }
 ```
 
 - Then you can start out with this starter code in that file
 
 ```javascript
 /** 
- * This example illustrates a simple electron app
- * packaged from a react project. 
- * 
- * Take note of the comments
- *  
+ * This sample illustrates a simple electron app
+ * packaged from a react project.  
  * 
  * */
 // require electron and destructure the app object and Browser Window class from it
@@ -165,7 +166,7 @@ app.on('activate', () => {
 
 // Define any IPC or other custom functionality below here
 // Remember the four objects to use when 
-//communicating between processes(in this case, your react and electron process)
+//communicating between processes(in this case, your react -renderer process- and electron process - main process)
 /* 
   - ipcRenderer.send(send messages/data from react process to electron app process)
   - ipcMain.on(receive messages/data from react process)
