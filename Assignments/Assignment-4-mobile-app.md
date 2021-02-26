@@ -52,7 +52,7 @@ Make a component to display each feature and value.
 
 **Challenge 5:**
 
-In your feature component display the value omn the right and the feature on the left. 
+In your feature component display the value on the right and the feature on the left. 
 
 Use your styles for this. You'll use flex properties. Use `justifycontent: 'space-between'`
 
@@ -97,3 +97,6 @@ Submit your your completed project to gradescope.
 | Completion | Did not complete the challenges | Completed the Challenges | Completed the challenges and some or all of the stretch challenges |
 | Code Quality | Code is not functioning | Code functions | Code has been linted and formatted to professional standards |
 | Work Ethic.  | < 3 comits.   | Commits show consistent work| commits show full 3 hours of work |
+
+### Resources
+- [WTHR Native Tutorial](https://www.makeschool.com/academy/track/standalone/wthr-native-tutorial-mvs/getting-started)
