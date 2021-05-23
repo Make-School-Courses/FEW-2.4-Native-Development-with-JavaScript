@@ -22,12 +22,60 @@ If your goal is to make the best possible user experiences and products having t
 
 Students by the end of the course will be able to:
 
-1. Create Native Applications for Desktop and Mobile
-1. Identify the use cases, pros, and cons of native development
+1. Create Native Applications for web, Desktop and Mobile
+1. Identify use cases, pros, and cons of native ve web development
 1. Use Reactive and Functional programming concepts
 1. Design and build applications using Android and or iOS UI Paradigms
 
 ## Schedule
+
+**Course Dates:** Monday, May 31 – Friday, July 16, 2021 (7 weeks)
+
+**Class Times:** Monday, Wednesday, Friday at 9:30am–11:15am (19 class sessions)
+
+| Class |          Date          |                 Topics                  |
+|:-----:|:----------------------:|:---------------------------------------:|
+|  - |  Mon, May 31         | **No Class - Memorial Day** |
+|  1 |  Wed, June 2         | [Lesson 1] |
+|  2 |  Fri, June 4         | [Lesson 2] |
+|  3 |  Mon, June 7         | [Lesson 3] |
+|  4 |  Wed, June 9         | [Lesson 4] |
+|  5 |  Fri, June 11        | [Lesson 5] |
+|  6 |  Mon, June 14        | [Lesson 6] |
+|  7 |  Wed, June 16        | [Lesson 7] |
+|  8 |  Fri, June 18        | [Lesson 8] |
+|  9 |  Mon, June 21        | [Lesson 9] |
+| 10 |  Wed, June 23        | [Lesson 10] |
+| 11 |  Fri, June 25        | [Lesson 11] |
+| 12 |  Mon, June 28        | [Lesson 12] |
+| 13 |  Wed, June 30        | [Lesson 13] |
+| 14 |  Fri, July 2         | [Lesson 14] |
+| -  |  Mon, July 5         | **No Class - Independence Day Observed** |
+| 15 |  Wed, July 7         | [Lesson 15] |
+| 16 |  Fri, July 9         | [Lesson 16] |
+| 17 |  Mon, July 12        | [Lesson 17] |
+| 18 |  Wed, July 14        | [Lesson 18] |
+| 19 |  Fri, July 16        | Final Exam/Presentations |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 **Course Dates:** Wednesday, October 21 – Wednesday, December 9, 2020 (8 weeks)
 
