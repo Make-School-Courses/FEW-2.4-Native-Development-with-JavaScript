@@ -33,80 +33,52 @@ Students by the end of the course will be able to:
 
 **Class Times:** Monday, Wednesday, Friday at 9:30am–11:15am (19 class sessions)
 
-| Class |          Date          |                 Topics                  |
-|:-----:|:----------------------:|:---------------------------------------:|
-|  - |  Mon, May 31         | **No Class - Memorial Day** |
-|  1 |  Wed, June 2         | [Lesson 1] |
-|  2 |  Fri, June 4         | [Lesson 2] |
-|  3 |  Mon, June 7         | [Lesson 3] |
-|  4 |  Wed, June 9         | [Lesson 4] |
-|  5 |  Fri, June 11        | [Lesson 5] |
-|  6 |  Mon, June 14        | [Lesson 6] |
-|  7 |  Wed, June 16        | [Lesson 7] |
-|  8 |  Fri, June 18        | [Lesson 8] |
-|  9 |  Mon, June 21        | [Lesson 9] |
-| 10 |  Wed, June 23        | [Lesson 10] |
-| 11 |  Fri, June 25        | [Lesson 11] |
-| 12 |  Mon, June 28        | [Lesson 12] |
-| 13 |  Wed, June 30        | [Lesson 13] |
-| 14 |  Fri, July 2         | [Lesson 14] |
-| -  |  Mon, July 5         | **No Class - Independence Day Observed** |
-| 15 |  Wed, July 7         | [Lesson 15] |
-| 16 |  Fri, July 9         | [Lesson 16] |
-| 17 |  Mon, July 12        | [Lesson 17] |
-| 18 |  Wed, July 14        | [Lesson 18] |
-| 19 |  Fri, July 16        | Final Exam/Presentations |
+| Class |    Date       |   Topics   |  Assignment |
+|:-----:|:-------------:|:----------:|:-----------:|
+|  -    |  Mon, May 31  | **No Class - Memorial Day** | - |
+|  1    |  Wed, June 2  | [Lesson 1]  | [Assignment 1 React/Redux Tutorial](Assignments/Assignment-1-react-redux.md) |
+|  2    |  Fri, June 4  | [Lesson 2]  | - |
+|  3    |  Mon, June 7  | [Lesson 3]  | - |
+|  4    |  Wed, June 9  | [Lesson 4]  | - |
+|  5    |  Fri, June 11 | [Lesson 5]  | - |
+|  6    |  Mon, June 14 | [Lesson 6]  | [Assignment 2 Desktop Application](Assignments/Assignment-2-desktop-app.md) |
+|  7    |  Wed, June 16 | [Lesson 7]  | - |
+|  8    |  Fri, June 18 | [Lesson 8]  | - |
+|  9    |  Mon, June 21 | [Lesson 9]  | [By Breed](Assignments/Assignment-4-mobile-app.md) |
+| 10    |  Wed, June 23 | [Lesson 10] | - |
+| 11    |  Fri, June 25 | [Lesson 11] | - |
+| 12    |  Mon, June 28 | [Lesson 12] | [Assignment 4 Final Project](Assignments/Assignment-final-project.md) |
+| 13    |  Wed, June 30 | [Lesson 13] | - |
+| 14    |  Fri, July 2  | [Lesson 14] | - |
+| -     |  Mon, July 5  | **No Class - Independence Day Observed** | - |
+| 15    |  Wed, July 7  | [Lesson 15] | - |
+| 16    |  Fri, July 9  | [Lesson 16] | - |
+| 17    |  Mon, July 12 | [Lesson 17] | - |
+| 18    |  Wed, July 14 | Final Exam/Presentations | - |
+| 19    |  Fri, July 16 | Final Exam/Presentations | - |
 
+[Lesson 1]: Lessons/Lesson-01.md
+[Lesson 2]: Lessons/Lesson-02.md
+[Lesson 3]: Lessons/Lesson-03.md
+[Lesson 4]: Lessons/Lesson-04.md
+[Lesson 5]: Lessons/Lesson-05.md
+[Lesson 6]: Lessons/Lesson-06.md
+[Lesson 7]: Lessons/Lesson-07.md
+[Lesson 8]: Lessons/Lesson-08.md
+[Lesson 9]: Lessons/Lesson09.md
+[Lesson 10]: Lessons/Lesson-10.md
+[Lesson 11]: Lessons/Lesson-11.md
+[Lesson 12]: Lessons/Lesson-12.md
+[Lesson 13]: Lessons/Lesson-13.md
+[Lesson 14]: Lessons/Lesson-14.md
+[Lesson 15]: Lessons/Lesson-15.md
+[Lesson 16]: Lessons/Lesson-16.md
+[Lesson 17]: Lessons/Lesson-17.md
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**Course Dates:** Wednesday, October 21 – Wednesday, December 9, 2020 (8 weeks)
-
-**Class Times:** Monday, Wednesday at 9:30am–12:15pm (13 class sessions)
-
-| Class | Date | Topics | Assignments |
-|:-----:|:----:|:------:|:-----------:|
-|  1 |  Wed, Oct 21  | [Lesson 1](Lessons/Lesson-01.md) | [Assignment 1 React/Redux Tutorial](Assignments/Assignment-1-react-redux.md) |
-|  2 |  Mon, Oct 26  | [Lesson 2](Lessons/Lesson-02.md) |  |
-|  3 |  Wed, Oct 28  | [Lesson 3](Lessons/Lesson-03.md) | [Assignment 2 Desktop Application](Assignments/Assignment-2-desktop-app.md) |
-|  - |  Mon, Nov 2   | **Vote! - Civic Responsibility Break** |
-|  4 |  Wed, Nov 4   | [Lesson 4](Lessons/Lesson-04.md) | [By Breed](Assignments/Assignment-4-mobile-app.md) |
-|  5 |  Mon, Nov 9   | [Lesson 5](Lessons/Lesson-05.md) | - |
-|  6 |  Wed, Nov 11  | [Lesson 6](Lessons/Lesson-06.md) | - |
-|  7 |  Mon, Nov 16  | [Lesson 7](Lessons/Lesson-07.md) | [Assignment Final Project](Assignments/Assignment-final-project.md) |
-|  8 |  Wed, Nov 18  | [Lesson 8](Lessons/Lesson-08.md) |  |
-|  9 |  Mon, Nov 23  | [Lesson 9](Lessons/Lesson-09.md) |  |
-|  - |  Wed, Nov 25  | **Holiday - Thanksgiving** |
-| 10 |  Mon, Nov 30  | [Lesson 10](Lessons/Lesson-10.md)|  |
-| 11 |  Wed, Dec 2   | [Lesson 11](Lessons/Lesson-11.md)|  |
-| 12 |  Mon, Dec 7   | [Lesson 12](Lessons/Lesson-12.md)|  |
-| 13 |  Wed, Dec 9   | [Final Assessment](Lessons/Lesson-14.md) |  |
-
-<!-- | 14 |  Mon, Nov 23  | [Final Presentations](Lessons/Lesson-14.md) |  | -->
-
-### Projects
-
-- [React + Redux Tutorial](Assignments/Assignment-1-react-redux.md)
-- [Electron Project](Assignments/Assignment-2-desktop-app.md)
-- [React Native Project](Assignments/Assignment-4-mobile-app.md)
-- [Final Project](Assignments/Assignment-final-project.md)
+[Assignment 1]: Assignments/Assignment-1-react-redux.md
+[Assignment 1]: Assignments/Assignment-1-react-redux.md
+[Assignment 1]: Assignments/Assignment-1-react-redux.md
+[Assignment 1]: Assignments/Assignment-1-react-redux.md
 
 ## Evaluation
 
@@ -114,9 +86,9 @@ To pass this course you must meet the following requirements:
 
 - Achieve a passing score according to the rubric on each of the [projects](#projects) listed above.
 
-### Final Exam
+### Final Assessment
 
--  **Passing the exam is a requirement for passing the class.**
+- **Passing the exam is a requirement for passing the class.**
 - You will have 2 hours to complete this exam - it will be in class using paper and pencil, or a format of the instructor's choosing
 - There are no retakes of the exam.
 - If you have a disability that needs an accommodation such as extended time or a different format, please take advantage of our [accommodations program](make.sc/disability-policy).
