@@ -42,6 +42,14 @@ If you are having trouble understanding a learning objective you need to take ac
         - What makes a good desktop app?
         - What makes a good mobile app?
 
+### WHat would make a good native app?
+
+Think of some ideas for native apps:
+
+- Games
+- Chess timer
+- Chess Board
+
 ## Why Learn React? 
 
 React is one of the most popular libraries around today. Seriously, you should know it! React is good to learn now since it has huge and well-deserved popularity.
@@ -58,9 +66,9 @@ Check out the state of JavaScript 2019:
 
 [State of JS 2020](https://2020.stateofjs.com/en-US/)
 
-Looks to me like it's a good time to learn React. That said, it won't be here forever and you are capable of learning any framework. React is a good place to invest your time right now. 
+Looks to me like it's a good time to learn React. That said, it won't be here forever and you are capable of learning any framework. React is a good place to invest your time right now.
 
-## React Review
+## React Redux Review
 
 React seems to be a popular tool, it can also be used to make native mobile applications. This makes it a good choice for this class. 
 
