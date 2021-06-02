@@ -16,14 +16,6 @@ Each of these tutorials creates a complete self contained app. There is not netw
 
 React is one of the most popular libraries around today. Seriously, you should know it! React is good to learn now since it has huge and well-deserved popularity.
 
-[Hacker News top 5 Hiring trends 2020](https://www.hntrends.com/2020/dec-year-unlike-any-other-tech-tools-didnt-change-much.html?compare=React&compare=Angular+2&compare=Vue&compare=)
-
-[NPM Downloads: React, Vue, Svelte, Angular](https://npm-stat.com/charts.html?package=react&package=vue&package=angular&package=Svelte&from=2016-06-01&to=2018-05-31)
-
-Looks to me like it's a good time to learn React. That said, it won't be here forever and you are capable of learning any framework. React is a good place to invest your time right now. 
-
-Here is what Stackshare has to say: https://stackshare.io/react
-
 Redux is an advanced tool for managing application state. It's a popular to combine with React and used in applications like: 
 
 - Instagram
@@ -31,8 +23,9 @@ Redux is an advanced tool for managing application state. It's a popular to comb
 - Robinhood
 - Doordash
 - Twitter
+- and more...
 
-This Stackshare provides some pros and cons: https://stackshare.io/reduxjs
+This article suggests 50% of React Apps are also using Redux. If you were to get a job you might expect to see these tools in use there. 
 
 ## Project requirements
 
