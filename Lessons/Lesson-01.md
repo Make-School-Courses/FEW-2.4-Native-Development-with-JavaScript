@@ -48,8 +48,7 @@ React is one of the most popular libraries around today. Seriously, you should k
 
 [Hacker News Hiring Trends: React, Vue, Angular, Angular 2](https://www.hntrends.com/2020/dec-year-unlike-any-other-tech-tools-didnt-change-much.html?compare=React&compare=Angular+2&compare=Vue&compare=)
 
-[NPM Downloads: React, Vue, Angular, Angular 2](https://npm-stat.com/charts.html?package=react&package=vue&package=angular&package=angular%202&from=2016-06-01&to=2018-05-31)
-
+[NPM Downloads: React, Vue, Svelte, Angular](https://npm-stat.com/charts.html?package=react&package=vue&package=angular&package=Svelte&from=2016-06-01&to=2018-05-31)
 Here is a good look at the reasons to learn React, Vue, or Angular. 
 
 [https://levelup.gitconnected.com/angular-vs-react-vs-vue-which-is-the-best-choice-for-2020-81f577697c7e](https://levelup.gitconnected.com/angular-vs-react-vs-vue-which-is-the-best-choice-for-2020-81f577697c7e)
