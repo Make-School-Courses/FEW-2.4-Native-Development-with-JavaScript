@@ -16,7 +16,7 @@ Each of these tutorials creates a complete self contained app. There is not netw
 
 React is one of the most popular libraries around today. Seriously, you should know it! React is good to learn now since it has huge and well-deserved popularity.
 
-[Hacker News top 5 Hiring trends 2019](https://www.hntrends.com/2019/oct-no-sign-of-react-falling-back.html?compare=React&compare=Vue&compare=Angular&compare=)
+[Hacker News top 5 Hiring trends 2020](https://www.hntrends.com/2020/dec-year-unlike-any-other-tech-tools-didnt-change-much.html?compare=React&compare=Angular+2&compare=Vue&compare=)
 
 [Hacker News Hiring Trends: React, Vue, Angular, Angular 2](https://www.hntrends.com/2019/oct-no-sign-of-react-falling-back.html?compare=AngularJS&compare=Ember&compare=React&compare=Vue)
 
