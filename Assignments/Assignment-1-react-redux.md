@@ -1,4 +1,4 @@
-# Class - Assignment Title 
+# Class - Assignment 1 - React + Redux 
 
 ## React/Redux review and practice
 
