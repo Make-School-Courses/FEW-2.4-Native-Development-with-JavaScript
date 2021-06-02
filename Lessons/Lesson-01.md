@@ -99,6 +99,11 @@ Build the following components
 - Auto Counter
     - Upgrade button
 
+- import dependencies `npm install redux react-redux`
+- create actions
+- create reducers
+- Setup the store and provider component
+
 ## After Class
 
 - [Assignment 1 - React Redix Tutorial](../Assignments/Assignment-1-react-redux.md)
