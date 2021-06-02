@@ -18,9 +18,7 @@ React is one of the most popular libraries around today. Seriously, you should k
 
 [Hacker News top 5 Hiring trends 2020](https://www.hntrends.com/2020/dec-year-unlike-any-other-tech-tools-didnt-change-much.html?compare=React&compare=Angular+2&compare=Vue&compare=)
 
-[Hacker News Hiring Trends: React, Vue, Angular, Angular 2](https://www.hntrends.com/2019/oct-no-sign-of-react-falling-back.html?compare=AngularJS&compare=Ember&compare=React&compare=Vue)
-
-[NPM Downloads: React, Vue, Angular, Angular 2](https://npm-stat.com/charts.html?package=react&package=vue&package=angular&package=angular%202&from=2016-06-01&to=2018-05-31)
+[NPM Downloads: React, Vue, Svelte, Angular](https://npm-stat.com/charts.html?package=react&package=vue&package=angular&package=Svelte&from=2016-06-01&to=2018-05-31)
 
 Looks to me like it's a good time to learn React. That said, it won't be here forever and you are capable of learning any framework. React is a good place to invest your time right now. 
 
