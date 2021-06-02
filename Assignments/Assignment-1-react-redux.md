@@ -27,6 +27,8 @@ Redux is an advanced tool for managing application state. It's a popular to comb
 
 This article suggests 50% of React Apps are also using Redux. If you were to get a job you might expect to see these tools in use there. 
 
+https://dev.to/alexandrudanpop/why-react-projects-still-use-redux-in-2020-395p
+
 ## Project requirements
 
 Your goal is to complete the tutorial.
