@@ -49,24 +49,30 @@ React is one of the most popular libraries around today. Seriously, you should k
 [Hacker News Hiring Trends: React, Vue, Angular, Angular 2](https://www.hntrends.com/2020/dec-year-unlike-any-other-tech-tools-didnt-change-much.html?compare=React&compare=Angular+2&compare=Vue&compare=)
 
 [NPM Downloads: React, Vue, Svelte, Angular](https://npm-stat.com/charts.html?package=react&package=vue&package=angular&package=Svelte&from=2016-06-01&to=2018-05-31)
+
 Here is a good look at the reasons to learn React, Vue, or Angular. 
 
 [https://levelup.gitconnected.com/angular-vs-react-vs-vue-which-is-the-best-choice-for-2020-81f577697c7e](https://levelup.gitconnected.com/angular-vs-react-vs-vue-which-is-the-best-choice-for-2020-81f577697c7e)
 
 Check out the state of JavaScript 2019:
 
-[https://2019.stateofjs.com/front-end-frameworks/](https://2019.stateofjs.com/front-end-frameworks/)
+[State of JS 2020](https://2020.stateofjs.com/en-US/)
 
 Looks to me like it's a good time to learn React. That said, it won't be here forever and you are capable of learning any framework. React is a good place to invest your time right now. 
 
 ## React Review
 
-<!-- 
+React seems to be a popular tool, it can also be used to make native mobile applications. This makes it a good choice for this class. 
 
-- Components
-    - Function vs Class
-    - Props and State
-    - JSX
+Native applications hold and manage their own data. We need a tool and a strategy for this! I'm going to propose Redux. You've used it before, it's mature and popular. 
+
+Let's answer a couple questions about redux. 
+
+Why use Redux? Is redux still used in 2021? Can't you replace Redux with one of those new hooks?
+
+https://dev.to/alexandrudanpop/why-react-projects-still-use-redux-in-2020-395p
+
+### You need some practice to get back into this!
 
 Build a Cookie Clicker in class?
 
@@ -74,28 +80,20 @@ Build a Cookie Clicker in class?
 - [Universal Paper Clips](http://www.decisionproblem.com/paperclips/)
 - [Incremental Game Math](https://gamedevelopment.tutsplus.com/articles/numbers-getting-bigger-the-design-and-math-of-incremental-games--cms-24023)
 
-Redux would be a great way to create a complex cookie clicker game. 
+Redux would be a great way to create a complex cookie clicker game.
 
 Build the following components
 
-- Couter Display
+- Counter Display
 - Counter 
     - Button add to count
     - Upgrade button
 - Auto Counter
     - Upgrade button
-    
--->
 
-Review practice and brush up your React and Redux skills by completing one of the tutorials below.
+## After Class
 
-Choose a tutorial to work on. Your goal is to complete your chosen tutorial before class next week.
-
-There are three tutorials listed by level of difficulty.
-
-1. [Password App](https://github.com/MakeSchool-Tutorials/web-7-react-redux-passwords-app)
-2. [Timers App](https://github.com/MakeSchool-Tutorials/web-7-react-redux-timers-app)
-3. [Tetris App](https://github.com/MakeSchool-Tutorials/web-7-react-redux-tetris-app)
+- [Assignment 1 - React Redix Tutorial](../Assignments/Assignment-1-react-redux.md)
 
 ## Additional Resources
 
