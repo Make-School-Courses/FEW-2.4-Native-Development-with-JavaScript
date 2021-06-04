@@ -86,6 +86,7 @@ Build a Cookie Clicker in class?
 
 - What is a [clicker](https://en.wikipedia.org/wiki/Cookie_Clicker)? 
 - [Universal Paper Clips](http://www.decisionproblem.com/paperclips/)
+- [Break Down Clicker games](https://allbitsequal.medium.com/taking-games-apart-how-to-design-a-simple-idle-clicker-6ca196ef90d6)
 - [Incremental Game Math](https://gamedevelopment.tutsplus.com/articles/numbers-getting-bigger-the-design-and-math-of-incremental-games--cms-24023)
 
 Redux would be a great way to create a complex cookie clicker game.
@@ -103,6 +104,18 @@ Build the following components
 - create actions
 - create reducers
 - Setup the store and provider component
+
+**Challenges: Clicker**
+
+Try and solve these challenges with the clicker game. 
+
+- Create a component that counts with each click "Clicker". 
+- Create a button that adds a new "Clicker". 
+- Create a component that displays the total clicks from all clickers. 
+- Create a bigger clicker. This should add more than 1 with each click. Each click could be 5, 10, 25, 50, or 100. You can use a component and configure it with props to set the amount. 
+- Create an "AutoClicker". AutoClickers count without a manual click. Use `setInterval`
+- Create a button that "buys" an auto clicker for 10 clicks. Clicking this should subtract 10 from the total and add an auto clicker.
+
 
 ## After Class
 
