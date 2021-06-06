@@ -164,7 +164,11 @@ You can adjust the window size in `electron.js:11`
 mainWindow = new BrowserWindow({ width: 400, height: 600 });
 ```
 
-### Set up a production build 
+**Challenge:** Consider the design of the interface and ask yourself about the elements you see in the window. DO the buttons look like buttons? Does the layout make sense? How could these things be improved? 
+
+Desiktop apps should look like software applications rather than web pages. Make some adjustments. 
+
+## Set up a production build 
 
 We need some build scripts. These scripts replace the existing react scripts that come with the CRA boilerplate code.
 
@@ -255,7 +259,6 @@ webPreferences: {
   nodeIntegration: true
 }
 ```
-
 
 ## Customizing the App
 
