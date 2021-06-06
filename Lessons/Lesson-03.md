@@ -16,7 +16,7 @@ Add a .gitignore if you haven't already. Add the following to it:
 ```
 build/
 dist/
-nod_modules/
+node_modules/
 ```
 
 Commit and push.
@@ -68,7 +68,7 @@ Getting started with Electron is easy. Follow the quick start guide to make a "h
 
 - https://electronjs.org/docs/tutorial/quick-start
 
-You can follow this guide to create a barbones electron app. This is good when you want to experiment. 
+You can follow this guide to create a barebones electron app. This is good when you want to experiment. 
 
 If you're making an app with React you have to do a little more work. 
 
@@ -88,7 +88,7 @@ yarn add wait-on concurrently --dev
 yarn add electron-is-dev
 ```
 
-Create a new file, public/electron.js, with the following contents.
+**Create a new file**, `public/electron.js`, with the following contents.
 
 ```JS
 const electron = require('electron');
@@ -136,7 +136,7 @@ Add the following to package.json:
 
 `"main": "public/electron.js",`
 
-Add the following to scripts in package.json: 
+**Add the following** to "`scripts`" in `package.json`: 
 
 `"electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\""`
 
@@ -148,13 +148,29 @@ Use this command to to test your electron app in development mode:
 
 You'll use development mode while to test, modify, and add new features to your app. 
 
+## Challenges
+
+Follow the instructions above. These should get your Electron app running on the desktop in dev mode. This is what you'll use when you are working locally and making changes. 
+
+**Challenge:** Follow the instructions above and get your app running in dev mode. 
+
+**Challenge:** Look at your app and think about how you want it to run on the desktop. Think about these ideas: 
+
+Think about the window size. A desktop app might want a fixed window size or to open at a size that works best. 
+
+You can adjust the window size in `electron.js:11`
+
+```JS
+mainWindow = new BrowserWindow({ width: 400, height: 600 });
+```
+
 ### Set up a production build 
 
 We need some build scripts. These scripts replace the existing react scripts that come with the CRA boilerplate code.
 
 `yarn add @rescripts/cli @rescripts/rescript-env --dev`
 
-Edit package.json and replace these keys in scripts with these: 
+**Edit** `package.json` and replace these keys in scripts with these: 
 
 ```JSON
 "start": "rescripts start",
@@ -162,13 +178,13 @@ Edit package.json and replace these keys in scripts with these:
 "test": "rescripts test",
 ```
 
-Now add a new file called .rescriptsrc.js with the following contents:
+Now **add a new file** named `.rescriptsrc.js` with the following contents:
 
 ```JS
 module.exports = [require.resolve('./.webpack.config.js')]
 ```
 
-Finally add another new file called .webpack.config.js with the following contents:
+Finally **add another new file** called `.webpack.config.js` with the following contents:
 
 ```JS
 // define child rescript
@@ -182,11 +198,11 @@ Add Electron Builder & Typescript:
 
 `yarn add electron-builder typescript --dev`
 
-Edit package.json again add:
+**Edit** `package.json` again add:
 
 `"homepage": "./",`
 
-Now add these to the scripts: 
+Now **add** these to the `"scripts"` in `package.json`: 
 
 ```JSON
 "postinstall": "electron-builder install-app-deps",
@@ -232,7 +248,7 @@ to:
 
 `"electron-pack": "electron-builder -mw"`
 
-I also added the following to the electron.js script. Without these my project wouldn't build.  
+I also added the following to the `electron.js` script. Without these my project wouldn't build.  
 
 ```JS
 webPreferences: {
@@ -243,7 +259,7 @@ webPreferences: {
 
 ## Customizing the App
 
-The electron.js file has configuration code that is used to by the process that runs the electron app. The HTML/CSS/JS code that was your original CRA project is displayed by electron and is the user interface for your project.
+The `electron.js` file has configuration code that is used to by the process that runs the electron app. The HTML/CSS/JS code that was your original CRA project is displayed by electron and is the user interface for your project.
 
 You can modify the application in a few says. Try changing the size of the app and adding an icon. 
 
@@ -251,7 +267,7 @@ While the icon might not sound important in reality it is. It's the first thing 
 
 Icons are actually more complex than you might think. You'll need images for all of the different screen resolutions your app might support. 
 
-- Set window size in electron.js:11
+- Set window size in `electron.js:11`
 	- `mainWindow = new BrowserWindow({width: 400, height: 600});`
 - App Icon
 	- https://dev.to/onmyway133/changing-electron-app-icon
