@@ -119,7 +119,7 @@ function createWindow() {
     width: 900, 
     height: 680,
     webPreferences: {
-    nodeIntegration: true
+      nodeIntegration: true
   }
 });
  mainWindow.loadURL(isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '../build/index.html')}`);
