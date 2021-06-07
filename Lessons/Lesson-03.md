@@ -2,14 +2,16 @@
 
 ## Learning Objectives
 
-1. Define use cases for desktop applications
-1. Define Electron 
+1. Build a desktop application with HTML/CSS/JS
 1. Create an Electron project with React
-1. Build a Desktop application with Electron
+1. Dog Fooding...
 
 ## Review
 
-
+- What is `useSelector`? How does it work? 
+- what is `useDispatch`? How does it work? 
+- Copy this array: `['four', 'score', 'and']`, and add the string `'seven'`
+- Copy this object `{ pi: 3.14, gr: 1.618 }` and add property: `en: 2.718`
 
 ## What is Electron?
 
@@ -124,6 +126,7 @@ function createWindow() {
   if (isDev) {
     // Open the DevTools.
     // BrowserWindow.addDevToolsExtension('<location to your react chrome extension>');
+    // Open Chrome web inspector for debug and development
     // mainWindow.webContents.openDevTools();
   }
   mainWindow.on('closed', () => mainWindow = null);
@@ -160,9 +163,34 @@ Use this command to to test your electron app in development mode:
 
 You'll use development mode while to test, modify, and add new features to your app. 
 
+## What is Dog Fooding? 
+
+https://en.wikipedia.org/wiki/Eating_your_own_dog_food
+
+In a nutshell it's using the product you create! How many times have you done this? If the answer is less than the number of products you have created you're missing a big opportunity to improve those products! 
+
+The goal: Now that you have created your desktop app you should use it. 
+
+If you created the password generator save some passwords. Every time you create a password save it to the app. You can mock this up if you don't want to save real passwords (security). Open it and retreive passwords when you need them. 
+
+If you made the timers app use it to track the time you spend working on homework, studying, reading, working out, and other activities. 
+
+If you made tetris play the game when you're bored. 
+
+The goal is to identify areas where the app could be improved through real world use! You will use your own work and evaluate it. 
+
+Take notes and make changes to the work. Keep a list of all of these changes.
+
 ## Challenges
 
 Follow the instructions above. These should get your Electron app running on the desktop in dev mode. This is what you'll use when you are working locally and making changes.
+
+**Challenge:** Dog food your app! Your goal for this week is to use the app you are working on! The challenge is to use the app at least once a day for it's intended purpose. After each use ask yourself: 
+
+- What is working? 
+- What is not working? 
+- What improvements can I make? 
+- Do you have any ideas for new features?
 
 **Challenge:** Follow the instructions above and get your app running in dev mode. 
 
