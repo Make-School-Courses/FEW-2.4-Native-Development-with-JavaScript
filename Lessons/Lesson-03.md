@@ -149,11 +149,15 @@ app.on('activate', () => {
 
 Add the following to `package.json`: 
 
-`"main": "public/electron.js",`
+```JSON
+"main": "public/electron.js",
+```
 
 **Add the following** to "`scripts`" in `package.json`: 
 
-`"electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\""`
+```JSON
+"electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\""
+```
 
 ### Test your Electron app
 
