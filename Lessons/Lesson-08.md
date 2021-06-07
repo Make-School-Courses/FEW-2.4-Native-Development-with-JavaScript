@@ -1,275 +1,247 @@
-# FEW 2.4 Navigation Part 2
+# FEW 2.4 Class 5 Defining a project
 
-A second look at navigation with Tab Navigator and Drawer Navigator. We will also look at how to display icons in your app. 
+From here until the end of the term you will be working on your final project. Your goal is to define what the project is and plan how you will complete it between now and the end of the term. 
 
-## Learning Objectives/Competencies
+## Learning Objectives
 
-- Build the List detail view navigation scheme with React Native
+- Apply Styles to components 
+- Explore Native Components and read documentation apply what you find
+- Define project goals
+- Identify the platform
+- Map out milestones
 
-## Tabs and Drawers
+## Styling Components
 
-Tabbed navigation appears is common on iOS and also appears on Android. Drawer navigation appears on Android and rarely on iOS. On iOS, the tab always appears at the bottom. 
+Components in React Native are styled using inline styles. 
 
-There is a Tabbed starter project option when using `expo init`, I found this project code to be a little more complex than needed. I suspect most people would end up undoing more than they would use with this project. 
-
-- [Drawer Navigator Starter](https://reactnavigation.org/docs/en/drawer-based-navigation.html) (Note! See my notes below tl;dr this did not work for me)
-
-I tested these both on my iOS device.
-
-### Tab Navigator 
-
-To get started with tabbed navigation you'll need to spin up a react native app along with the required dependancies. 
-
-`expo init tabbed-example`
-
-Choose blank project.
-
-Install the expo dependancies:
-
-`npm install @react-navigation/native`
-
-`expo install react-native-reanimated react-native-screens @react-native-community/masked-view`
-
-Get the bottom tabs:
-
-`npm install @react-navigation/bottom-tabs`
-
-One more time in case soemthing was missing:
-
-`npm install`
-
-Test your app with `yarn start`, `npm start`, `yarn ios` or which ever method you prefer. 
-
-If everything is working create some tabbed navigation. 
-
-Copy yhe sample code here: 
-
-https://reactnavigation.org/docs/tab-based-navigation#minimal-example-of-tab-based-navigation
-
-This creates a bare bones application with two tabs. 
-
-```JS
-import * as React from 'react';
-import { Text, View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home!</Text>
-    </View>
-  );
-}
-
-function SettingsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings!</Text>
-    </View>
-  );
-}
-
-const Tab = createBottomTabNavigator();
-
-export default function App() {
-  return (
-    <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
-      </Tab.Navigator>
-    </NavigationContainer>
-  );
-}
-```
-
-**Challenge:**
-
-- Add another tab to the tab bar. Follow these steps: 
-  - Make a new component screen. This can be a function that returns a `<View>` with some `<Text>`
-  - Add a new `<Tab.Screen>` as a child of `<Tab.Navigator>`. You can put this below the existing tab screens. Assign it your new component. 
-
-## Icons 
-
-Icons appear on mobile in many places. If you can make them flexible in size that's even better. There are several libraries that make icons these notes will cover [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons).
-
-This library has several sets of bundled icons. Start by importing the library. 
-
-`npm install --save react-native-vector-icons`
-
-I had to link my icons using, this may not be needed for everyone: 
-
-<!-- `npx react-native link`
-
-`npx react-native link react-native-vector-icons` -->
-
-In your React Native project import the icon with: 
-
-`import { Ionicons } from 'react-native-vector-icons'`
-
-Use the icon with: 
-
-`<Ionicons name="ios-add-circle-outline" size={32} />`
-
-This should display a 32pt icon that looks like a circle with a plus in the center.
-
-You can put this component almost anywhere! Seems like these need to be wrapped in a `<Text></Text>` component. 
-
-**Note!** Finding the name to use for a specific icon is not as easy as you might think. The names shown with the icon bundles are not always what you need to set as the name in the component!
-
-If you get a warning that the name isn't working for an icon open the warning and read the names! It will list all of the names that are possible values. 
-
-**Activity:** Add some icons to the Home and Settings Screens. 
-
-**Challenges:**
-
-- Make an icon that appears on the Home Screen
-- Make an icon that appears on the Settings Screen 
-- Set the and color of the icons
-
-Explore Icons here: 
-
-Look at the bundled icon sets: https://github.com/oblador/react-native-vector-icons#bundled-icon-sets.
-
-**Challenges:** 
-
-- Make some icons in a Screen. You'll need to: 
-	- Import the icon set you want to use
-	- Figure out the name of the icon you want to see (this might take some experimentation)
-	- Add and configure an Icon component in your Screen
-	
-**Stretch Challenge:**
-
-- Make an Icon button. 
-	- Follow the guide [here](https://github.com/oblador/react-native-vector-icons#iconbutton-component)
-
-## Tab Bar Icons 
-
-The docs show a solution in the [customizing the appearance](https://reactnavigation.org/docs/tab-based-navigation/#customizing-the-appearance) section of the React Navigation Tab Bar Example. This example looks a little complex as it uses the React-Native-Vector-Icons and includes a badge on the icon.
-
-Notice that big block of code inside:
-
-`<Tab.Navigator screenOptions={...lots of code here...} >`
-
-This function returns an object thqt includes a property: `tabBarIcon`. This property is a function that receives an object with three properties: `focused, color, size`. You'll use these values to generate an icon and return it. 
-
-```JS
-<Tab.Navigator
-  screenOptions={({ route }) => ({
-    tabBarIcon: ({ focused, color, size }) => {
-      let iconName;
-
-      if (route.name === 'Home') {
-        iconName = focused
-          ? 'ios-information-circle'
-          : 'ios-information-circle-outline';
-      } else if (route.name === 'Settings') {
-        iconName = focused ? 'ios-list-box' : 'ios-list';
-      }
-
-      // You can return any component that you like here!
-      return <Ionicons name={iconName} size={size} color={color} />;
-    },
-  })}
-  tabBarOptions={{
-    activeTintColor: 'tomato',
-    inactiveTintColor: 'gray',
-  }}
->
+```JavaScript
 ...
-</Tab.Navigator>
+return <View style={{width: 100}}>...</View>
+...
 ```
 
-**Challenge:**
+Use `StyleSheet.create()` for some reason not clearly explained in the docs. The `StyleSheet` also has some helper functions. 
 
-Add a custom icon for your new tab bar view. Find an icon you like. In the `tabBarIcon` function add a new else if block. This case should look for `route.name` to identify the icon. Look up an icon in the icon set. 
+```JavaScript
+...
+return <View style={styles.container}></View>
+...
+import { StyleSheet }
+const styles = StyleSheet.create({
+	container: {
+		width: 100
+	}
+})
+```
 
-Note: Many icons have a solid and outline version. You can use the solid for the focussed state and the outline when the tab is not focussed. 
+**Important!** React Native uses CSS styles but there are a few differences between React Native and the Web. 
+
+- Does not support all styles 
+- Not all components support all styles 
+- All units are pixels/points (with a few expections)
+
+### Flex Box
+
+Everything is styled with Flex. The following properties will take your layouts far. 
+
+- flex
+- justifyContent
+- alignItems 
+
+Keep in mind that Flexbox applies to children. While Flexbox applies to a single axis you can mix axis by nesting elements in in a view. 
+
+## React Native Q and A
+
+What kinds of questions do you have so far about React Native? 
+
+## Handling Input 
+
+Touch screen devices have their own input paradigms. Touch screen interaction is a very different experience from mouse driven interaction. 
+
+Discuss the differences
+
+https://facebook.github.io/react-native/docs/handling-touches
+
+React Native provides a few interactive components. 
+
+- Button - Good for basic button
+- Touchables - Good when the button isn't enough or can't be styled to meet your needs. 
+	- TouchableHighlight
+	- TouchableNativeFeedback
+	- TouchableOpacity
+	- TouchableWithoutNativeFeedback
+- TextInput
+
+Use the 'Touchable' components to create custom buttons and things you can tap to handle input. 
+
+## Forms 
+
+Forms on native follow the same patterns used with React on the web with a few unique issues. 
+
+Keyboard avoiding!
+
+Mobile screens are small and space is limited. On mobile the keyboard will often obscure an input field. React Native solves this with it's: 
+
+[KeyboardAvoidingView](https://facebook.github.io/react-native/docs/keyboardavoidingview)
+
+For Text input use: 
+
+- [InputAccessoryView]( https://facebook.github.io/react-native/docs/inputaccessoryview) - Customizes keyboard input view
+- [Picker](https://facebook.github.io/react-native/docs/picker) - Handles multi-choice input with a scrolling list of choices. Good for many choices.
+- [PickerIOS](https://facebook.github.io/react-native/docs/pickerios) - iOS Picker View
+- [SegmentedConreolIOS](https://facebook.github.io/react-native/docs/segmentedcontrolios) - Multi-choice input, iOS only, good for picking one choice from a short list. 
+- [Slider](https://facebook.github.io/react-native/docs/slider)
+- [Switch](https://facebook.github.io/react-native/docs/switch) - Like a checkbox
+- [TextInput](https://facebook.github.io/react-native/docs/textinput) - Use for Single line and multi-line text input 
+
+## Controlled Component Pattern
+
+Use the [Controlled Component pattern](https://reactjs.org/docs/forms.html) with form elements. 
+
+**tl;dr** Store the value of the input element on state, set the state when the element changes, and set the value of the element from state. 
+
+- Define a property on state
+- Set the valuse of the form element it value on state
+- Set state when the form element changes
+
+Taking the By Breed project as an example add a search field. Use this to search for animals by breed name. The example below uses Hooks. 
+
+**Step 1** Import `useState` to track the search query. 
 
 ```JS
-if (route.name === 'Home') {
-  iconName = focused ? 'ios-information-circle' : 'ios-information-circle-outline';
-} else if (route.name === 'Settings') {
-  iconName = focused ? 'ios-list-box' : 'ios-list';
-} else if (route.name === 'Other') {
-  iconName = focused ? 'ios-star' : 'ios-star-outline';
-}
+import React, { useState } from 'react';
 ```
 
-Here I used the icons 'ios-star' and 'ios-star-outline' for the icon used in the 'Other' route.
+**Step 2** Import the `TextInput` and `KeyboardAvoidingView`.
 
-### Stretch Challenges
+```JS
+...
+import { ..., TextInput, KeyboardAvoidingView } from 'react-native';
+...
+```
 
-- Import the breed data from the previous assignments. You can use the components from theose assignments also! 
-	- Make a cats tab, display all the cat breeds in the cats tab, use FlatList.
-		- Give this a cat icon
-	- Make a dogs tab and display dog breeds in a list here.
-		- Give this tab a Dog icon. 
+**Step 3** Define a variable to be used to hold the search query. This would go at the top of your component. 
 
-### Tab Navigator Recap
+```JS 
+...
+const [ query, setQuery ] = useState('')
+...
+```
 
-Discussion: 
+**Step 4** Add an input. I put my input at the bottom, below the FlatList I used to display the list of animals.
 
-- Quickly describe how tabnavigator is constructed
-- How are icons added? 
-- What other options can be applied? 
+```JS 
+...
+<TextInput 
+	style={styles.input}
+	onChangeText={text => setQuery(text)}
+	value={query}
+/>
+...
+```
 
-Stretch challenges: 
+Notice you're using the Controlled component pattern here to set the `value` from the state variable (`query`) and you're setting state in the `onChangeText`. 
 
-- Add a stack navigator to one of the tabs screens
+Note! We have't set `styles.input` yet! 
 
-### Drawer Navigator
+**Step 5** Since the `TextInput` is at the bottom the keyboard will cover it when it pops up. Usde the `KeyboardAvoidingView` to move the input up and out of the way. 
 
-I had a hard time getting this to work. I suspect this was because I was working on iOS. 
+We want the `KeyboardAvoidingView` to be the container for all of the other views. I had a View in that position so I **replaced** it with the `KeyboardAvoidingView`. I also had the `SafeAreaView` at the top. 
 
-The default sample code [here](https://reactnavigation.org/docs/en/drawer-based-navigation.html) did NOT work for me on iOS. 
+Here is what the structure of my component looked like: 
 
-What DID work for me was this example: 
+```HTML
+<SafeAreaView ...>
+  <KeyboardAvoidingView 
+		behavior={Platform.OS == "ios" ? "padding" : "height"}
+    style={styles.container}
+	>
+		<FlatList .../>
+		<TextInput .../>
+		<StatusBar style="auto" />
+  </KeyboardAvoidingView>
+</SafeAreaView>
+```
 
-- https://snack.expo.io/@aboutreact/navigationdrawer-example?session_id=snack-session-5vdX_nqe_
+Take note of the props in the `KeyboardAvoidingView`. It didn't seem to work for me without these. Seems like there are special settings for this that are unique to Android and iOS. I was testing on the iOS simulator. 
 
-To get this working I did the following: 
+**Step 6** Add some styles for the `TextInput`.
 
-- Download the sample code. This was incomplete and possible not using the latest version of React Native and React Navigator. 
-- Make a new blank project with `expo init`. 
-- Copy the following files from [example](https://snack.expo.io/@aboutreact/navigationdrawer-example?session_id=snack-session-5vdX_nqe_) and paste them into a new project you created in the previous step. 
-    - App.js
-    - app.json
-    - assets
-    - image
-    - pages
-    
-The package.json from the example code is missing a few things. Don't copy this! You will need to add react-navigation
+```JS
+const styles = StyleSheet.create({
+  ...
+  input: {
+    width: '100%', 
+    borderWidth: 1,
+    padding: 10
+  }
+});
+```
 
-`npm install react-navigation`
+You can work with these. I needed width 100% to get the TextInputt to span the space. Some padding to the give the text content a little room. And I added a border to define the area. 
 
-This worked for me and generated a simple app with a drawer and three subpages. 
+**Step 7** Now it's time to get the query to filter the list of animals. Inside the FlatList you're seting the data prop to an array of animals. If you filter it here it will change what's displayed in the list. 
 
-Please let me know if missed a step here. It was hard to backtrack over my experiments and note them here. 
+To make this happen you can use `Array.filter()` and `String.includes()`. 
 
-## Apply navigation concepts
+```JS
+cats.filter((item) => item.breed.includes(query))
+```
 
-Apply the navigation concepts from class to your final project. Choose a navigation scheme for your project and create a minimal implementation to get started. Mockup any Screens you may need with a Text label naming the content that will eventually be there. 
+Here is the whole FlatList with the search.
 
-Do this now in class! 
+```JS
+<FlatList 
+	style={{width: '100%'}}
+	data={cats.filter((item) => item.breed.includes(query))}
+	renderItem={( { index, item } ) => {
+		return <Cell3 item={item} />
+	}}
+	keyExtractor={item => item.breed}
+/>
+```
+
+You could also move this to the top of the component and make a temp variable use in FlatList. It might look like this: 
+
+```JS
+const filteredCats = cats.filter((item) => item.breed.includes(query))
+```
+
+## Activity 
+
+Use components to solve these problems. 
+
+- ScrollView 
+	- Make a scrolling view with content Use any components to fill the view.
+- FlatList
+	- Use header, footer, and or separator in the list
+	- Use TextInput to filter list 
+- TextInput 
+	- Input zip code in Wthr app to show whether
+	- Use KeyBoardAvoidingView
 
 ## After Class
 
-- Continue working on the final project. Focus on building navigation and passing data to screens. 
+Define your final project. This must be a native app of some kind. 
+
+## Defining the final 
+
+What are you going to make? 
+
+What platform will it use? 
+
+- Mobile
+- Desktop
+
+Define milestones for the project. A milestone is a a step in the construction of your project and should have a deliverable.
 
 ## Additional Resources
 
-- React Navigation
-	- Tabs
-		- https://reactnavigation.org/docs/en/tab-based-navigation.html
-		- https://reactnavigation.org/docs/en/tab-based-navigation.html#minimal-example-of-tab-based-navigation
-		- https://reactnavigation.org/docs/en/tab-based-navigation.html#customizing-the-appearance
-		- https://reactnavigation.org/docs/en/bottom-tab-navigator.html#bottomtabnavigatorconfig
-	- Vector Icons 
-		- https://github.com/oblador/react-native-vector-icons
-		- https://github.com/oblador/react-native-vector-icons#iconbutton-component
-	- Drawers 
-		- https://reactnavigation.org/docs/en/drawer-based-navigation.html
-		- https://snack.expo.io/@aboutreact/navigationdrawer-example?session_id=snack-session-5vdX_nqe_
-
+- [Controlled Component pattern](https://reactjs.org/docs/forms.html) 
+- [InputAccessoryView]( https://facebook.github.io/react-native/docs/inputaccessoryview) - Customizes keyboard input view
+- [Picker](https://facebook.github.io/react-native/docs/picker) - Handles multi-choice input with a scrolling list of choices. Good for many choices.
+- [PickerIOS](https://facebook.github.io/react-native/docs/pickerios) - iOS Picker View
+- [SegmentedConreolIOS](https://facebook.github.io/react-native/docs/segmentedcontrolios) - Multi-choice input, iOS only, good for a few choices. 
+- [Slider](https://facebook.github.io/react-native/docs/slider)
+- [Switch](https://facebook.github.io/react-native/docs/switch) - Like a checkbox
+- [TextInput](https://facebook.github.io/react-native/docs/textinput) - Use for Single line and multi-line text input 

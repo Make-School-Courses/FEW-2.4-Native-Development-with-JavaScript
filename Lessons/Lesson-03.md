@@ -7,19 +7,9 @@
 1. Create an Electron project with React
 1. Build a Desktop application with Electron
 
-## Before Starting! 
+## Review
 
-During this lesson you will be building desktop applications which are large binary files. You should not push this to your GitHub repository. 
 
-Add a .gitignore if you haven't already. Add the following to it: 
-
-```
-build/
-dist/
-node_modules/
-```
-
-Commit and push.
 
 ## What is Electron?
 
@@ -70,7 +60,29 @@ Getting started with Electron is easy. Follow the quick start guide to make a "h
 
 You can follow this guide to create a barebones electron app. This is good when you want to experiment. 
 
-If you're making an app with React you have to do a little more work. 
+If you're making an app with React you have to do a little more work.
+
+Choose a react project you want to turn into a desktop app. 
+
+In the lesson today you will set this app up as a desktop app and get it working in development mode. Developement mode is a what you will use when you are developing the app. 
+
+## Before Starting! 
+
+During this lesson you will be building desktop applications which are large binary files. You should not push these to your GitHub repository! 
+
+Add a `.gitignore` if you haven't already. 
+
+Add the following to your `.gitignore`.
+
+```
+build/
+dist/
+node_modules/
+```
+
+Commit and push. 
+
+This is **important** because building the application will create a large binary file that you don't want to upload to GitHub! 
 
 ## Electron Builder
 
@@ -88,7 +100,7 @@ yarn add wait-on concurrently --dev
 yarn add electron-is-dev
 ```
 
-**Create a new file**, `public/electron.js`, with the following contents.
+**Create a new file**, `public/electron.js`, with the following content.
 
 ```JS
 const electron = require('electron');
@@ -132,7 +144,7 @@ app.on('activate', () => {
 });
 ```
 
-Add the following to package.json: 
+Add the following to `package.json`: 
 
 `"main": "public/electron.js",`
 
@@ -150,7 +162,7 @@ You'll use development mode while to test, modify, and add new features to your 
 
 ## Challenges
 
-Follow the instructions above. These should get your Electron app running on the desktop in dev mode. This is what you'll use when you are working locally and making changes. 
+Follow the instructions above. These should get your Electron app running on the desktop in dev mode. This is what you'll use when you are working locally and making changes.
 
 **Challenge:** Follow the instructions above and get your app running in dev mode. 
 
@@ -166,130 +178,19 @@ mainWindow = new BrowserWindow({ width: 400, height: 600 });
 
 **Challenge:** Consider the design of the interface and ask yourself about the elements you see in the window. DO the buttons look like buttons? Does the layout make sense? How could these things be improved? 
 
-Desiktop apps should look like software applications rather than web pages. Make some adjustments. 
-
-## Set up a production build 
-
-We need some build scripts. These scripts replace the existing react scripts that come with the CRA boilerplate code.
-
-`yarn add @rescripts/cli @rescripts/rescript-env --dev`
-
-**Edit** `package.json` and replace these keys in scripts with these: 
-
-```JSON
-"start": "rescripts start",
-"build": "rescripts build",
-"test": "rescripts test",
-```
-
-Now **add a new file** named `.rescriptsrc.js` with the following contents:
-
-```JS
-module.exports = [require.resolve('./.webpack.config.js')]
-```
-
-Finally **add another new file** called `.webpack.config.js` with the following contents:
-
-```JS
-// define child rescript
-module.exports = config => {
-  config.target = 'electron-renderer';
-  return config;
-}
-```
-
-Add Electron Builder & Typescript:
-
-`yarn add electron-builder typescript --dev`
-
-**Edit** `package.json` again add:
-
-`"homepage": "./",`
-
-Now **add** these to the `"scripts"` in `package.json`: 
-
-```JSON
-"postinstall": "electron-builder install-app-deps",
-"preelectron-pack": "yarn build",
-"electron-pack": "electron-builder -mw"
-```
-
-Now add all of this to package.json
-
-```json
-"author": {
-  "name": "Your Name",
-  "email": "your.email@domain.com",
-  "url": "https://your-website.com"
-},
-"build": {
-  "appId": "com.my-website.my-app",
-  "productName": "MyApp",
-  "copyright": "Copyright © 2019 ${author}",
-  "mac": {
-    "category": "public.app-category.utilities"
-  },
-  "files": [
-    "build/**/*",
-    "node_modules/**/*"
-  ],
-  "directories": {
-    "buildResources": "assets"
-  }
-},
-```
-
-
-Now, build your app for production: 
-
-`yarn electron-pack`
-
-**NOTE:** Following the instructions from the article I wasn't able to get it to build until I changed: 
-
-`"electron-pack": "build -mw"` 
-
-to:
-
-`"electron-pack": "electron-builder -mw"`
-
-I also added the following to the `electron.js` script. Without these my project wouldn't build.  
-
-```JS
-webPreferences: {
-  nodeIntegration: true
-}
-```
-
-## Customizing the App
-
-The `electron.js` file has configuration code that is used to by the process that runs the electron app. The HTML/CSS/JS code that was your original CRA project is displayed by electron and is the user interface for your project.
-
-You can modify the application in a few says. Try changing the size of the app and adding an icon. 
-
-While the icon might not sound important in reality it is. It's the first thing people see when they use your app. So it's a chance to brand your product and set impressions. It's also required to publish your apps to the app store. Without an icon your app will automatically be rejected. 
-
-Icons are actually more complex than you might think. You'll need images for all of the different screen resolutions your app might support. 
-
-- Set window size in `electron.js:11`
-	- `mainWindow = new BrowserWindow({width: 400, height: 600});`
-- App Icon
-	- https://dev.to/onmyway133/changing-electron-app-icon
-  - https://www.christianengvall.se/electron-app-icons/
-	- https://www.electron.build/icons
-	
-## Build an Electron App
-
-Your goal is to build a desktop application from your React project. Follow the guide above. Your deliverable is a functioning native app that runs on Mac or Windows. 
-
-- Native App
+Desiktop apps should look like software applications rather than web pages. Make some adjustments.
 
 ## After Class
 
-The goal this week is to build an Electron app. Take the tutorial project or a project that you have created with React and build an Electron app with it. 
+The goal this week is to build your Electron app. For this first class get development mode working and use it as your workflow to improve your app. Since every app will be different I'll generalize what you should be working this week. 
 
-You have one week to work on this. Scope conservatively. 
+Remember your goal is to make a portfolio project that proves your capabilities. 
 
-Choose a React App you have created, this can be one of the tutorial projects, and make an Electron with it. 
+- Get the app running in dev mode. This important for testing and seeing how your chosen project will work as a desktop application. 
+- Think about your app in the context of a desktop application and consider the user interface. Make changes to the user interface to improve the user experience. 
+  - Look closely at buttons and other user interface elements. 
+  - Look closely at labels and text content. Does it read well? Can you understand it? can other people understand it? Consider performing a user test or getting feedback from someone else. 
+  - Look closely at the layout and arrangement of UI elements. 
 
 ## Additional Resources
 

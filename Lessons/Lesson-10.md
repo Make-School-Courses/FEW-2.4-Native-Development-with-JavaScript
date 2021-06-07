@@ -1,397 +1,275 @@
-# FEW 2.4 Animation 
+# FEW 2.4 Navigation Part 2
 
-Making things move on mobile provides that thing that makes your apps interesting and irresistible. 
+A second look at navigation with Tab Navigator and Drawer Navigator. We will also look at how to display icons in your app. 
 
-## Objectives 
+## Learning Objectives/Competencies
 
-- Define a plan and milestones for your project
-- Make things that move on mobile
-- Use Animated for discreet animated objects 
-- Use LayoutAnimation for animating groups of elements
+- Build the List detail view navigation scheme with React Native
 
-## Planning your project
+## Tabs and Drawers
 
-To get the best results for your project you need a plan. Create a **Todo** section in your project readme. 
+Tabbed navigation appears is common on iOS and also appears on Android. Drawer navigation appears on Android and rarely on iOS. On iOS, the tab always appears at the bottom. 
 
-Do this: 
+There is a Tabbed starter project option when using `expo init`, I found this project code to be a little more complex than needed. I suspect most people would end up undoing more than they would use with this project. 
 
-- Write a short description of your project goals. 
-- Make a list of tasks you'll need to complete to complete your project. 
-- Take a look at the class calendar in the syllabus and map your tasks across the remaining time. 
+- [Drawer Navigator Starter](https://reactnavigation.org/docs/en/drawer-based-navigation.html) (Note! See my notes below tl;dr this did not work for me)
 
-Assess at the scope of your project. Ask yourself if it looks like there is too much to complete before the end of the term? 
+I tested these both on my iOS device.
 
-Take stock of what is in your project and compare to the project description. Do you have all of the required elements?
+### Tab Navigator 
 
-Push these changes to readme on GitHub. 
+To get started with tabbed navigation you'll need to spin up a react native app along with the required dependancies. 
 
-## Animation
+`expo init tabbed-example`
 
-Animation is about making things change over time. On the computer this boils down to changing numeric values over time. The appearance of any component on the screen is controlled by a collection of numeric values. Change these values and the appearance of an object changes. Continuously change the values and it looks like it's moving. 
+Choose blank project.
 
-For the record motion includes changes in: color, opacity, size, shape, and rotation. 
+Install the expo dependancies:
 
-React Native provides two complimentry animation systems: `Animated` for animating specific elements and interactions, and `LayoutAnimation` for animating global layout transactions.
+`npm install @react-navigation/native`
 
-## `Animated`
+`expo install react-native-reanimated react-native-screens @react-native-community/masked-view`
 
-To animate an object you'll need to change one or more of the values that define it over time. 
+Get the bottom tabs:
 
-For example if you wanted a View to fade in you would animate the opacity of the view from 0 to 1. 
+`npm install @react-navigation/bottom-tabs`
 
-Animated is a built in Component, you'll use it to handle animating other components. Animated has many options.
+One more time in case soemthing was missing:
 
-**Use Animated for discreet animations**. This would be single elements that move or change.
+`npm install`
 
-### Example
+Test your app with `yarn start`, `npm start`, `yarn ios` or which ever method you prefer. 
 
-```JS
-// A simple animation. This example fades a view in by animating 
-// the opacity
+If everything is working create some tabbed navigation. 
 
-// 1. Import Animated from react native 
-// 2. Define a property to be animate
-// 3. Define and start an Animation
-// 4. Use the animated to value 
+Copy yhe sample code here: 
 
-import React from 'react';
-// 1. Import Animated
-import { StyleSheet, Text, View, Animated } from 'react-native';
+https://reactnavigation.org/docs/tab-based-navigation#minimal-example-of-tab-based-navigation
 
-export default class Animated_1 extends React.Component {
-  // 2. Define a value to animate on state: fade with an initial value of 0
-  state = {
-    fade: new Animated.Value(0),
-  }
-
-  // Start the animation when this view loads
-  componentDidMount() {
-    // 3. Call Animated.timing() and set the ending value, duration, and delay
-    Animated.timing(
-      this.state.fade, {
-        toValue: 1,
-        duration: 3000,
-        delay: 1000
-      }
-    ).start() // Start the Animation
-  }
-
-  render() {
-    // 4. Get the fade value 
-    const { fade } = this.state
-    return (
-      <View style={styles.container}>
-        {/* Apply the fade value to a CSS property */}
-        <Animated.View style={{ ...styles.box, opacity: fade }}>
-          <Text style={styles.title}>Animation 1</Text>
-          <Text>Fades in using Animated</Text>
-        </Animated.View>
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  box: {
-    backgroundColor: 'rgba(255, 0, 0, 0.5)',
-    width: 200,
-    height: 200,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold'
-  }
-});
-```
-
-Here is the same example written with a hooks. This example uses `useEffect()` a React Hook that handles lifecycle events. 
-
-https://medium.com/recraftrelic/usestate-and-useeffect-explained-cdb5dc252baf
-
-https://leewarrick.com/blog/react-use-effect-explained/
-
+This creates a bare bones application with two tabs. 
 
 ```JS
+import * as React from 'react';
+import { Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-// A simple animation. This example fades a view in by animating 
-// the opacity
-
-// 0. Import Hooks useEffect and useRef
-// 1. Import Animated from react native 
-// 2. Define a property to be animate
-// 3. Define and start an Animation
-// 4. Use the animated to value 
-
-// 0. Import some hooks 
-import React, { useEffect, useRef } from 'react';
-// 1. Import Animated
-import { StyleSheet, Text, View, Animated } from 'react-native';
-
-export default function Animated_1_hooks() {
-  // 2. Define a value to animate on state: fade with an initial value of 0
-  const fadeAnim = useRef(new Animated.Value(0)).current 
-  
-  // This acts as a lifecycle method
-  useEffect(() => {
-    Animated.timing(
-      fadeAnim,
-      {
-        toValue: 1,
-        duration: 5000,
-      }
-    ).start();
-  }, [])
-
+function HomeScreen() {
   return (
-    <View style={styles.container}>
-      {/* Apply the fade value to a CSS property */}
-      <Animated.View style={{ ...styles.box, opacity: fadeAnim }}>
-        <Text style={styles.title}>Animation 1</Text>
-        <Text>Fades in using Animated</Text>
-      </Animated.View>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Home!</Text>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  box: {
-    backgroundColor: 'rgba(255, 0, 0, 0.5)',
-    width: 200,
-    height: 200,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold'
-  }
-});
+function SettingsScreen() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Settings!</Text>
+    </View>
+  );
+}
+
+const Tab = createBottomTabNavigator();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Settings" component={SettingsScreen} />
+      </Tab.Navigator>
+    </NavigationContainer>
+  );
+}
 ```
 
+**Challenge:**
 
-## Demo Example 
+- Add another tab to the tab bar. Follow these steps: 
+  - Make a new component screen. This can be a function that returns a `<View>` with some `<Text>`
+  - Add a new `<Tab.Screen>` as a child of `<Tab.Navigator>`. You can put this below the existing tab screens. Assign it your new component. 
 
-There are several example Components: Animated_1-6 that show introductory examples of motion using animated. 
+## Icons 
 
-Create a new React Native project with Expo. 
+Icons appear on mobile in many places. If you can make them flexible in size that's even better. There are several libraries that make icons these notes will cover [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons).
 
-Try out the following component examples: 
+This library has several sets of bundled icons. Start by importing the library. 
 
-**Fade Animation**
+`npm install --save react-native-vector-icons`
+
+I had to link my icons using, this may not be needed for everyone: 
+
+<!-- `npx react-native link`
+
+`npx react-native link react-native-vector-icons` -->
+
+In your React Native project import the icon with: 
+
+`import { Ionicons } from 'react-native-vector-icons'`
+
+Use the icon with: 
+
+`<Ionicons name="ios-add-circle-outline" size={32} />`
+
+This should display a 32pt icon that looks like a circle with a plus in the center.
+
+You can put this component almost anywhere! Seems like these need to be wrapped in a `<Text></Text>` component. 
+
+**Note!** Finding the name to use for a specific icon is not as easy as you might think. The names shown with the icon bundles are not always what you need to set as the name in the component!
+
+If you get a warning that the name isn't working for an icon open the warning and read the names! It will list all of the names that are possible values. 
+
+**Activity:** Add some icons to the Home and Settings Screens. 
+
+**Challenges:**
+
+- Make an icon that appears on the Home Screen
+- Make an icon that appears on the Settings Screen 
+- Set the and color of the icons
+
+Explore Icons here: 
+
+Look at the bundled icon sets: https://github.com/oblador/react-native-vector-icons#bundled-icon-sets.
+
+**Challenges:** 
+
+- Make some icons in a Screen. You'll need to: 
+	- Import the icon set you want to use
+	- Figure out the name of the icon you want to see (this might take some experimentation)
+	- Add and configure an Icon component in your Screen
+	
+**Stretch Challenge:**
+
+- Make an Icon button. 
+	- Follow the guide [here](https://github.com/oblador/react-native-vector-icons#iconbutton-component)
+
+## Tab Bar Icons 
+
+The docs show a solution in the [customizing the appearance](https://reactnavigation.org/docs/tab-based-navigation/#customizing-the-appearance) section of the React Navigation Tab Bar Example. This example looks a little complex as it uses the React-Native-Vector-Icons and includes a badge on the icon.
+
+Notice that big block of code inside:
+
+`<Tab.Navigator screenOptions={...lots of code here...} >`
+
+This function returns an object thqt includes a property: `tabBarIcon`. This property is a function that receives an object with three properties: `focused, color, size`. You'll use these values to generate an icon and return it. 
 
 ```JS
-// A simple animation. This example fades a view in by animating 
-// the opacity
+<Tab.Navigator
+  screenOptions={({ route }) => ({
+    tabBarIcon: ({ focused, color, size }) => {
+      let iconName;
 
-// 1. Import Animated from react native 
-// 2. Define a property to be animate
-// 3. Define and start an Animation
-// 4. Use the animated to value 
+      if (route.name === 'Home') {
+        iconName = focused
+          ? 'ios-information-circle'
+          : 'ios-information-circle-outline';
+      } else if (route.name === 'Settings') {
+        iconName = focused ? 'ios-list-box' : 'ios-list';
+      }
 
-import React from 'react';
-// 1. Import Animated
-import { StyleSheet, Text, View, Animated } from 'react-native';
+      // You can return any component that you like here!
+      return <Ionicons name={iconName} size={size} color={color} />;
+    },
+  })}
+  tabBarOptions={{
+    activeTintColor: 'tomato',
+    inactiveTintColor: 'gray',
+  }}
+>
+...
+</Tab.Navigator>
+```
 
-export default class Animated_1 extends React.Component {
-  // 2. Define a value to animate on state: fade with an initial value of 0
-  state = {
-    fade: new Animated.Value(0),
-    // width: new Animated.Value(0),
-    // spin: new Animated.Value(0)
-  }
+**Challenge:**
 
-  // Start the animation when this view loads
-  componentDidMount() {
-    // console.log('Animation 1 Component MOUNTED')
-    // 3. Call Animated.timing() and set the ending value, duration, and delay
+Add a custom icon for your new tab bar view. Find an icon you like. In the `tabBarIcon` function add a new else if block. This case should look for `route.name` to identify the icon. Look up an icon in the icon set. 
+
+Note: Many icons have a solid and outline version. You can use the solid for the focussed state and the outline when the tab is not focussed. 
+
+```JS
+if (route.name === 'Home') {
+  iconName = focused ? 'ios-information-circle' : 'ios-information-circle-outline';
+} else if (route.name === 'Settings') {
+  iconName = focused ? 'ios-list-box' : 'ios-list';
+} else if (route.name === 'Other') {
+  iconName = focused ? 'ios-star' : 'ios-star-outline';
+}
+```
+
+Here I used the icons 'ios-star' and 'ios-star-outline' for the icon used in the 'Other' route.
+
+### Stretch Challenges
+
+- Import the breed data from the previous assignments. You can use the components from theose assignments also! 
+	- Make a cats tab, display all the cat breeds in the cats tab, use FlatList.
+		- Give this a cat icon
+	- Make a dogs tab and display dog breeds in a list here.
+		- Give this tab a Dog icon. 
+
+### Tab Navigator Recap
+
+Discussion: 
+
+- Quickly describe how tabnavigator is constructed
+- How are icons added? 
+- What other options can be applied? 
+
+Stretch challenges: 
+
+- Add a stack navigator to one of the tabs screens
+
+### Drawer Navigator
+
+I had a hard time getting this to work. I suspect this was because I was working on iOS. 
+
+The default sample code [here](https://reactnavigation.org/docs/en/drawer-based-navigation.html) did NOT work for me on iOS. 
+
+What DID work for me was this example: 
+
+- https://snack.expo.io/@aboutreact/navigationdrawer-example?session_id=snack-session-5vdX_nqe_
+
+To get this working I did the following: 
+
+- Download the sample code. This was incomplete and possible not using the latest version of React Native and React Navigator. 
+- Make a new blank project with `expo init`. 
+- Copy the following files from [example](https://snack.expo.io/@aboutreact/navigationdrawer-example?session_id=snack-session-5vdX_nqe_) and paste them into a new project you created in the previous step. 
+    - App.js
+    - app.json
+    - assets
+    - image
+    - pages
     
-    // Animated.timing(value, options).start()
-    Animated.timing(
-      this.state.fade, {
-        toValue: 1,
-        duration: 1000,
-        delay: 4000,
-        useNativeDriver: true
-      }
-    ).start() // Start the Animation
+The package.json from the example code is missing a few things. Don't copy this! You will need to add react-navigation
 
-    // Animated.timing(
-    //   this.state.width,
-    //   {
-    //     toValue: 200, 
-    //     duration: 2000, 
-    //     delay: 1000
-    //   }
-    // ).start()
+`npm install react-navigation`
 
-    // Animated.timing(
-    //   this.state.spin, 
-    //   {
-    //     toValue: 360, 
-    //     duration: 3000, 
-    //     useNativeDriver: true
-    //   }
-    // ).start()
-  }
+This worked for me and generated a simple app with a drawer and three subpages. 
 
-  componentDidUpdate() {
-    // console.log('Animation 1 Component UPDATED')
-  }
+Please let me know if missed a step here. It was hard to backtrack over my experiments and note them here. 
 
-  componentWillUnmount() {
-    // console.log('Animation 1 Component UNMOUNTED')
-  }
+## Apply navigation concepts
 
-  render() {
-    // 4. Get the fade value 
-    const { fade, width } = this.state
+Apply the navigation concepts from class to your final project. Choose a navigation scheme for your project and create a minimal implementation to get started. Mockup any Screens you may need with a Text label naming the content that will eventually be there. 
 
-    return (
-      <View style={styles.container}>
-        {/* Apply the fade value to a CSS property */}
-        <Animated.View style={{ 
-          ...styles.box, 
-          opacity: fade
-         }}>
-          <Text style={styles.title}>Animation 1</Text>
-          <Text>Fades in using Animated</Text>
-        </Animated.View>
-      </View>
-    );
-  }
-}
+Do this now in class! 
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  box: {
-    backgroundColor: 'rgba(255, 0, 0, 0.5)',
-    width: 200,
-    height: 200,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold'
-  }
-});
-```
+## After Class
 
-**Translation Animation**
+- Continue working on the final project. Focus on building navigation and passing data to screens. 
 
-```JS
-// Move a view by animating the X and Y.
+## Additional Resources
 
-// Moving things requires a little more work. 
-// Besides setting the x and y you also need to consider the position 
-// determined by layout systems with flex. 
-
-// Here we'll use ValueXY this handles an object with x and y properties. 
-// The getLayout() method converts x and y to left and top for positioning. 
-
-// Think of the toValue as an offset relative to where the element would 
-// be placed by flex layout. 
-
-// That means that the current position + {x:100, y:50} would place the 
-// object 100 pixels to the right and 50 pixels down from where flex 
-// would have positioned it.
-
-// The example here uses a starting position of { x:0, y: 400 } that's
-// 400 pixels down, and animates it to { x: 0, y: 0 } which should be
-// it's position without an offset. 
-
-import React from 'react';
-// Import Animated
-import { StyleSheet, Text, View, Animated, Easing } from 'react-native';
-
-export default class Animated_2 extends React.Component {
-  // Define State that holds the values for the animation. 
-  // In this case animating the position of the object with x and y. 
-  // The numbers here is starting position. Imagine this as the 
-  // offset from where the object would appear without these numebrs. 
-  state = {
-    move: new Animated.ValueXY({ x:0, y: -400 })
-  }
-  
-  componentDidMount() {
-    // Use spring animation
-    Animated.timing(
-      this.state.move, {
-        easing: Easing.in(Easing.bounce),
-        toValue: { x: 0, y: 0 }, // toValue consists of x and y
-        // Seems to have an error when using native driver true
-        useNativeDriver: false
-      }
-    ).start() // Start the animation
-  }
-  
-  render() {
-    const { move } = this.state
-    return (
-      <View style={styles.container}>
-        {/* Combine the styles with move. Call getLayout() to convert x and y to screen coords */}
-        <Animated.View style={[styles.box, move.getLayout()]}>
-          <Text style={styles.title}>Animated 2</Text>
-          <Text>Animation moves up using spring.</Text>
-        </Animated.View>
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    // Position the object in the center (with no offset). 
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#fff',
-  },
-  box: {
-    backgroundColor: 'rgba(255, 0, 0, 0.5)',
-    width: 200,
-    height: 200,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold'
-  }
-});
-
-```
-
-## Resources 
-
-- https://drop.engineering/demystifying-react-natives-animated-api-part-1-681da7ca4661
-- https://www.belatrixsf.com/blog/animations-react-native
-
-
-
-
-
+- React Navigation
+	- Tabs
+		- https://reactnavigation.org/docs/en/tab-based-navigation.html
+		- https://reactnavigation.org/docs/en/tab-based-navigation.html#minimal-example-of-tab-based-navigation
+		- https://reactnavigation.org/docs/en/tab-based-navigation.html#customizing-the-appearance
+		- https://reactnavigation.org/docs/en/bottom-tab-navigator.html#bottomtabnavigatorconfig
+	- Vector Icons 
+		- https://github.com/oblador/react-native-vector-icons
+		- https://github.com/oblador/react-native-vector-icons#iconbutton-component
+	- Drawers 
+		- https://reactnavigation.org/docs/en/drawer-based-navigation.html
+		- https://snack.expo.io/@aboutreact/navigationdrawer-example?session_id=snack-session-5vdX_nqe_
 

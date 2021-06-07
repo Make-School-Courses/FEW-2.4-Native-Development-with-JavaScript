@@ -1,16 +1,25 @@
-# Project Presentations
+# React Native APIs
 
 ## Learning Outcomes
 
-- Present your project in a professional manner, like an engineer would to their stakeholders
+By the end of this class, you'll learn how to...
 
+- Integrate react native APIs into your app that utilize hardware components
+- Animate components
 
-## Presentations
+## Motion Sensors Example
 
-Every student must present. Be prepared to do the following:
+https://react-native-sensors.github.io
 
-- 2 minute pitch of your app using a slide deck with a minimum of including these 3 slides:
-	- Introduction to your app. What does it do?
-	- What problem(s) did you solve?
-	- What resources/libraries did you use?
-- 3 minute demo of your app
+## Camera API
+
+https://github.com/react-native-cameraroll/react-native-cameraroll
+
+## Resources
+
+- [https://medium.com/react-native-training/using-sensors-in-react-native-b194d0ad9167](https://medium.com/react-native-training/using-sensors-in-react-native-b194d0ad9167)
+- [https://github.com/react-native-community/react-native-camera](https://github.com/react-native-community/react-native-camera)
+
+## Resources
+
+- [https://apiko.com/blog/deploying-react-native-apps-to-app-store-and-play-market/](https://apiko.com/blog/deploying-react-native-apps-to-app-store-and-play-market/)
