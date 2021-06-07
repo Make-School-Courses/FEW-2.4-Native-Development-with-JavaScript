@@ -153,7 +153,7 @@ Add the following to `package.json`:
 "main": "public/electron.js",
 ```
 
-**Add the following** to "`scripts`" in `package.json`: 
+**Add the following** to `"scripts"` in `package.json`: 
 
 ```JSON
 "electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\""
