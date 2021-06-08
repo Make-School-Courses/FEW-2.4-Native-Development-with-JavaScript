@@ -4,13 +4,21 @@
 
 
 
+## Building Electron
+
+The instructions here continue from what was covered in class. If you haven't followed the instructions from class 3 be sure to do that now before continuing. 
+
+The instructions here were compiled from this [article](https://www.codementor.io/@randyfindley/how-to-build-an-electron-app-using-create-react-app-and-electron-builder-ss1k0sfer). 
+
 ## Set up a production build 
 
 We need some build scripts. These scripts replace the existing react scripts that come with the CRA boilerplate code.
 
 `yarn add @rescripts/cli @rescripts/rescript-env --dev`
 
-**Edit** `package.json` and replace these keys in scripts with these: 
+**Note!** The terminal will ask you which version of rescripts you want to install choose the latest by hitting return. 
+
+**Edit** `package.json` and *replace* these keys in scripts with these: 
 
 ```JSON
 "start": "rescripts start",
@@ -88,7 +96,10 @@ to:
 
 `"electron-pack": "electron-builder -mw"`
 
-I also added the following to the `electron.js` script. Without these my project wouldn't build.  
+**Note!** I also had trouble building with NodeJS 16. I had to switch to NodeJS 15. 
+
+
+**Note!** I also added the following to the `electron.js` script. Without these my project wouldn't build.  
 
 ```JS
 webPreferences: {
