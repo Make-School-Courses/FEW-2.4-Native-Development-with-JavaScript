@@ -4,6 +4,7 @@
 
 - Name three reference types in JS? 
 - Name three value types in JavaScript?
+- What is Electron?
 
 ## Review the Current Project
 
