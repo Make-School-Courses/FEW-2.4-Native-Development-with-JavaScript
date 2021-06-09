@@ -2,7 +2,16 @@
 
 ## Review
 
+- Name three reference types in JS? 
+- Name three value types in JavaScript?
 
+## Review the Current Project
+
+You should be using your product/project (remember that dog fooding disucssion?) looking for improvements. 
+
+- How did you use your product? 
+- What did you observe that was working well?
+- What did you observe that needed improvement? Name three things...
 
 ## Building Electron
 
@@ -98,14 +107,14 @@ to:
 
 **Note!** I also had trouble building with NodeJS 16. I had to switch to NodeJS 15. 
 
-
+<!-- 
 **Note!** I also added the following to the `electron.js` script. Without these my project wouldn't build.  
 
 ```JS
 webPreferences: {
   nodeIntegration: true
 }
-```
+``` -->
 
 ## Customizing the App
 
