@@ -75,6 +75,14 @@ The ListView uses a limited set of views to scroll through an unlimited amount o
 
 ## Getting Started 
 
+For these projects you will be using Expo. It is a tool used with React Native. Follow the Guide here: https://docs.expo.io
+
+**tl;dr**
+
+```
+npm install --global expo-cli
+```
+
 For these examples, you'll be using a data set that has information about cat and dog breeds. 
 
 Initialize a new React Native Project with expo. 
