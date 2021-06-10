@@ -38,8 +38,6 @@ https://developer.apple.com/design/human-interface-guidelines/
 
 Mobile interfaces have their own UI elements and design systems. 
 
-
-
 ## ScrollView vs ListView 
 
 Mobile screens are small you'll always be scrolling. There are two ways to handle scrolling.
@@ -81,24 +79,79 @@ For these examples, you'll be using a data set that has information about cat an
 
 Initialize a new React Native Project with expo. 
 
-`expo init by-breed`
+```
+expo init by-breed
+```
 
 Choose: Blank project.
 
 Then run the project to test it. 
 
-`cd by-breed`
+```
+cd by-breed
+```
 
-`npm start`
+Choose **blank** project at the prompt. 
+
+Navigate to the project directory in the terminal with: 
+
+```
+cd by-breed
+```
+
+Notice the command shown in the terminal. To run your project you can choose any one of these. The project will run in different environments depending on your choice. 
+
+- `yarn start` # you can open iOS, Android, or web from here, or run them directly with the commands below.
+- `yarn android`
+- `yarn ios`
+- `yarn web`
+
+Run your project with: 
+
+```
+yarn start
+```
+
+This should open a web window showing a QR. You will scan this QR code with Expo to test your app. 
+
+**Note!** I had trouble again with the NodeJS version and had to switch to Node 15. It might also ask to install expo. Follow the instructions in the terminal. 
+
+**What is Expo?**
+
+Expo is an app that runs on your phone that loads your React Native project. You'll use this for development. When you are ready to publish your app you'll do a build. 
+
+To work with Expo you need to install on an iOS or Android device. 
+
+After installing Expo on your mobile device open your phone and scan the QR code that opened in your browser. 
+
+After a moment you should see the app load on your phone. If you have problems connecting to your phone with Expo in the web page, just above the QR code, try switching from LAN to Tunnel. 
+
+Another way to run the project on your desktop is with the iOS or Android simulator. You need to have these installed. The iOS simulator comes with Xcode.
+
+Take a look at the terminal you'll see: 
+
+```
+ › Press a │ open Android
+ › Press i │ open iOS simulator
+ › Press w │ open web
+ ```
+
+Pressing `i` should open the iOS simulator (provided you have it installed)
+
+From here editing the code on your desktop should update on your phone! 
+
+## Starting the Project
+
+Once you have created a project and can run it in Expo you're ready to start on the current class project. The goal of this project is to create an for people interested in owning a dog or cat. The app will list cats and dogs and provide information that rates each animal in different categories by breed.
 
 Get the sample files here: https://github.com/Make-School-Labs/few-2-4-by-breed-starter 
 
-Copy these files into your project folder. 
+**Copy these two files into your project folder.**
 
 - `breeds.js`
 - `cat-and-dog-breeds.json`
 
-The `cat-and-dog-breeds.json` file contains all of the data as one larger object. The `breeds.js` has some helper code to turn this object into arrays of cats and dogs. 
+The `cat-and-dog-breeds.json` file contains all of the data as one larger object. The `breeds.js` has some helper code to turn this object into arrays of cats and dogs.
 
 ## Implement ScrollView
 
@@ -106,13 +159,36 @@ The `cat-and-dog-breeds.json` file contains all of the data as one larger object
 - Add some content 
 - Scroll!
 
-Import ScrollView component.
+**Make a new component `Item.js`.**
 
-`import { ScrollView, View, Text } from 'react-native'`
+Keep things simple at first. Use the View and Text component to display each breed. 
 
-Then import the list of cats, or dogs if you prefer!
+```JS 
+import React from 'react'
+import { View, Text } from 'react-native'
 
-`import { cats } from './breeds'`
+function Item({ title }) {
+	return (
+		<View>
+			<Text>{title}</Text>
+		</View>
+	);
+}
+
+export default Item
+```
+
+**In `App.js` import ScrollView component.**
+
+```JS
+import { ScrollView, View, Text } from 'react-native'
+```
+
+Then **import the list of cats**, or dogs if you prefer!
+
+```JS
+import { cats } from './breeds'
+```
 
 The `cats` array contains a list of objects with information about a cat breed. 
 
@@ -132,23 +208,13 @@ One record might look like:
 }
 ```
 
-Keep things simple at first. Just make a View and Text component to display each breed. 
+Import the Item component you created. 
 
-Make a component: 
-
-```JS 
-function Item({ title }) {
-	return (
-		<View style={styles.item}>
-		<Text style={styles.title}>{title}</Text>
-		</View>
-	);
-}
+```JS
+import Item from './Item'
 ```
 
-Notice this component is using `styles.item`. You can add some styles for this later. 
-
-In your App.js component use the ScrollView and `map` the list of cats into `Item` components. 
+**In your `App.js` component** use the `ScrollView` and `map` the list of cats into `Item` components. 
 
 ```JSX
 <ScrollView>
@@ -164,11 +230,13 @@ You can take this into account by adjusting padding and margin on the ScrollView
 
 import `SafeAreaView`
 
-`import { ..., SafeAreaView } from 'react-native'`
+```JS
+import { ..., SafeAreaView } from 'react-native'
+```
 
 Wrap your `ScrollView` in the `SafeAreaView`. 
 
-```JSX
+```JS
 <SafeAreaView>
 	<ScrollView>
 		...
