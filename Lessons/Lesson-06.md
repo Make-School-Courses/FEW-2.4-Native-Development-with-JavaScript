@@ -371,10 +371,12 @@ Your goal is to display a list of Cats or dogs. Your list should include all of 
 
 Remember animals share some properties but each animals list of properties us unique to each animal! 
 
+Each property has a value associated with it. Display that next to the property name. 
+
 - Use FlatList to display a list of animals
 - Create a component for List item
 - Display the breed name for each
-- Display all of the properties supplied for each animal!
+- Display all of the properties and values supplied for each animal!
 - Style your component
 
 ## Resources 
