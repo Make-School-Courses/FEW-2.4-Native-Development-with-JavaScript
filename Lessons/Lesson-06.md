@@ -260,8 +260,8 @@ Wrap your `ScrollView` in the `SafeAreaView`.
 - Define data 
 - Create a FlatList 
 - Define props 
- - renderItem
- - keyExtractor
+	- renderItem
+	- keyExtractor
 
 The `FlatFlist` is a component that is used to display large amounts of data in a scrolling list. 
 
@@ -367,9 +367,15 @@ https://reactnative.dev/docs/flatlist#docsNav
 
 ## After class
 
-Complete the challenges here. 
+Your goal is to display a list of Cats or dogs. Your list should include all of the properties supplied for each animal breed. 
 
-Start planning your final project. This can be Electron or React Native. 
+Remember animals share some properties but each animals list of properties us unique to each animal! 
+
+- Use FlatList to display a list of animals
+- Create a component for List item
+- Display the breed name for each
+- Display all of the properties supplied for each animal!
+- Style your component
 
 ## Resources 
 
