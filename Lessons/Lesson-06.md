@@ -4,9 +4,13 @@ Mobile is the land of small screens in portrait orientation, tall and narrow. Th
 
 Touch interaction is also a different experience with it's own set of concerns and solutions. 
 
-## Follow this lesson in Video 
+## Lesson Video
 
-https://www.youtube.com/playlist?list=PLoN_ejT35AEhE6SyoGzrLHPISssRaM-a4s
+Follow this lesson lecture in video form: 
+
+https://youtube.com/playlist?list=PLoN_ejT35AEhE6SyoGzrLHPISssRaM-a4
+
+Watch Lesson 06 1 - 3
 
 ## Learning Objectives
 
