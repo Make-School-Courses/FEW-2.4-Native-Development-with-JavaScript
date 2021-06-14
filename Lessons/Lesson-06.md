@@ -4,6 +4,10 @@ Mobile is the land of small screens in portrait orientation, tall and narrow. Th
 
 Touch interaction is also a different experience with it's own set of concerns and solutions. 
 
+## Follow this lesson in Video 
+
+https://www.youtube.com/playlist?list=PLoN_ejT35AEhE6SyoGzrLHPISssRaM-a4s
+
 ## Learning Objectives
 
 - Use ListView to display data on mobile (lots of data on a small screen)
@@ -378,6 +382,44 @@ Each property has a value associated with it. Display that next to the property 
 - Display the breed name for each
 - Display all of the properties and values supplied for each animal!
 - Style your component
+	- Style the text so the breed name is larger than the property names. 
+	- Use some margin to add space around each Item
+	- Add a border on the bottom of each item to act as a separator. 
+
+**Stretch Goals!** 
+
+Calculate an average rating for each animal. Add up all of the value from it's properties, other than 'breed' and divide by the number of properties. 
+
+Round off the average rating to 1 or 2 decimals.
+
+Display the rating as stars. Use the emoji star in a `Text` component. 
+
+Style the names and values so the names are on the left and the values are on the right. You can do this with Flex. You may need to add more Text and View components to make this work!
+
+Imagine this was one property and value row. 
+
+```JS
+<View style={styles.propertyRow}>
+	<Text>Affectionate with Family</Text>
+	<Text>3</Text>
+</View>
+```
+
+You arrange these with flex like this: 
+
+```JS
+const styles = {
+	propertyRow: {
+		display: flex,
+		justifyContent: 'space-between'
+	}
+}
+```
+
+Follow the tutorial videos and create the By Breed app. Your app should do the following: 
+
+- Display all cats or dogs
+- Display the name of each breed
 
 ## Resources 
 

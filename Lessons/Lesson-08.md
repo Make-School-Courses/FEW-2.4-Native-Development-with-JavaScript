@@ -56,7 +56,7 @@ What kinds of questions do you have so far about React Native?
 
 ## Handling Input 
 
-Touch screen devices have their own input paradigms. Touch screen interaction is a very different experience from mouse driven interaction. 
+Touch screen devices have their own input paradigms. Touch screen interaction is a very different experience from mouse driven interaction.
 
 Discuss the differences
 
