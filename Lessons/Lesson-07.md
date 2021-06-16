@@ -124,3 +124,28 @@ Note! I used the `styles.container` styles on the `KeyboardAvoidingView`. If you
 
 Also note! `behavior` prop. I took this from the docs. It appears that `KeyboardAvoidingView` behaves differently on different playforms and needs a different stting for each! 
 
+## After Class 
+
+Continue working on the By Breed app. Your app should be able to do the following: 
+
+- List all of the Cats or Dogs
+  - Display the features of each breed
+  - Show the name of the feature and value
+  - Display the Feature on the left and the value on the right
+  - Display an average rating for each breed
+- Style the list
+  - Set the font size for each row
+  - Use padding and margin to add some space between rows and to add some space between the text and the edge of the screen
+- Search breeds
+  - Add a TextInput search
+  - Search value should filter the list
+  - Use KeyboardAvoidingView
+- Stretch Goals 
+  - Add a button to switch between cats and dogs. 
+
+## Resources 
+
+- https://reactnative.dev
+- https://reactnative.dev/docs/flatlist
+- https://reactnative.dev/docs/keyboardavoidingview
+- https://reactnative.dev/docs/textinput
