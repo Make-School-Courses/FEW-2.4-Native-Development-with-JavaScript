@@ -110,15 +110,19 @@ expo install react-native-reanimated react-native-screens @react-native-communit
 
 I had a problem installing all of these at the same time, I tried installing in two passes like this: 
 
-- `expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context`
+```
+expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context
+```
 
 **Creating a Stack View** 
 
 Create a root component that will act as the main navigator. This can be the App component. If you're using a single Stack it should be App. 
 
-- `npm install @react-navigation/stack`
+```
+npm install @react-navigation/stack
+```
 
-I had to run `npm install` at this step.
+I had to run `npm install` at this step. Not sure why.
 
 ```JS
 // In App.js in a new project
