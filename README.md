@@ -65,7 +65,7 @@ Students by the end of the course will be able to:
 [Lesson 6]: Lessons/Lesson-06.md
 [Lesson 7]: Lessons/Lesson-07.md
 [Lesson 8]: Lessons/Lesson-08.md
-[Lesson 9]: Lessons/Lesson09.md
+[Lesson 9]: Lessons/Lesson-09.md
 [Lesson 10]: Lessons/Lesson-10.md
 [Lesson 11]: Lessons/Lesson-11.md
 [Lesson 12]: Lessons/Lesson-12.md
