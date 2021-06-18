@@ -74,22 +74,39 @@ React Navigation is a library for React Native that is open source. It provides 
 
 Start with a new Expo project: 
 
-`expo init react-navigation-example`
+```
+expo init react-navigation-example
+```
 
 Choose blank project. 
 
-`cd react-navigation-example`
+```
+cd react-navigation-example
+```
 
-Test your project. 
+Test your project with: 
+
+```
+yarn start
+```
+
+After you confirm everything is working continue! 
 
 **Get started by importing the library**
 
-- `npm install @react-navigation/native`
+```
+npm install @react-navigation/native
+```
 
 **Install Expo dependancies**
 
-- `npm install @react-native-community/masked-view`
-- `expo install react-native-reanimated react-native-screens @react-native-community/masked-view`
+```
+npm install @react-native-community/masked-view
+```
+
+```
+expo install react-native-reanimated react-native-screens @react-native-community/masked-view
+```
 
 I had a problem installing all of these at the same time, I tried installing in two passes like this: 
 
