@@ -386,20 +386,21 @@ You can set styles across all views by applying them to the navigator.
 ...
 ```
 
-## Table View Detail View 
+## Navbars in the wold 
 
-A common pattern in mobile development is the list view and detail view. At the root level you have stack view that contains list view. Tapping one of the cells in the list shows a detail view. 
+Observe some navbars in apps that you use to see how they are configured and styled:  
 
-You see this pattern in many apps. 
-
-- Mail
+- Twitter
+- Facebook
 - Settings
 - Slack
 - Instagram
 
-Almost every app you use will make use of this pattern is some way. 
+## List Detail Pattern
 
-## Challenges 
+A common pattern on mobile is the list detail pattern. This pattern displays a list of options tapping one of the list items displays a new screen this is the called the details view. 
+
+## Challenges
 
 Set up an app following the structions above. It should use React Navigation have a Home Screen and a Detail Screen. 
 
