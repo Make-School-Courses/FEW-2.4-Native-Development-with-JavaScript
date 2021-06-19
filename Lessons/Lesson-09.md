@@ -122,7 +122,7 @@ Create a root component that will act as the main navigator. This can be the App
 npm install @react-navigation/stack
 ```
 
-I had to run `npm install` at this step. Not sure why.
+Edit `App.js`, replace everything there with the code block below: 
 
 ```JS
 // In App.js in a new project
@@ -155,20 +155,17 @@ function App() {
 export default App;
 ```
 
-> At this point I got the error: **expo install react-native-safe-area-context**
-> 
-> I found a solution [here](https://github.com/th3rdwave/react-native-safe-area-context/issues/110#issuecomment-668864576)
-> 
-> `expo install react-native-safe-area-context`
-> `run yarn or npm install`
+The code above defines a component `HomeScreen` and the component `App` in the same file. You can move `HomeScreen` to it's own file and import it here if you like. 
+
+To keep things simple I used inline styles. You could mov e these inline styles to a styles object if you like. 
 
 The sample code above Defines a HomeScreen component, creates an instance of StackNavigator and wraps these in a NavigationContainer. 
 
-There is a single route: Stack.Screen which will display: HomeScreen. 
+There is a single route: `<Stack.Screen>` which will display: `HomeScreen`. 
 
-The example so far only displays the a single Screen: Home Screen. But, it does this using the StackNavigator. 
+The example so far only displays the a single Screen: Home Screen. But, it does this using the StackNavigator!
 
-Notice that Stack navigator provides the title bar at the top. 
+Notice that Stack navigator provides the title bar at the top. This is the standard behavior. You can configure the title bar and do things like add buttons to the upper right and left, change the background color of the titlebar, and test the title in the center. 
 
 ### Navigating to another screen
 
@@ -199,7 +196,13 @@ function App() {
 }
 ```
 
-The homescreen will navigate to the details screen: 
+Now set up a button that will navigate from `HomeScreen` to `DetailsScreen`. 
+
+- Import `Button`
+- Add a `Button` to the `HomeScreen`
+- Add an `onPress` to the button
+- Get the `navigation` prop
+- Use Navigation to navigate to Details
 
 ```JS 
 import * as React from 'react';
@@ -222,7 +225,7 @@ function HomeScreen({ navigation }) {
 ...
 ```
 
-Navigate to the same screen multiple times: 
+Navigating to a Screen creates an instance of that screen and adds it to the navigation stack. You can experiment with that here. Add a button to the `DetailsScreen` that loads another instance of the `DetailsScreen` to the stack.
 
 ```js 
 ...
@@ -240,7 +243,13 @@ function DetailsScreen({ navigation }) {
 ...
 ```
 
-Going back from one screen to the previous screen in the stack. Or jump to a screen on the stack.
+Test your work. From the Home Screen press the button to go to Details. Then press the button to load another Details screen. Press the button again to load another Details screen. 
+
+Notice the back returns to the previous screen, try it out. 
+
+Going back from one screen to the previous screen in the stack. Or jump to a screen on the stack. In the next step you'll a Home button that jumps all the Home screen. 
+
+Add two buttons in the Deatils Screen. The first navigates to Home. The second returns to the previous screen on the stack. 
 
 ```js
 ...
@@ -297,9 +306,10 @@ The details screen can access the params object to receive data from the route t
 ```JS
 ...
 function DetailsScreen({ route, navigation }) {
+
   /* 2. Get the param */
-  const { itemId } = route.params;
-  const { otherParam } = route.params;
+  const { itemId, otherParam } = route.params;
+
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Details Screen</Text>
@@ -333,7 +343,7 @@ On any screen you can set options.
 />
 ```
 
-Here you set the title of the Home Screen. Note `name="Home"` is used for navigation and is also used fo the title if you don't name the title in `options`. 
+Here you set the title of the Home Screen. Note `name="Home"` is used for navigation and is also used for the title, if you don't name the title in `options`. 
 
 Set some more styles for the navigation bar: 
 
@@ -355,7 +365,7 @@ Set some more styles for the navigation bar:
 />
 ```
 
-Here you set the title, background clor and some styles on the title. 
+Here you set the title, background color of the nav bar, tint color, and font types of the title. 
 
 You can set styles across all views by applying them to the navigator. 
 
@@ -378,7 +388,7 @@ You can set styles across all views by applying them to the navigator.
 
 ## Table View Detail View 
 
-A common pattern in mobile development is the listview and detail view. At the root level you have stack view that contains list view. Tapping one of the cells in the list shows a detail view. 
+A common pattern in mobile development is the list view and detail view. At the root level you have stack view that contains list view. Tapping one of the cells in the list shows a detail view. 
 
 You see this pattern in many apps. 
 
@@ -387,7 +397,7 @@ You see this pattern in many apps.
 - Slack
 - Instagram
 
-Almost every app you use will make use of this pattern. 
+Almost every app you use will make use of this pattern is some way. 
 
 ## Challenges 
 
