@@ -431,6 +431,13 @@ Start planning your final project. We will covering Tab Navigation in a future c
 
 - [Assignment final project](../Assignments/Assignment-final-project.md)
 
+If you are done with the current challenges (stack view, list and detail view) you can try these challenges: 
+
+- Display the animal features using `FlatList` in the detail screen. 
+- Customize the styles of the app. 
+- Display the Average rating for each breed in the title bar next to the breed name. 
+- Add another level. Start with a FlatList that displays: "Cats" and "Dogs". Tapping one of these two cells displays a new screen with the stack navigator that is a list of all breeds (either cats or dogs.) Tapping on a breed displays details about the breed. This would look forward to creating an app that could handle any number of pet types! 
+
 ## Additional Resources
 
 - https://reactnavigation.org/docs/getting-started/
