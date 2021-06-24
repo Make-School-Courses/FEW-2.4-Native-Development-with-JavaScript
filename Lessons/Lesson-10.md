@@ -20,33 +20,47 @@ I tested these both on my iOS device.
 
 To get started with tabbed navigation you'll need to spin up a react native app along with the required dependancies. 
 
-`expo init tabbed-example`
+```
+expo init tabbed-example
+```
 
-Choose blank project.
+When prompted **choose blank project**.
+
+Navigate to your project directory: 
+
+```
+cd tabbed-example
+```
 
 Install the expo dependancies:
 
-`npm install @react-navigation/native`
+```
+npm install @react-navigation/native
+```
 
-`expo install react-native-reanimated react-native-screens @react-native-community/masked-view`
+```
+expo install react-native-reanimated react-native-screens @react-native-community/masked-view
+```
 
 Get the bottom tabs:
 
-`npm install @react-navigation/bottom-tabs`
+```
+npm install @react-navigation/bottom-tabs
+```
 
-One more time in case soemthing was missing:
+<!-- One more time in case soemthing was missing:
 
-`npm install`
+`npm install` -->
 
 Test your app with `yarn start`, `npm start`, `yarn ios` or which ever method you prefer. 
 
-If everything is working create some tabbed navigation. 
+If everything is working you should see the default Expo app and you will create some tabbed navigation in the next steps! 
 
-Copy yhe sample code here: 
+The code below comes from the React Native Navigation docs [here](https://reactnavigation.org/docs/tab-based-navigation#minimal-example-of-tab-based-navigation).
 
-https://reactnavigation.org/docs/tab-based-navigation#minimal-example-of-tab-based-navigation
+This creates a bare bones application with two tabs. Notice this is very similar to the stack navigation code! 
 
-This creates a bare bones application with two tabs. 
+Replace the code in `App.js` with the code below:
 
 ```JS
 import * as React from 'react';
@@ -84,6 +98,25 @@ export default function App() {
 }
 ```
 
+**Challenge:** 
+
+The code above uses three components: `App`, `HomeScreen`, and `SettingsScreen` in one file. Best practice is to keep all components in their own files. 
+
+Move `HomeScreen` and `SettingsScreen` into their own files. Be sure to import the required dependencies, export the component, and import these components for use in `App.js`. 
+
+**Challenge:** 
+
+Customize `HomeScreen` and `SettingsScreen`. This is an open ended challenge you can do as much as you like here. The goal is to modify the contents and styles of these screens. 
+
+- Change the content
+  - Modify the existing text
+  - Add new text and or a view
+- Change the style
+  - Style the text
+    - Set the `fontSize`, `color` etc.
+  - Style any new content
+  - Style the containing view
+
 **Challenge:**
 
 - Add another tab to the tab bar. Follow these steps: 
@@ -92,54 +125,60 @@ export default function App() {
 
 ## Icons 
 
-Icons appear on mobile in many places. If you can make them flexible in size that's even better. There are several libraries that make icons these notes will cover [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons).
+Icons are used in many places in mobile apps. With the small screen size a picture communicates a lot. Think about how emojis do the same in text messages. 
+
+Icons will appear at different sizes in different locations on the screen and at different sizes on diofferent devices with different screen sizes. Using a scalable vector images is a good choice when possible. There are several libraries that provide vector icons. For this example we will use: [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons).
 
 This library has several sets of bundled icons. Start by importing the library. 
 
-`npm install --save react-native-vector-icons`
+```
+npm install --save react-native-vector-icons
+```
 
-I had to link my icons using, this may not be needed for everyone: 
+<!-- I had to link my icons using, this may not be needed for everyone: 
 
-<!-- `npx react-native link`
+ `npx react-native link`
 
 `npx react-native link react-native-vector-icons` -->
 
 In your React Native project import the icon with: 
 
-`import { Ionicons } from 'react-native-vector-icons'`
+```
+import { Ionicons } from 'react-native-vector-icons'
+```
 
 Use the icon with: 
 
-`<Ionicons name="ios-add-circle-outline" size={32} />`
+```
+<Ionicons name="ios-add-circle-outline" size={32} />
+```
 
 This should display a 32pt icon that looks like a circle with a plus in the center.
 
-You can put this component almost anywhere! Seems like these need to be wrapped in a `<Text></Text>` component. 
+You can put this component almost anywhere! You can place inside of a `View` or inside of a `Text` component. 
 
-**Note!** Finding the name to use for a specific icon is not as easy as you might think. The names shown with the icon bundles are not always what you need to set as the name in the component!
+**Explore Icons here:**
+
+Look at the bundled icon sets: https://github.com/oblador/react-native-vector-icons#bundled-icon-sets.
+
+**Note!** Above uses the name: `ios-add-circle-outline` which identifies and displays a specific icon. Finding the name to use for a specific icon is not as easy as you might think. The names shown with the icon bundles are not always what you need to set as the name in the component using React Native!
 
 If you get a warning that the name isn't working for an icon open the warning and read the names! It will list all of the names that are possible values. 
-
-**Activity:** Add some icons to the Home and Settings Screens. 
 
 **Challenges:**
 
 - Make an icon that appears on the Home Screen
 - Make an icon that appears on the Settings Screen 
 - Set the and color of the icons
-
-Explore Icons here: 
-
-Look at the bundled icon sets: https://github.com/oblador/react-native-vector-icons#bundled-icon-sets.
-
-**Challenges:** 
-
-- Make some icons in a Screen. You'll need to: 
+  - Use the `style` prop and set the `color`. The same as you would with a `Text` component.
+- Make some icons in a Screen. You'll need to:
 	- Import the icon set you want to use
 	- Figure out the name of the icon you want to see (this might take some experimentation)
 	- Add and configure an Icon component in your Screen
 	
 **Stretch Challenge:**
+
+Add a button to the Home or Settings screens and include an icon with that button. 
 
 - Make an Icon button. 
 	- Follow the guide [here](https://github.com/oblador/react-native-vector-icons#iconbutton-component)
@@ -150,11 +189,20 @@ The docs show a solution in the [customizing the appearance](https://reactnaviga
 
 Notice that big block of code inside:
 
-`<Tab.Navigator screenOptions={...lots of code here...} >`
+```
+<Tab.Navigator screenOptions={...lots of code here...} >
+```
 
-This function returns an object thqt includes a property: `tabBarIcon`. This property is a function that receives an object with three properties: `focused, color, size`. You'll use these values to generate an icon and return it. 
+This function returns an object that includes a property: `tabBarIcon`. This property is a function that receives an object with three properties: `focused`, `color`, `size`. You'll use these values to generate an icon and return it. 
+
+The `route` identifies which tab the icon is for. We have an if else that defines the correct icon name for each route.  
+
+The three properties: `focussed`, `color`, and `size` describe how the icon should be displayed. The `focussed` property is true when that tab is currently active. 
 
 ```JS
+...
+import { Ionicons } from 'react-native-vector-icons'
+...
 <Tab.Navigator
   screenOptions={({ route }) => ({
     tabBarIcon: ({ focused, color, size }) => {
