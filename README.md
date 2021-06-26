@@ -54,7 +54,7 @@ Students by the end of the course will be able to:
 | 15    |  Wed, July 7  | [Lesson 15] | - |
 | 16    |  Fri, July 9  | [Lesson 16] | - |
 | 17    |  Mon, July 12 | [Lesson 17] | - |
-| 18    |  Wed, July 14 | Final Exam/Presentations | - |
+| 18    |  Wed, July 14 | [Lesson 18] | - |
 | 19    |  Fri, July 16 | Final Exam/Presentations | - |
 
 [Lesson 1]: Lessons/Lesson-01.md
@@ -74,6 +74,7 @@ Students by the end of the course will be able to:
 [Lesson 15]: Lessons/Lesson-15.md
 [Lesson 16]: Lessons/Lesson-16.md
 [Lesson 17]: Lessons/Lesson-17.md
+[Lesson 18]: Lessons/Lesson-18.md
 
 [Assignment 1]: Assignments/Assignment-1-react-redux.md
 [Assignment 1]: Assignments/Assignment-1-react-redux.md
