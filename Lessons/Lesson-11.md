@@ -1,6 +1,6 @@
 # FEW 2.4 React Native Elements
 
-React native ELements is a library of cross platform UI elements. This library fills in many of the gaps in the default React Native components making it quicker and easier to spin up mobile applications. 
+React native ELements is a library of cross platform UI elements. This library fills in many of the gaps in the default React Native components making it quicker and easier to spin up mobile applications.
 
 https://react-native-training.github.io/react-native-elements/docs/overview.html
 
@@ -13,11 +13,157 @@ https://react-native-training.github.io/react-native-elements/docs/overview.html
 
 ## Initial Exercise
 
-- Discussion Android and iOS
-	- Who uses Android? 
-		- What are the UI systems in use? 
-	- Who uses iOS?
-		- What are UI systems in use? 
+Identify and implement React Native Elements 
+
+
+
+https://reactnativeelements.com/docs/
+
+
+Make a new expo app 
+
+expo init react-native-elements-example
+
+Choose blank project
+
+Navigate to the project: 
+
+cd react-native-elements-example
+
+Install native elements:
+
+yarn add react-native-elements
+
+Add vector icons: 
+
+yarn add react-native-vector-icons
+
+<!-- Link the icons: 
+
+npx react-native link react-native-vector-icons -->
+
+Install safe area context:
+
+yarn add react-native-safe-area-context
+
+
+In App.js add the SafeAreaProvider: 
+
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+
+function App() {
+  return <SafeAreaProvider>...</SafeAreaProvider>;
+}
+
+
+Test your app at this point: 
+
+yarn start
+
+This should display the default app. Let's experiment with some of the React Native Elements. 
+
+
+Start with an image. This is NOT a React Native ELements component but you may want to use images. 
+
+Create a folder named images in your project directory and add an image to the folder. I used an image named `dog.png`:
+
+```JS
+import { ..., Image } from 'react-native';
+
+export default function App() {
+  return (
+    <SafeAreaProvider>
+			...
+      <Image source={require('./images/dog.png')} />
+      ...
+    </SafeAreaProvider>
+  );
+}
+```
+
+Here's more info about the Image component: https://reactnative.dev/docs/images
+
+
+Create an Avatar. An Avatar is an image container that has some controls on how it is displayed and other other features beyond the standard image. 
+
+https://reactnativeelements.com/docs/avatar
+
+```JS
+import { Avatar } from 'react-native-elements';
+
+export default function App() {
+  return (
+    <SafeAreaProvider>
+			...
+			<Avatar
+				overlayContainerStyle={{backgroundColor: '#eee'}}
+				size="large"
+				rounded
+				source={require('./images/dog.png')}
+			/>
+			...
+    </SafeAreaProvider>
+  );
+}
+```
+
+An Avatar can act as a button and display icons. Check the docs for all of it's features. 
+
+
+Badges 
+
+A badge is one of those little circles that appears in the upper right of an element. It usually displays a number. 
+
+https://reactnativeelements.com/docs/badge
+
+Add a badge to the Avatar: 
+
+```JS
+import { ..., Badge } from 'react-native-elements';
+
+export default function App() {
+  return (
+    <SafeAreaProvider>
+      <View style={styles.container}>
+        <Badge value="99+" status="error" />
+        <Badge value={<Text>My Custom Badge</Text>} />
+
+        <Badge status="success" />
+        <Badge status="error" />
+        <Badge status="primary" />
+        <Badge status="warning" />
+        ...
+      </View>
+    </SafeAreaProvider>
+  );
+}
+```
+
+With a value the value is displayed. 
+
+When value is a component that component is wrapped in the badge. 
+
+When there is no value the badge is a small colored circle. 
+
+Set the base color of the badge with the `status` prop. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Defining your final project
 

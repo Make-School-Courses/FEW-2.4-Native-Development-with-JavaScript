@@ -1,25 +1,28 @@
-# React Native APIs
+# FEW 2.4 React Native Elements
 
-## Learning Outcomes
+React native ELements is a library of cross platform UI elements. This library fills in many of the gaps in the default React Native components making it quicker and easier to spin up mobile applications.
 
-By the end of this class, you'll learn how to...
+https://react-native-training.github.io/react-native-elements/docs/overview.html
 
-- Integrate react native APIs into your app that utilize hardware components
-- Animate components
+## Learning Objectives/Competencies
 
-## Motion Sensors Example
+Expllore React Native elements 
 
-https://react-native-sensors.github.io
+## Initial Exercise
 
-## Camera API
 
-https://github.com/react-native-cameraroll/react-native-cameraroll
+## Defining your final project
 
-## Resources
 
-- [https://medium.com/react-native-training/using-sensors-in-react-native-b194d0ad9167](https://medium.com/react-native-training/using-sensors-in-react-native-b194d0ad9167)
-- [https://github.com/react-native-community/react-native-camera](https://github.com/react-native-community/react-native-camera)
+### Final Project ideas
 
-## Resources
+ 
 
-- [https://apiko.com/blog/deploying-react-native-apps-to-app-store-and-play-market/](https://apiko.com/blog/deploying-react-native-apps-to-app-store-and-play-market/)
+### Wireframes for Final
+
+
+## After Class
+
+- 
+
+## Additional Resources
