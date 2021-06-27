@@ -8,7 +8,6 @@ https://react-native-training.github.io/react-native-elements/docs/overview.html
 
 Apply Native Elements to the By Breed App. 
 
-
 ## Initial Exercise
 
 
