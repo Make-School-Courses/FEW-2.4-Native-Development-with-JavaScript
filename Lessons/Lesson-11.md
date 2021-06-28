@@ -181,7 +181,7 @@ Having a plan or blueprint will help
 
 ## After Class
 
-- Start working on your final project
+- Start working on your [final project](https://github.com/Make-School-Courses/FEW-2.4-Native-Development-with-JavaScript/blob/master/Assignments/Assignment-final-project.md)
 
 ## Additional Resources
 
