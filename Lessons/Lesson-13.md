@@ -1,28 +1,28 @@
-# FEW 2.4 React Native Elements
-
-React native ELements is a library of cross platform UI elements. This library fills in many of the gaps in the default React Native components making it quicker and easier to spin up mobile applications.
-
-https://react-native-training.github.io/react-native-elements/docs/overview.html
-
-## Learning Objectives/Competencies
-
-Expllore React Native elements 
-
-## Initial Exercise
+# FEW 2.4 Final Project Lab
 
 
-## Defining your final project
+
+## Objectives 
 
 
-### Final Project ideas
+
+## Animation
+
+
+
+### Example
+
+
+
+### Challenges 
 
  
 
-### Wireframes for Final
-
-
-## After Class
+## Resources 
 
 - 
 
-## Additional Resources
+
+
+
+

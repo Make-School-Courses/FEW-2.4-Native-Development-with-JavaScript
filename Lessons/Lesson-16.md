@@ -1,25 +1,26 @@
-# React Native APIs
+# FEW 2.4 Lab
 
-## Learning Outcomes
+Final Project Pab Day
 
-By the end of this class, you'll learn how to...
+## Learning Objectives/Competencies
 
-- Integrate react native APIs into your app that utilize hardware components
-- Animate components
+- 
 
-## Motion Sensors Example
+## Initial Exercise
 
-https://react-native-sensors.github.io
 
-## Camera API
+## Defining your final project
 
-https://github.com/react-native-cameraroll/react-native-cameraroll
 
-## Resources
+### Final Project ideas
 
-- [https://medium.com/react-native-training/using-sensors-in-react-native-b194d0ad9167](https://medium.com/react-native-training/using-sensors-in-react-native-b194d0ad9167)
-- [https://github.com/react-native-community/react-native-camera](https://github.com/react-native-community/react-native-camera)
+ 
 
-## Resources
+### Wireframes for Final
 
-- [https://apiko.com/blog/deploying-react-native-apps-to-app-store-and-play-market/](https://apiko.com/blog/deploying-react-native-apps-to-app-store-and-play-market/)
+
+## After Class
+
+- 
+
+## Additional Resources
