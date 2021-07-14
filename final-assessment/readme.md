@@ -4,9 +4,11 @@ Metal fans need an app and you have to make it. Follow these steps to build the 
 
 These images show what you would be making.
 
-![final-metal-tab-1](final-metal-tab-1.jpeg)
+![final-metal-tab-1](final-metal-tab-1.png)
 
-![final-metal-tab-2](final-metal-tab-2.jpeg)
+![final-metal-tab-2](final-metal-tab-2.png)
+
+![final-metal-tab-2](final-metal-tab-3.png)
 
 The core of the assessment is making the app. Save the styling and details for last. This will save you time as you work without wasting time solving problems that are not core to the app. For this reason, I recommend you solve the problems in the order listed here. 
 
@@ -74,10 +76,10 @@ This tab shows statistics from the data in `metal.json`. Use map, filter, and re
 
 Show the following: 
 
-- **Total number of Bands**
-- **Total metal fans** (this is the sum of all fans for each band)
-- **Number of Countries represented**. You'll need to count each unique country found in all bands. 
-- **Number of Active bands** (each band has a split property, this is "-" when a band is still active and shows the year they split if they broke up)
+- **Total number of Bands** - this is equal to the number of bands in the list
+- **Total metal fans** - this is the sum of all fans for each band
+- **Number of Countries represented** - You'll need to count each unique country found in all bands
+- **Number of Active bands** - each band has a split property, this is "-" (hyphen) when a band is still active and shows the year they split if they broke up
 - **Number of bands that have split**
 
 ## Challenge 7: Style your work
@@ -117,7 +119,7 @@ Look at the images and try to match the general styles you see.
 
 ## Challenge 8: Conditional styles
 
-Some of the bands have splut up and are no longer active. You need to show this in the band cell in the list. Do it by adjusting the styles conditionally on the data. 
+Some of the bands have split up and are no longer active. You need to show this in the band cell in the list. Do it by adjusting the styles conditionally on the data. 
 
 In each cell modify the styles of the name based on whether the band is split or active. A band that has split up will have a year in the "split" field for example: 
 
@@ -146,7 +148,7 @@ Style the band name:
 
 ## Challenge 9: Styles of Metal
 
-Besides the wide array of interesting and creative bands names metal also has an interesting and creative range of sub genres. Your job is to find all of the all of the sub-genres. 
+Besides the wide array of interesting and creative bands names metal also has an interesting and creative range of sub genres. Your job is to find all of the sub-genres. 
 
 Each band has a "style" listed in the JSON data. You're goal is to count the unique styles. 
 
@@ -155,6 +157,21 @@ Display the count of unique metal styles on the Statictics screen. Something lik
 - **Styles:** 47
 
 (It's notable that out of 50 bands there are 47 unqiue styles!)
+
+Note! styles is a string but a band may subscribe to multiple styles! The styles are separated by a comma! 
+
+For example: 
+
+```
+"style": "New wave of british heavy,Heavy"
+```
+
+Shows a band with two styles: 
+
+- New wave of british heavy
+- Heavy
+
+Take this into account when you count the styles. 
 
 ## Challenge 10: List the Styles 
 
