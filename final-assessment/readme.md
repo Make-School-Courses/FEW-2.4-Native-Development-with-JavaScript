@@ -187,3 +187,7 @@ Try any or all of these stretch challenges:
 - Add a search field at the top of the band list. Use it to filter the list of bands displayed by name. 
 - Sort the names in the genre list.
 - Use the List detail pattern. The goal is to use a Stack View in the first tab. Tapping a list cell should display a screen showing detailed information about a band.
+
+## Submit your work
+
+When you're finished submit your work on GradeScope. 
